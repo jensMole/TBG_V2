@@ -1,0 +1,401 @@
+/* Afbeelding TBG */
+.wide {
+	height: 250px;
+    background-image: url('/afbeeldingen/banner.jpg');
+    background-size: contain;
+    background-position: top center;
+    background-attachment: fixed;
+    background-repeat: repeat-x;
+    margin-bottom: 0px;
+}
+
+.nav.navbar-nav li a {
+    color: white;
+}
+.active a{
+	color: black !IMPORTANT;
+}
+.navbar-default li{
+	list-style-type: none;
+	font-size: 130%;
+}
+.navbar-default{
+	background-color:#7D1935;
+}
+.navbar-default li:hover{
+	background-color: #6D1935;
+}
+.navbar-default li:hover a{
+	color: black !IMPORTANT;
+}
+.dropdown-menu a{
+	color: black !IMPORTANT;
+}
+.dropdown-menu{
+	background-color: white !IMPORTANT;
+}
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+.navbar .navbar-collapse {
+  text-align: center;
+}
+.navbar-brand{
+	color: White !IMPORTANT;
+}
+
+
+.row{
+padding-bottom: 10px;
+}
+
+
+
+/* BEGIN HOOFDPAGINA */
+*{
+	padding: 0px;
+	margin: 0px;
+}
+
+body{
+ 	font-family:Arial, sans-serif;
+	background-color: #505050;
+	color: #bbb;
+ 	overflow-x: hidden;
+}
+
+/* uitleg */
+#uitleg{
+	margin-left: 20px;
+	margin-right: 20px;
+	font-size: 130%;
+	background-color: #404040;
+	border-radius: 10px;
+	padding: 5px;
+}
+
+/* foto */
+#fotoJens{
+    display: block;
+    margin: auto;
+    border-style: solid;
+    border-width: 3px;
+    border-color: gray;
+}
+
+/* linken Foto */
+#twit{
+	display: block;
+        margin: auto;
+        padding-top: 20px;
+}
+
+#YT{
+        display: block;
+        margin: auto;
+        padding-top: 20px;
+}
+
+#FB{
+	display: block;
+        margin: auto;
+        padding-top: 20px;
+}
+
+
+/* iframe's */
+iframe{
+	position:relative;
+	border-color: black;
+	position: center;
+	padding: 0px;
+}
+
+.container{
+	padding-bottom: 20px;
+}
+
+#video iframe{
+    border-style: solid;
+    border-width: 5px;
+    border-color: gray;
+}
+
+/* Einde Hoofdpagina */
+
+
+
+
+
+
+/* Begin over pagina */
+/* content verplaatsen */
+#content{
+	margin-top: 80px;
+}
+
+/* foto jens */
+#Jens{
+	margin-left: 92px;
+}
+
+/* korte beschrijving */
+#kort{
+ 	position: absolute;
+ 	margin-left: 600px;
+ 	margin-top: -250px;
+	width: auto;
+	font-size: 130%;
+	background-color: #404040;
+	border-radius: 10px;
+	padding: 5px;
+}
+
+#diep{
+ 	margin-left: 25px;
+	margin-right: 25px;
+	margin-top: 20px;
+  	width: auto;
+	font-size: 130%;
+	background-color: #404040;
+	border-radius: 10px;
+	padding: 5px;
+	margin-bottom: 10px;
+}
+/* Einde over pagina */
+
+
+
+
+
+
+/* Begin Video's Pagina */
+#Mine,#Ander{
+	text-align: center;
+	margin: 10px;
+	background-color: #404040;
+	border: 3px groove #505050;
+	height: 50px;
+	padding: 5px 0px;
+}
+/* Einde Video's Pagina */
+
+
+
+
+
+/* Begin Andere Video's pagina */
+#AnderVid{
+	text-align: center;
+}
+
+.navbar-ex1-collapse{
+	font-size: 130%;
+}
+/* Einde Andere Video's Pagina */
+
+
+
+
+/* Begin Extra pagina */
+.berichten p{
+    font-size: 130%;
+	background-color: #404040;
+	border-radius: 10px;
+	padding: 5px;
+        margin: 10px;
+}
+
+.aankondigingen p{
+	font-size: 130%;
+	background-color: #404040;
+	border-radius: 10px;
+	padding: 5px;
+        margin: 10px;
+}
+
+.BerichtTitel{
+	text-align: center;
+}
+
+.AankondigengenTitel{
+	text-align: center;
+}
+/* Einde extra pagina*/
+
+
+
+
+/* begin Downloads pagina */
+h1 {
+	text-align: center;
+}
+
+h2.titelsDown {
+	color: white;
+	margin-bottom: 10px;
+	background-color: #7D1935;
+	margin-left: 30px;
+	margin-right: 30px;
+	padding-left: 10px;
+	padding-top: 5px;
+	height: 40px;
+}
+/* Einde Downloads pagina */
+
+
+
+
+
+/* Begin Contact pagina */
+#contact1{
+	font-size:3em;
+	color:white;
+	text-align: center;
+}
+
+#contact2{
+	text-align: center;
+	font-size:1.8em;
+	color:white;
+}
+
+#bericht p{
+    font-size: 140%;
+	background-color: #404040;
+	border-radius: 10px;
+	padding: 5px;
+	text-align: center;
+}
+/* Einde contact pagina */
+
+
+
+
+
+/* Begin Blog pagina's */
+#blogtitel{
+	text-align: center;
+	color: white;
+}
+
+#onderwerp{
+	text-align: center;
+	color: white;
+}
+
+#datumpost{
+	text-align: center;
+	color: white;
+}
+
+#postdeel{
+	margin: auto;
+	margin-top: 30px;
+	font-size: 140%;
+	background-color: #404040;
+	border-radius: 10px;
+	padding: 5px;
+	margin-bottom: 20px;
+}
+
+#fotoblog{
+    display: block;
+    width: 50%;
+    height: auto;
+    margin: auto;
+
+}
+/* Einde blog pagina's */
+
+/*Begin Downloads pagina*/
+h2#muziek, h2#plugin {
+	text-align: center;
+	margin-top: 60px;
+	color: white;
+	background-color: #7D1935;
+	margin-left: 30px;
+	margin-right: 30px;
+	padding-left: 10px;
+	padding-top: 5px;
+	height: 40px;
+}
+
+.music{
+	font-size: 150%;
+	text-align: center;
+}
+
+.music li{
+	list-style-type: none;
+	margin-bottom: 10px;
+}
+
+#note{
+	display: block;
+	margin: 0 auto;
+}
+
+.Plugins li{
+	list-style-type: none;
+}
+
+.Plugins img{
+	display: block;
+	margin: 0 auto;
+}
+
+h3{
+	text-align: center;
+}
+
+.tekstPlugin{
+	text-align: center;
+	padding-bottom: 50px;
+	color: white;
+}
+
+.pluginAfbeeldingen{
+	padding-bottom: 50px;
+}
+
+.vehicles, .audio{
+	padding-top: 50px;
+}
+
+/*Einde downloads pagina*/
+
+
+/* footer */
+footer{
+	background-color: #7D1935;
+	padding: 5px 10px;
+	font-size: 125%;
+	bottom: 0px;
+	position: relative;
+  width: 100%;
+}
+
+footer a{
+	padding: 0px 5px;
+}
+
+a{
+	text-decoration: none;
+	color: white;
+}
+
+a:hover{
+	color:white;
+}
+
+.counter{
+        float: center;
+        position: center;
+}
+
+.copy{
+	float: right;
+}
