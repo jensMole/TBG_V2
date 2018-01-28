@@ -395,12 +395,13 @@ h3{
     display: inline-block;
 }
 
-#vidLinkTekst{
+#vidLinkTekst, #tekstFronpage{
 	font-size: 130%;
 }
 
 .centerVidLink{
 	text-align: center;
+	z-index:-3;
 }
 
 .vidFrontDash{
@@ -408,6 +409,23 @@ h3{
     border-width: 5px;
 	border-color: gray;
 	margin-top: 10px;
+	z-index: -2;
+}
+
+#tekstFrontVoorbeeld{
+	z-index: -1;
+	border-right: 1px solid;
+	color: white;
+}
+
+.hoofdPag{
+	position:relative;
+	z-index:1;
+}
+
+#tekstFronpageEdit{
+	color: black;
+	/* resize: none; */
 }
 /* Dashboard */
 

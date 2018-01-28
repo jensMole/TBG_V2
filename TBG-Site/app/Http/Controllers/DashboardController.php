@@ -11,12 +11,13 @@ class DashboardController extends Controller
     {
         //ophalen van de url van de video uit database.
         $vidLink = HoofdPag::pluck("vidLink");
+        $tekstFront = HoofdPag::pluck("tekstFrontPage");
 
         // https://www.youtube.com/watch?v=p44TszdiiA4
         //url omvormen naar vb. p44TszdiiA4.
         $newVidLink = substr($vidLink, 37, 11);
  
-        return view('panel.index', compact('vidLink','newVidLink'));
+        return view('panel.index', compact('vidLink','newVidLink','tekstFront'));
     }
 
     public function updateLinkVoorPag(Request $request)
