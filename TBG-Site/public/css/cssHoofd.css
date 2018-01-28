@@ -368,6 +368,16 @@ h3{
 /*Einde downloads pagina*/
 
 
+
+/* Dashboard */
+.panelFooter{
+	text-align: center;
+}
+
+
+
+
+
 /* footer */
 footer{
 	background-color: #7D1935;
@@ -399,3 +409,4 @@ a:hover{
 .copy{
 	float: right;
 }
+/* Footer */

@@ -11,4 +11,8 @@
 |
 */
 
+// Tonen van de index (voorpagina).
 Route::get('/', 'HomeController@index');
+
+// Tonen van het dashboard.
+Route::get('/dashboard', 'DashBoardController@index');

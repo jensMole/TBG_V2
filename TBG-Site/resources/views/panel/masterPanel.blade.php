@@ -31,11 +31,11 @@
 
         <div class="wide hidden-xs hidden-sm hidden-md"></div>
 
-        @include('static.sidenav')
+        @include('static.sidenavPanel')
           
         @yield('content')
 
-        @include('static.footer')
+        @include('static.footerPanel')
 
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
