@@ -402,6 +402,13 @@ h3{
 .centerVidLink{
 	text-align: center;
 }
+
+.vidFrontDash{
+	border-style: solid;
+    border-width: 5px;
+	border-color: gray;
+	margin-top: 10px;
+}
 /* Dashboard */
 
 

@@ -12,7 +12,8 @@
         <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
             <!-- class="active" -->
-            <li><a href="#">Home</a></li>
+            <li><a href="">Home</a></li>
+            <li><a href="/">Ga naar front page</a></li>
         </ul>
         </div><!--/.nav-collapse -->
     </div><!--/.container-fluid -->
