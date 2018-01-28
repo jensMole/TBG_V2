@@ -35,7 +35,7 @@
           
         @yield('content')
 
-        @include('static.footerPanel')
+
 
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

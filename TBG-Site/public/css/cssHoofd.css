@@ -374,6 +374,35 @@ h3{
 	text-align: center;
 }
 
+#vidLink{
+	color: black;
+	text-align: center;
+	width: 100%;
+    padding: 12px 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+#submitButton{
+	color: black;
+	text-align: center;
+	font-size: 130%;
+	background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+#vidLinkTekst{
+	font-size: 130%;
+}
+
+.centerVidLink{
+	text-align: center;
+}
+/* Dashboard */
 
 
 

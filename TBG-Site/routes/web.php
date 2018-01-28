@@ -14,5 +14,10 @@
 // Tonen van de index (voorpagina).
 Route::get('/', 'HomeController@index');
 
+
+
+//Dashboard
 // Tonen van het dashboard.
-Route::get('/dashboard', 'DashBoardController@index');
+Route::resource('/dashboard','DashBoardController');
+//updaten van de video link van voorpagina.
+Route::post("updateLinkVidVoorPagina", "DashboardController@updateLinkVoorPag");
