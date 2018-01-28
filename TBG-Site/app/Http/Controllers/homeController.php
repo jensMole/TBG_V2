@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\HoofdPag;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -9,7 +10,12 @@ class HomeController extends Controller
 
     public function index()
     {
-        return view('welcome');
+        $vidLink = HoofdPag::pluck("vidLink");
+
+        // https://www.youtube.com/watch?v=p44TszdiiA4
+        $newVidLink = substr($vidLink, 37, 11);
+
+        return view('welcome', compact('newVidLink'));
     }
 
 }
