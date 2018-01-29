@@ -16,18 +16,18 @@
             <div class="row">
                 <div class="col-sm-4">
                     <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ljw6g1OMmks" allowfullscreen></iframe>
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[0], 32, 11)}}" allowfullscreen></iframe>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/kO2ZmZrrgn4" allowfullscreen></iframe>
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[1], 32, 11)}}" allowfullscreen></iframe>
                     </div>
                 </div>
                 
                 <div class="col-sm-4">
                     <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/oLCe-irFfWU" allowfullscreen></iframe>
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[2], 32, 11)}}" allowfullscreen></iframe>
                     </div>
                 </div>			
             </div>
@@ -44,17 +44,17 @@
             <div class="row">
                                             <div class="col-sm-4">
                     <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/EphA8dKWM_0" allowfullscreen></iframe>
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[3], 32, 11)}}" allowfullscreen></iframe>
                     </div>
                 </div>
                                             <div class="col-sm-4">
                     <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/_pYsj9ofmUY" allowfullscreen></iframe>
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[4], 32, 11)}}" allowfullscreen></iframe>
                     </div>
                 </div>
                                         <div class="col-sm-4">
                     <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/TetFt66KO1I" allowfullscreen></iframe>
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[5], 32, 11)}}" allowfullscreen></iframe>
                     </div>
                                             </div>
             </div>
