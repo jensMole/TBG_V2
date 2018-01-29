@@ -5,10 +5,10 @@
 @stop
 
 @section('content')
-<section>
+<!-- Home pagina. -->
     <h3>Home pagina</h3>
     <br/>
-
+    <section id="sectionHeadPage">
         <div>
             <!-- Tekst hoofdpagina -->
             <div class="col-sm-3 updateTekstVoorPagina">
@@ -47,8 +47,13 @@
                     <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{$newVidLink}}"></iframe>
                 </div>
             </div>
-        </div>            
-</section>
+        </div>  
+    </section>
+<!-- Home pagina -->
+
+<div>
+    <p>pp</p>
+</div>
 
 <script>
 // Nakijken als je op het begin spatie wilt meegeven.
