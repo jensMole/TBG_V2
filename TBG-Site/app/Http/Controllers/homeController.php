@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-
     public function index()
     {
         //ophalen van de url van de video uit database.
@@ -22,7 +21,6 @@ class HomeController extends Controller
         //terug geven van de view en meegeven van de link.
         return view('welcome', compact('newVidLink','tekst'));
     }
-
 }
 
 ?>
