@@ -20,23 +20,29 @@
                 <li><a href="Planet Coaster.html">Planet Coaster</a></li>
                 <li><a href="Lezen van reacties.html">Lezen van reacties</a></li>
                 <li><a href="extra.html">Extra</a></li>
-            </ul>
-            </li>
-            <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Over <span class="caret"></span></a>
+                <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Minecraft <span class="caret"></span></a>
             <ul class="dropdown-menu">
-                <li><a href="over.html">Over</a></li>
-                <li><a href="mailto: catch-all@thebelgiumgames.be">Contact</a></li>      
+                <li><a href="over.html">Over</a></li>      
             </ul>
             </li>
-            <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Extra <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-                <li><a href="extra.html">Aankondigingen</a></li>
-                <li><a href="Downloads.html">Downloads</a></li>
+                </ul>
+                </li>
+                <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Over <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="over.html">Over</a></li>
+                    <li><a href="mailto: catch-all@thebelgiumgames.be">Contact</a></li>      
+                </ul>
+                </li>
+                <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Extra <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="extra.html">Aankondigingen</a></li>
+                    <li><a href="Downloads.html">Downloads</a></li>
+                </ul>
+                </li>
             </ul>
-            </li>
-        </ul>
-        </div><!--/.nav-collapse -->
-    </div><!--/.container-fluid -->
-</nav>
+            </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+    </nav>
