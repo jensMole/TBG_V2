@@ -13,7 +13,8 @@
 
 // Tonen van de index (voorpagina).
 Route::get('/', 'HomeController@index');
-
+// Video's hoofd pagina.
+Route::get('/video','VideoController@index');
 
 
 // Dashboard
