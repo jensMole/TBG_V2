@@ -57,6 +57,27 @@ class DashboardController extends Controller
         //terugsturen naar dashboard
         return redirect("/dashboard");
     }
+
+    /**
+     * Updaten van de linken van de video's
+     * 
+     * @param  \Illuminate\Http\Request  $request
+     * @param  id $id ophalen van het id dat wordt meegegeven.
+     * @return \Illuminate\Http\Response
+     */
+    public function vidUpdate(Request $request, $id)
+    {
+        // ophalen van gegevens.
+        $GetVideo = Video::find($id+1);
+
+        $sRequest = "vid".$id;
+
+        $GetVideo->VideoLink = request($sRequest);
+
+        $GetVideo->save();
+
+        return redirect("/dashboard");
+    }
 }
 
 ?>

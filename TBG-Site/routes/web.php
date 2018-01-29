@@ -24,3 +24,5 @@ Route::resource('/dashboard','DashBoardController');
 Route::post("updateLinkVidVoorPagina", "DashboardController@updateLinkVoorPag");
 // Updaten tekst frontpage.
 Route::post("updateTekstVoorPagina","DashboardController@updateTekstVoorPag");
+
+Route::post("vidUpdate/{id}","DashboardController@vidUpdate");

@@ -64,11 +64,11 @@
         <br/><br/><br/>
             <!-- Input veld voor link. -->
             <div class="col-sm-2">
-                <form class="centerVidLink" method="post" action="">
+                <form class="centerVidLink" method="post" action="{{action('DashboardController@vidUpdate', 0)}}">
                     <div>
                     {{csrf_field()}}
                         <label id="vid1Label" for="Vid1">Video link: </label><br/>
-                        <input class="vidLink" size="48" name="Vid1" type="text" placeholder="Video link (URL)" id="Vid1" value="{{$vids[0]}}" required/>
+                        <input class="vidLink" size="48" name="vid0" type="text" placeholder="Video link (URL)" id="vid0" value="{{$vids[0]}}" required/>
                     </div>
                     <br/>
                     <button type="submit" value="Submit"  class="submitButton">Opslaan</button>
@@ -84,7 +84,7 @@
         <div>
             <!-- Input veld voor link. -->
             <div class="col-sm-2 centerVidLink">
-                <form class="centerVidLink" method="post" action="">
+                <form class="centerVidLink" method="post" action="vidUpdate">
                     <div>
                     {{csrf_field()}}
                         <label id="vid2Label" for="vid2">Video link: </label><br/>
@@ -104,7 +104,7 @@
         <div>
             <!-- Input veld voor link. -->
             <div class="col-sm-2 centerVidLink">
-                <form class="centerVidLink" method="post" action="">
+                <form class="centerVidLink" method="post" action="vidUpdate">
                     <div>
                     {{csrf_field()}}
                         <label id="vid3Label" for="vid3">Video link: </label><br/>
@@ -130,7 +130,7 @@
         <br/><br/><br/>
             <!-- Input veld voor link. -->
             <div class="col-sm-2">
-                <form class="centerVidLink" method="post" action="">
+                <form class="centerVidLink" method="post" action="vidUpdate">
                     <div>
                     {{csrf_field()}}
                         <label id="vid1Label" for="Vid1">Video link: </label><br/>
@@ -150,7 +150,7 @@
         <div>
             <!-- Input veld voor link. -->
             <div class="col-sm-2 centerVidLink">
-                <form class="centerVidLink" method="post" action="">
+                <form class="centerVidLink" method="post" action="vidUpdate">
                     <div>
                     {{csrf_field()}}
                         <label id="vid2Label" for="vid2">Video link: </label><br/>
@@ -170,7 +170,7 @@
         <div>
             <!-- Input veld voor link. -->
             <div class="col-sm-2 centerVidLink">
-                <form class="centerVidLink" method="post" action="">
+                <form class="centerVidLink" method="post" action="vidUpdate">
                     <div>
                     {{csrf_field()}}
                         <label id="vid3Label" for="vid3">Video link: </label><br/>
