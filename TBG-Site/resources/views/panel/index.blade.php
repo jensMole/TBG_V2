@@ -68,7 +68,7 @@
                     <div>
                     {{csrf_field()}}
                         <label id="vid1Label" for="Vid1">Video link: </label><br/>
-                        <input class="vidLink" size="48" name="Vid1" type="text" placeholder="Video link (URL)" id="Vid1" value="{{$vidLink[0]}}" required/>
+                        <input class="vidLink" size="48" name="Vid1" type="text" placeholder="Video link (URL)" id="Vid1" value="{{$vids[0]}}" required/>
                     </div>
                     <br/>
                     <button type="submit" value="Submit"  class="submitButton">Opslaan</button>
@@ -77,7 +77,7 @@
             <!-- video voorstelling -->
             <div class="col-sm-2">
                 <div class="embed-responsive embed-responsive-16by9 vidFrontDash">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{$newVidLink}}"></iframe>
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[0], 32, 11)}}"></iframe>
                 </div>
             </div>
         </div>
@@ -88,7 +88,7 @@
                     <div>
                     {{csrf_field()}}
                         <label id="vid2Label" for="vid2">Video link: </label><br/>
-                        <input class="vidLink" size="48" name="vid2" type="text" placeholder="Video link (URL)" id="vid2" value="{{$vidLink[0]}}" required/>
+                        <input class="vidLink" size="48" name="vid2" type="text" placeholder="Video link (URL)" id="vid2" value="{{$vids[1]}}" required/>
                     </div>
                     <br/>
                     <button type="submit" value="Submit"  class="submitButton">Opslaan</button>
@@ -97,7 +97,7 @@
             <!-- video voorstelling -->
             <div class="col-sm-2">
                 <div class="embed-responsive embed-responsive-16by9 vidFrontDash">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{$newVidLink}}"></iframe>
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[1], 32, 11)}}"></iframe>
                 </div>
             </div>
         </div>
@@ -108,7 +108,7 @@
                     <div>
                     {{csrf_field()}}
                         <label id="vid3Label" for="vid3">Video link: </label><br/>
-                        <input class="vidLink" size="48" name="vid3" type="text" placeholder="Video link (URL)" id="vid3" value="{{$vidLink[0]}}" required/>
+                        <input class="vidLink" size="48" name="vid3" type="text" placeholder="Video link (URL)" id="vid3" value="{{$vids[2]}}" required/>
                     </div>
                     <br/>
                     <button type="submit" value="Submit"  class="submitButton">Opslaan</button>
@@ -117,7 +117,7 @@
             <!-- video voorstelling -->
             <div class="col-sm-2">
                 <div class="embed-responsive embed-responsive-16by9 vidFrontDash">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{$newVidLink}}"></iframe>
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[2], 32, 11)}}"></iframe>
                 </div>
             </div>
         </div>
@@ -134,7 +134,7 @@
                     <div>
                     {{csrf_field()}}
                         <label id="vid1Label" for="Vid1">Video link: </label><br/>
-                        <input class="vidLink" size="48" name="Vid1" type="text" placeholder="Video link (URL)" id="Vid1" value="{{$vidLink[0]}}" required/>
+                        <input class="vidLink" size="48" name="Vid1" type="text" placeholder="Video link (URL)" id="Vid1" value="{{$vids[3]}}" required/>
                     </div>
                     <br/>
                     <button type="submit" value="Submit"  class="submitButton">Opslaan</button>
@@ -143,7 +143,7 @@
             <!-- video voorstelling -->
             <div class="col-sm-2">
                 <div class="embed-responsive embed-responsive-16by9 vidFrontDash">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{$newVidLink}}"></iframe>
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[3], 32, 11)}}"></iframe>
                 </div>
             </div>
         </div>
@@ -154,7 +154,7 @@
                     <div>
                     {{csrf_field()}}
                         <label id="vid2Label" for="vid2">Video link: </label><br/>
-                        <input class="vidLink" size="48" name="vid2" type="text" placeholder="Video link (URL)" id="vid2" value="{{$vidLink[0]}}" required/>
+                        <input class="vidLink" size="48" name="vid2" type="text" placeholder="Video link (URL)" id="vid2" value="{{$vids[4]}}" required/>
                     </div>
                     <br/>
                     <button type="submit" value="Submit"  class="submitButton">Opslaan</button>
@@ -163,7 +163,7 @@
             <!-- video voorstelling -->
             <div class="col-sm-2">
                 <div class="embed-responsive embed-responsive-16by9 vidFrontDash">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{$newVidLink}}"></iframe>
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[4], 32, 11)}}"></iframe>
                 </div>
             </div>
         </div>
@@ -174,7 +174,7 @@
                     <div>
                     {{csrf_field()}}
                         <label id="vid3Label" for="vid3">Video link: </label><br/>
-                        <input class="vidLink" size="48" name="vid3" type="text" placeholder="Video link (URL)" id="vid3" value="{{$vidLink[0]}}" required/>
+                        <input class="vidLink" size="48" name="vid3" type="text" placeholder="Video link (URL)" id="vid3" value="{{$vids[5]}}" required/>
                     </div>
                     <br/>
                     <button type="submit" value="Submit"  class="submitButton">Opslaan</button>
@@ -183,7 +183,7 @@
             <!-- video voorstelling -->
             <div class="col-sm-2">
                 <div class="embed-responsive embed-responsive-16by9 vidFrontDash">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{$newVidLink}}"></iframe>
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[5], 32, 11)}}"></iframe>
                 </div>
             </div>
         </div>

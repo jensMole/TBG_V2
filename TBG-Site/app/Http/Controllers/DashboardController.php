@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\HoofdPag;
+use App\Video;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -12,12 +13,13 @@ class DashboardController extends Controller
         //ophalen van de url van de video uit database.
         $vidLink = HoofdPag::pluck("vidLink");
         $tekstFront = HoofdPag::pluck("tekstFrontPage");
+        $vids = Video::pluck('VideoLink');
 
         // https://www.youtube.com/watch?v=p44TszdiiA4
         //url omvormen naar vb. p44TszdiiA4.
         $newVidLink = substr($vidLink, 37, 11);
  
-        return view('panel.index', compact('vidLink','newVidLink','tekstFront'));
+        return view('panel.index', compact('vidLink','newVidLink','tekstFront','vids'));
     }
 
     /**
