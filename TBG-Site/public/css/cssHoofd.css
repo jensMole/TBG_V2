@@ -378,7 +378,7 @@ h3{
 	text-align: center;
 }
 
-#vidLink{
+.vidLink{
 	color: black;
 	width: 100%;
     padding: 12px 10px;
@@ -398,7 +398,7 @@ h3{
     display: inline-block;
 }
 
-#vidLinkTekst, #tekstFronpage{
+#vidLinkTekst, #tekstFronpage, #vid1Label, #vid2Label, #vid3Label{
 	font-size: 130%;
 }
 
@@ -407,6 +407,12 @@ h3{
     border-width: 5px;
 	border-color: gray;
 	margin-top: -40px;
+}
+
+.vid{
+	border-style: solid;
+    border-width: 5px;
+	border-color: gray;
 }
 
 .hoofdPag{
@@ -430,6 +436,19 @@ h3{
 	color: black;
 	z-index: 1000;
 	/* resize: none; */
+}
+
+#sectionVideosHomeMinecraft{
+	margin-bottom: 30px;
+	overflow: auto;
+}
+
+.rijOneven{
+	margin-top: 50px;
+}
+
+.rijen{
+	margin: 0 auto;
 }
 
 hr {
