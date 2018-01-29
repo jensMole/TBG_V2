@@ -2,4 +2,4 @@
 
 @section('title', 'Error')
 
-@section('message', 'Too many requests.')
+@section('message', 'Te veel verzoeken.')

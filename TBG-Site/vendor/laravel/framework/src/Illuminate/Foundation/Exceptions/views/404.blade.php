@@ -1,5 +1,5 @@
 @extends('errors::layout')
 
-@section('title', 'Page Not Found')
+@section('title', 'Pagina Niet Gevonden')
 
-@section('message', 'Sorry, the page you are looking for could not be found.')
+@section('message', 'De pagina die je zocht werd niet gevonden :( ')

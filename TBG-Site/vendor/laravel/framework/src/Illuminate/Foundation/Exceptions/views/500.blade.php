@@ -2,4 +2,4 @@
 
 @section('title', 'Error')
 
-@section('message', 'Whoops, looks like something went wrong.')
+@section('message', 'Whoops, het lijkt er op dat er een fout is opgetreden.')

@@ -1,9 +1,9 @@
 @extends('errors::layout')
 
-@section('title', 'Page Expired')
+@section('title', 'Pagina verlopen')
 
 @section('message')
-    The page has expired due to inactivity.
+    De pagina was onverwachts verdwenen ...
     <br/><br/>
-    Please refresh and try again.
+    Probeer het later opnieuw.
 @stop
