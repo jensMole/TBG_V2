@@ -11,8 +11,8 @@
 
     <div>
         <!-- Tekst hoofdpagina -->
-        <div class="col-sm-3" class="hoofdPag">
-            <form  class="centerVidLink" method="post" action="">
+        <div class="col-sm-3" class="updateTekstVoorPagina">
+            <form  class="centerVidLink" method="post" action="updateTekstVoorPagina">
                 <div>
                 {{csrf_field()}}
                     <label id="tekstFronpage" for="tekstFronpage">Tekst hoofdpagina: </label>
@@ -23,7 +23,7 @@
             </form> 
         </div>
     </div>   
-
+    <!-- Tonen van de tekst -->
     <div class="col-sm-3" id="tekstFrontVoorbeeld">
         <?= htmlspecialchars_decode($tekstFront[0]);?>
     </div>
@@ -49,4 +49,21 @@
         </div>
     <div>               
 </section>
+
+<script>
+// Nakijken als je op het begin spatie wilt meegeven.
+$(function() {
+  $('body').on('keydown', '#vidLink', function(e) {
+    if (e.which === 32 &&  e.target.selectionStart === 0) {
+      return false;
+    }
+  });
+
+  $('body').on('keydown', '#tekstFronpageEdit', function(e) {
+    if (e.which === 32 &&  e.target.selectionStart === 0) {
+      return false;
+    }
+  });
+});
+</script>
 @endsection

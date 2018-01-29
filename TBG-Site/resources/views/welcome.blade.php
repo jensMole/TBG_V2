@@ -25,22 +25,9 @@
     <!-- Tekst -->
     <div>
         <div class="col-sm-6">
-            <p id="uitleg">
-                <strong>! Nieuwe website in aanbouw !</strong><br/><br/>
-                Hallo en welkom op de website van The BelgiumGames.<br/>
-                Deze website gaat over de YouTuber Jens en zijn video's.<br/><br/>
-                Wie is Jens? Hij is een Belgische YouTuber die voor jouw video's maakt over Minecraft en andere games.<br/>
-                Wat kun je verwachten op deze website? Meer info over de video's van Jens, zoals wanneer er een video uitkomt en dan ook nog meer info over Jens zelf.<br/>
-                <br/>
-                De video's die ik maak zijn vaak tutorials en behulpzame video's.<br/>
-                Geniet van de video's en ook van je dag.<br/><br/>
-                
-                De <a href="https://www.thebelgiumgames.be/over.html"><strong>over pagina</strong></a> met info over Jens en Jasper is nu ook up-to-date :)<br/>
-                
-                Meer info over opkomende video's kan je vinden op de <a href="https://www.thebelgiumgames.be/extra.html">aankondigings</a> pagina.<br/><br/>
-                
-                Dit is de vernieuwde site van Thebelgiumgames gesponserd door Badskinsgarden.<br/><br/>
-                
+            <p id="uitleg">   
+                <!-- Tekst binnenhalen en tonen. -->
+                <?= htmlspecialchars_decode($tekst[0]);?>
             </p>
         </div>
         

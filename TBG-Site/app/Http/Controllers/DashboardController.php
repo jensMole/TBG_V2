@@ -20,6 +20,12 @@ class DashboardController extends Controller
         return view('panel.index', compact('vidLink','newVidLink','tekstFront'));
     }
 
+    /**
+     * Updaten van de link voor de frontVideo.
+     * 
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
     public function updateLinkVoorPag(Request $request)
     {
         //link ophalen uit database
@@ -28,6 +34,24 @@ class DashboardController extends Controller
         $vidLinkGet->vidLink = request("vidLink");
         //opslaan.
         $vidLinkGet->save();
+        //terugsturen naar dashboard
+        return redirect("/dashboard");
+    }
+
+    /**
+     * Updaten tekst voor frontpag.
+     * 
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function updateTekstVoorPag(Request $request)
+    {
+        // ophalen van gegevens.
+        $GetTekst = HoofdPag::find(1);
+        // Ophalen gegevens die je hebt ingevuld.
+        $GetTekst->tekstFrontPage = request("tekstFronpage");
+        // Opslaan.
+        $GetTekst->save();
         //terugsturen naar dashboard
         return redirect("/dashboard");
     }
