@@ -109,7 +109,7 @@ body{
 iframe{
 	position:relative;
 	border-color: black;
-	position: center;
+	/* position: center; */
 	padding: 0px;
 }
 
@@ -382,8 +382,8 @@ h3{
 	color: black;
 	width: 100%;
     padding: 12px 10px;
-    margin: 8px 0;
-    box-sizing: border-box;
+	margin: 8px 0;
+	box-sizing: border-box;
 }
 
 .submitButton{
@@ -465,6 +465,10 @@ hr {
 	color: #bbbbbb;
 	text-decoration: none;
 }
+
+.vids{
+	margin-top: 0px;
+}
 /* Dashboard */
 
 
@@ -491,11 +495,6 @@ a{
 
 a:hover{
 	color:white;
-}
-
-.counter{
-        float: center;
-        position: center;
 }
 
 .copy{
