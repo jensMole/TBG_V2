@@ -456,6 +456,15 @@ hr {
     height: 4px;
 	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
+
+.notLink{
+	color: #bbbbbb;
+}
+
+.notLink:hover{
+	color: #bbbbbb;
+	text-decoration: none;
+}
 /* Dashboard */
 
 

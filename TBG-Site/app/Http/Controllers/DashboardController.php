@@ -68,15 +68,13 @@ class DashboardController extends Controller
     public function vidUpdate(Request $request, $id)
     {
         // ophalen van gegevens.
-        $GetVideo = Video::find($id+1);
-
-        $sRequest = "vid".$id;
-
-        $GetVideo->VideoLink = request($sRequest);
-
+        $GetVideo = Video::find($id);
+        // gegevens die je hebt ingevoerd ophalen.
+        $GetVideo->VideoLink = request("vid".$id);
+        // Opslaan.
         $GetVideo->save();
-
-        return redirect("/dashboard");
+        // Terugsturen naar de pagina in het video segment.
+        return redirect("/dashboard#videoLink");
     }
 }
 
