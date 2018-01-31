@@ -16,6 +16,14 @@ Route::get('/', 'HomeController@index');
 // Video's hoofd pagina.
 Route::get('/video','VideoController@index');
 
+// Minecraft video indeling.
+Route::get('/plugins','MinecraftVidsController@plugins');
+Route::get('/mods','MinecraftVidsController@mods');
+Route::get('/maps','MinecraftVidsController@maps');
+Route::get('/minigames','MinecraftVidsController@minigames');
+Route::get('/tutorials','MinecraftVidsController@tutorials');
+Route::get('/snapshots','MinecraftVidsController@snapshots');
+
 
 // Dashboard
 // Tonen van het dashboard.
