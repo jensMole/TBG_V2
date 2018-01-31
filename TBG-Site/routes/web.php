@@ -19,10 +19,13 @@ Route::get('/video','VideoController@index');
 
 // Dashboard
 // Tonen van het dashboard.
+Route::get('/dashboard/minecraft','DashBoardController@minecraft');
+Route::get('/dashboard/andere','DashBoardController@andere');
 Route::resource('/dashboard','DashBoardController');
+
 // updaten van de video link van voorpagina.
 Route::post("updateLinkVidVoorPagina", "DashboardController@updateLinkVoorPag");
 // Updaten tekst frontpage.
 Route::post("updateTekstVoorPagina","DashboardController@updateTekstVoorPag");
-
+// Video's die geupdate moeten worden.
 Route::post("vidUpdate/{id}","DashboardController@vidUpdate");

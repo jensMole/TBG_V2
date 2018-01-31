@@ -60,7 +60,7 @@
     <h3><a class="notLink" id="videoLink">Video's home pagina</a></h3>
     <div class="row rijen">
         <div>
-        <h3>Minecraft Video's</h3>
+        <h3><a href="/dashboard/minecraft">Minecraft Video's</a></h3>
         <br/><br/><br/>
             <!-- Input veld voor link. -->
             <div class="col-sm-2">
@@ -126,7 +126,7 @@
     <!-- Tweede deel -->
     <div class="row rijen">
         <div>
-        <h3>Andere Video's</h3>
+        <h3><a href="/dashboard/andere">Andere Video's</a></h3>
         <br/><br/><br/>
             <!-- Input veld voor link. -->
             <div class="col-sm-2">

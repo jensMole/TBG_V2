@@ -12,7 +12,9 @@
         <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
             <!-- class="active" -->
-            <li><a href="">Home</a></li>
+            <li><a href="/dashboard">Home</a></li>
+            <li><a href="/dashboard/minecraft">Minecraft</a></li>
+            <li><a href="/dashboard/andere">Andere</a></li>
             <li><a href="/">Ga naar front page</a></li>
         </ul>
         </div><!--/.nav-collapse -->

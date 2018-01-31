@@ -22,6 +22,21 @@ class DashboardController extends Controller
         return view('panel.index', compact('vidLink','newVidLink','tekstFront','vids'));
     }
 
+    public function minecraft()
+    {
+        
+
+        return view('panel.minecraftVids');
+    }
+
+
+    public function andere()
+    {
+        
+
+        return view('panel.andereVids');
+    }
+
     /**
      * Updaten van de link voor de frontVideo.
      * 
