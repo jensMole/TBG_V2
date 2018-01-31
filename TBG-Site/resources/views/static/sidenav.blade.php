@@ -24,7 +24,7 @@
                                 </ul>
 
                             </li>
-                            <li><a href="Andere.html">Andere</a><span class="caret"></span></a>
+                            <li><a href="Andere.html">Andere<span class="caret"></span></a>
                                 
                                 <!-- Dit moet dan verder aangevuld worden -->
                                 <ul class="dropdown-menu">
