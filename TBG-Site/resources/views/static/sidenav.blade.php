@@ -20,7 +20,12 @@
                                
                                 <!-- Dit moet dan verder aangevuld worden -->
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">Action</a></li>
+                                    <li><a href="/plugins">Plugin's</a></li>
+                                    <li><a href="/mods">Mod's</a></li>
+                                    <li><a href="/maps">Map's</a></li>
+                                    <li><a href="/minigames">Minigames</a></li>
+                                    <li><a href="/tutorials">Toturials</a></li>
+                                    <li><a href="/snapshots">Snapshots</a></li>
                                 </ul>
 
                             </li>
@@ -28,9 +33,10 @@
                                 
                                 <!-- Dit moet dan verder aangevuld worden -->
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Planet Coaster</a></li>
+                                    <li><a href="#">Lezen van reacties</a></li>
                                 </ul>
-
+                                
                             </li>
                         </ul>
                     </li>
