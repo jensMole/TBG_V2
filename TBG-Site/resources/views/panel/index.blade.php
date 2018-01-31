@@ -215,4 +215,28 @@ $(function() {
     });
 });
 </script>
+
+
+<button onclick="topFunction()" id="Top" title="Go to top">Naar boven</button>
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+        document.getElementById("Top").style.display = "block";
+    } else {
+        document.getElementById("Top").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+
+
+
 @endsection
