@@ -217,7 +217,8 @@ $(function() {
 </script>
 
 
-<button onclick="topFunction()" id="Top" title="Go to top">Naar boven</button>
+<!-- <button onclick="topFunction()" id="Top" title="Go to top">Naar boven</button> -->
+<img onclick="topFunction()" id="Top" src="afbeeldingen\boven.png" alt="Mountain View">
 <script>
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
