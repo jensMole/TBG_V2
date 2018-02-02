@@ -103,9 +103,30 @@ class DashboardController extends Controller
     //  TODO segment aanmaken en meegeven.
     public function vidUpdateMinecraft(Request $request, $id)
     {
-        //we gaan de gegevens wat worden meegegeven gaan opsplitsen.
-        // Dus bv. 19.2 wordt 19 en 2.
-        $idSegment = explode('.', $id);
+
+        switch($id){
+
+            case 1:
+                $icounter = 7;
+
+                for( $i = 0; $i < 4; $i++){
+                    // ophalen van gegevens.
+                    $GetVideo = Video::find($icounter);
+                    // gegevens die je hebt ingevoerd ophalen.
+                    $GetVideo->VideoLink = request("vid".$icounter);
+                    // Opslaan.
+                    $GetVideo->save();
+                    // Optellen van de counter voor de volgende video.
+                    $icounter++;
+                }
+
+                // Terugsturen naar de pagina in het video segment.
+                return redirect("/dashboard/minecraft/#$id");
+
+                break;
+
+        }
+
 
         // ophalen van gegevens.
         $GetVideo = Video::find($idSegment[0]);
