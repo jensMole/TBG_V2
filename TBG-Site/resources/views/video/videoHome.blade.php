@@ -10,7 +10,7 @@
     <!-- Minecraft video's -->
     <div id="Minecraft">
         
-        <a href="Minecraft.html"><h1 id="Mine">Minecraft</h1></a>
+        <a href="/plugins"><h1 id="Mine">Minecraft</h1></a>
         
         <div class="container">
             <div class="row">
@@ -38,7 +38,7 @@
     <!-- Andere video's -->
     <div id="Andere">
         
-        <a href="Andere.html"><h1 id="Ander">Andere</h1></a>
+        <a href="/planetcoaster"><h1 id="Ander">Andere</h1></a>
         
         <div class="container">
             <div class="row">

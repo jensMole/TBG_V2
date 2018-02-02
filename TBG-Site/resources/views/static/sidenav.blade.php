@@ -16,7 +16,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Video's <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="/video">Video's</a></li>
-                            <li><a href="">Minecraft<span class="caret"></span></a>
+                            <li><a href="/plugins">Minecraft<span class="caret"></span></a>
                                
                                 <!-- Dit moet dan verder aangevuld worden -->
                                 <ul class="dropdown-menu">
