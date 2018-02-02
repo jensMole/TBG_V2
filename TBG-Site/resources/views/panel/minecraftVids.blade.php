@@ -16,7 +16,7 @@
     <div>
     <br/>
         <!-- Input veld voor link. -->
-        <div class="col-sm-3">
+        <div class="col-sm-3 labelsVids">
             <form class="centerVidLink" method="post" action="{{action('DashboardController@vidUpdateMinecraft', '7.1')}}">
                 <div>
                 {{csrf_field()}}
@@ -42,7 +42,7 @@
             </div>
         </div>
         <!-- Input veld voor link. -->
-        <div class="col-sm-3 centerVidLink">
+        <div class="col-sm-3 labelsVids">
             <form class="centerVidLink" method="post" action="{{action('DashboardController@vidUpdateMinecraft', '8.1')}}">
                 <div>
                 {{csrf_field()}}
@@ -61,7 +61,7 @@
     <div>
     <br/>
         <!-- Input veld voor link. -->
-        <div class="col-sm-3">
+        <div class="col-sm-3 labelsVids">
             <form class="centerVidLink" method="post" action="{{action('DashboardController@vidUpdateMinecraft', '9.1')}}">
                 <div>
                 {{csrf_field()}}
@@ -87,7 +87,7 @@
             </div>
         </div>
         <!-- Input veld voor link. -->
-        <div class="col-sm-3 centerVidLink">
+        <div class="col-sm-3 labelsVids">
             <form class="centerVidLink" method="post" action="{{action('DashboardController@vidUpdateMinecraft', '10.1')}}">
                 <div>
                 {{csrf_field()}}
@@ -111,7 +111,7 @@
     <div>
     <br/>
         <!-- Input veld voor link. -->
-        <div class="col-sm-3">
+        <div class="col-sm-3 labelsVids">
             <form class="centerVidLink" method="post" action="{{action('DashboardController@vidUpdateMinecraft', '11.2')}}">
                 <div>
                 {{csrf_field()}}
@@ -137,7 +137,7 @@
             </div>
         </div>
         <!-- Input veld voor link. -->
-        <div class="col-sm-3 centerVidLink">
+        <div class="col-sm-3 labelsVids">
             <form class="centerVidLink" method="post" action="{{action('DashboardController@vidUpdateMinecraft', '12.2')}}">
                 <div>
                 {{csrf_field()}}
@@ -156,7 +156,7 @@
     <div>
     <br/>
         <!-- Input veld voor link. -->
-        <div class="col-sm-3">
+        <div class="col-sm-3 labelsVids">
             <form class="centerVidLink" method="post" action="{{action('DashboardController@vidUpdateMinecraft', '13.2')}}">
                 <div>
                 {{csrf_field()}}
@@ -182,7 +182,7 @@
             </div>
         </div>
         <!-- Input veld voor link. -->
-        <div class="col-sm-3 centerVidLink">
+        <div class="col-sm-3 labelsVids">
             <form class="centerVidLink" method="post" action="{{action('DashboardController@vidUpdateMinecraft', '14.2')}}">
                 <div>
                 {{csrf_field()}}
@@ -206,7 +206,7 @@
     <div>
     <br/>
         <!-- Input veld voor link. -->
-        <div class="col-sm-3">
+        <div class="col-sm-3 labelsVids">
             <form class="centerVidLink" method="post" action="{{action('DashboardController@vidUpdateMinecraft', '15.3')}}">
                 <div>
                 {{csrf_field()}}
@@ -232,7 +232,7 @@
             </div>
         </div>
         <!-- Input veld voor link. -->
-        <div class="col-sm-3 centerVidLink">
+        <div class="col-sm-3 labelsVids">
             <form class="centerVidLink" method="post" action="{{action('DashboardController@vidUpdateMinecraft', '16.3')}}">
                 <div>
                 {{csrf_field()}}
@@ -246,12 +246,13 @@
     </div>
 </div>
 
-<!-- TODO CSS -->
 <div class="row rijen">
     <div>
     <br/>
-        <!-- Input veld voor link. -->
         <div class="col-sm-3">
+        </div>
+        <!-- Input veld voor link. -->
+        <div class="col-sm-3 labelsVids">
             <form class="centerVidLink" method="post" action="{{action('DashboardController@vidUpdateMinecraft', '17.3')}}">
                 <div>
                 {{csrf_field()}}
@@ -268,6 +269,8 @@
                 <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[16], 32, 11)}}"></iframe>
             </div>
         </div>
+        <div class="col-sm-3">
+        </div>
     </div>
 </div>
 
@@ -281,7 +284,7 @@
     <div>
     <br/>
         <!-- Input veld voor link. -->
-        <div class="col-sm-3">
+        <div class="col-sm-3 labelsVids">
             <form class="centerVidLink" method="post" action="{{action('DashboardController@vidUpdateMinecraft', '18.4')}}">
                 <div>
                 {{csrf_field()}}
@@ -307,7 +310,7 @@
             </div>
         </div>
         <!-- Input veld voor link. -->
-        <div class="col-sm-3 centerVidLink">
+        <div class="col-sm-3 labelsVids">
             <form class="centerVidLink" method="post" action="{{action('DashboardController@vidUpdateMinecraft', '19.4')}}">
                 <div>
                 {{csrf_field()}}
@@ -325,8 +328,10 @@
 <div class="row rijen">
     <div>
     <br/>
-        <!-- Input veld voor link. -->
         <div class="col-sm-3">
+        </div>
+        <!-- Input veld voor link. -->
+        <div class="col-sm-3 labelsVids">
             <form class="centerVidLink" method="post" action="{{action('DashboardController@vidUpdateMinecraft', '20.4')}}">
                 <div>
                 {{csrf_field()}}
@@ -343,6 +348,8 @@
                 <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[19], 32, 11)}}"></iframe>
             </div>
         </div>
+        <div class="col-sm-3">
+        </div>
     </div>
 </div>
 
@@ -356,7 +363,7 @@
     <div>
     <br/>
         <!-- Input veld voor link. -->
-        <div class="col-sm-3">
+        <div class="col-sm-3 labelsVids">
             <form class="centerVidLink" method="post" action="{{action('DashboardController@vidUpdateMinecraft', '21.5')}}">
                 <div>
                 {{csrf_field()}}
@@ -382,7 +389,7 @@
             </div>
         </div>
         <!-- Input veld voor link. -->
-        <div class="col-sm-3 centerVidLink">
+        <div class="col-sm-3 labelsVids">
             <form class="centerVidLink" method="post" action="{{action('DashboardController@vidUpdateMinecraft', '22.5')}}">
                 <div>
                 {{csrf_field()}}
@@ -401,7 +408,7 @@
     <div>
     <br/>
         <!-- Input veld voor link. -->
-        <div class="col-sm-3">
+        <div class="col-sm-3 labelsVids">
             <form class="centerVidLink" method="post" action="{{action('DashboardController@vidUpdateMinecraft', '23.5')}}">
                 <div>
                 {{csrf_field()}}
@@ -427,7 +434,7 @@
             </div>
         </div>
         <!-- Input veld voor link. -->
-        <div class="col-sm-3 centerVidLink">
+        <div class="col-sm-3 labelsVids">
             <form class="centerVidLink" method="post" action="{{action('DashboardController@vidUpdateMinecraft', '24.5')}}">
                 <div>
                 {{csrf_field()}}
@@ -452,7 +459,7 @@
     <div>
     <br/>
         <!-- Input veld voor link. -->
-        <div class="col-sm-3">
+        <div class="col-sm-3 labelsVids">
             <form class="centerVidLink" method="post" action="{{action('DashboardController@vidUpdateMinecraft', '25.6')}}">
                 <div>
                 {{csrf_field()}}
@@ -478,7 +485,7 @@
             </div>
         </div>
         <!-- Input veld voor link. -->
-        <div class="col-sm-3 centerVidLink">
+        <div class="col-sm-3 labelsVids">
             <form class="centerVidLink" method="post" action="{{action('DashboardController@vidUpdateMinecraft', '26.6')}}">
                 <div>
                 {{csrf_field()}}
@@ -497,7 +504,7 @@
     <div>
     <br/>
         <!-- Input veld voor link. -->
-        <div class="col-sm-3">
+        <div class="col-sm-3 labelsVids">
             <form class="centerVidLink" method="post" action="{{action('DashboardController@vidUpdateMinecraft', '27.6')}}">
                 <div>
                 {{csrf_field()}}
@@ -523,7 +530,7 @@
             </div>
         </div>
         <!-- Input veld voor link. -->
-        <div class="col-sm-3 centerVidLink">
+        <div class="col-sm-3 labelsVids">
             <form class="centerVidLink" method="post" action="{{action('DashboardController@vidUpdateMinecraft', '28.6')}}">
                 <div>
                 {{csrf_field()}}

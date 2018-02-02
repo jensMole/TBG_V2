@@ -469,7 +469,11 @@ hr {
 }
 
 .vids{
-	margin-top: 0px;
+	margin-top: 10px;
+}
+
+.labelsVids{
+	padding-top: 40px;
 }
 /* Dashboard */
 
