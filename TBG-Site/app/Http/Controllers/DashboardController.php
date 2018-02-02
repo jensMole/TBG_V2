@@ -24,16 +24,12 @@ class DashboardController extends Controller
 
     public function minecraft()
     {
-        
-
         return view('panel.minecraftVids');
     }
 
 
     public function andere()
     {
-        
-
         return view('panel.andereVids');
     }
 

@@ -34,7 +34,9 @@
                                 <!-- Dit moet dan verder aangevuld worden -->
                                 <ul class="dropdown-menu">
                                     <li><a href="#">Planet Coaster</a></li>
-                                    <li><a href="#">Lezen van reacties</a></li>
+                                    <li><a href="#">Hoe maak je plugins</a></li>
+                                    <li><a href="#">Hoe maak je websites</a></li>
+                                    <li><a href="#">Lezen van reacties & andere</a></li>
                                 </ul>
                                 
                             </li>

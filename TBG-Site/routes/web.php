@@ -37,3 +37,5 @@ Route::post("updateLinkVidVoorPagina", "DashboardController@updateLinkVoorPag");
 Route::post("updateTekstVoorPagina","DashboardController@updateTekstVoorPag");
 // Video's die geupdate moeten worden.
 Route::post("vidUpdate/{id}","DashboardController@vidUpdate");
+// Video's die geupdate moeten worden.
+Route::post("vidUpdateMinecraft/{id}","MinecraftVidsController@vidUpdateMinecraft");
