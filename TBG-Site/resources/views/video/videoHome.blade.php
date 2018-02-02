@@ -14,18 +14,18 @@
         
         <div class="container">
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-sm-4 vids">
                     <div class="embed-responsive embed-responsive-16by9">
                         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[0], 32, 11)}}" allowfullscreen></iframe>
                     </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-4 vids">
                     <div class="embed-responsive embed-responsive-16by9">
                         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[1], 32, 11)}}" allowfullscreen></iframe>
                     </div>
                 </div>
                 
-                <div class="col-sm-4">
+                <div class="col-sm-4 vids">
                     <div class="embed-responsive embed-responsive-16by9">
                         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[2], 32, 11)}}" allowfullscreen></iframe>
                     </div>
@@ -42,17 +42,17 @@
         
         <div class="container">
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-sm-4 vids">
                     <div class="embed-responsive embed-responsive-16by9">
                         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[3], 32, 11)}}" allowfullscreen></iframe>
                     </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-4 vids">
                     <div class="embed-responsive embed-responsive-16by9">
                         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[4], 32, 11)}}" allowfullscreen></iframe>
                     </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-4 vids">
                     <div class="embed-responsive embed-responsive-16by9">
                         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[5], 32, 11)}}" allowfullscreen></iframe>
                     </div>
