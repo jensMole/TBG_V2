@@ -539,7 +539,7 @@
 
 <br><br><br>
 
-<img onclick="topFunction()" id="Top" src="../afbeeldingen/boven.png" alt="Ga naar boven">
+<img onclick="topFunction()" id="Top" src="../../afbeeldingen/boven.png" alt="Ga naar boven">
 
 <script>
 // When the user scrolls down 20px from the top of the document, show the button
