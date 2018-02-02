@@ -13,24 +13,24 @@
         <div class="row">
             <div class="col-sm-6">
                 <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/hnkZrPTbDA8"></iframe>
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[6], 32, 11)}}"></iframe>
                 </div>
             </div>
             <div class="col-sm-6">
                 <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/GnKiTSu7ILc"></iframe>
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[7], 32, 11)}}"></iframe>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-sm-6">
                 <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/T82Uge_qyn4"></iframe>
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[8], 32, 11)}}"></iframe>
                 </div>
             </div>
             <div class="col-sm-6">
                 <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Hp5h6BxgAf8"></iframe>
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[9], 32, 11)}}"></iframe>
                 </div>
             </div>
         </div>

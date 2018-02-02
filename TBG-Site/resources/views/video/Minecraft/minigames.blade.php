@@ -13,7 +13,7 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/BktjcMmzGg4"></iframe>
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[17], 32, 11)}}"></iframe>
                 </div>
             </div>
             
@@ -21,12 +21,12 @@
         <div class="row">
                                         <div class="col-sm-6">
                 <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/VZHcUqYNC00"></iframe>
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[18], 32, 11)}}"></iframe>
                 </div>
             </div>
             <div class="col-sm-6">
                 <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/qLBSnXenLoc"></iframe>
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[19], 32, 11)}}"></iframe>
                 </div>
             </div>
         </div>
