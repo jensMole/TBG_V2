@@ -24,7 +24,10 @@ class DashboardController extends Controller
 
     public function minecraft()
     {
-        return view('panel.minecraftVids');
+        //afhalen van gegevens (video linken).
+        $vids = Video::pluck('VideoLink');
+
+        return view('panel.minecraftVids', compact('vids'));
     }
 
 
@@ -86,6 +89,28 @@ class DashboardController extends Controller
         $GetVideo->save();
         // Terugsturen naar de pagina in het video segment.
         return redirect("/dashboard#videoLink");
+    }
+
+
+    /**
+     * Updaten van de linken van de video's
+     * 
+     * @param  \Illuminate\Http\Request  $request
+     * @param  id $id ophalen van het id dat wordt meegegeven.
+     * @return \Illuminate\Http\Response
+     */
+
+    //  TODO segment aanmaken en meegeven.
+    public function vidUpdateMinecraft(Request $request, $id)
+    {
+        // ophalen van gegevens.
+        $GetVideo = Video::find($id);
+        // gegevens die je hebt ingevoerd ophalen.
+        $GetVideo->VideoLink = request("vid".$id);
+        // Opslaan.
+        $GetVideo->save();
+        // Terugsturen naar de pagina in het video segment.
+        return redirect("/dashboard/minecraft");
     }
 }
 
