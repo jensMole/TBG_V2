@@ -542,6 +542,14 @@
 <img onclick="topFunction()" id="Top" src="../../afbeeldingen/boven.png" alt="Ga naar boven">
 
 <script>
+$(function() {
+    $('body').on('keydown', '.vidLink', function(e) {
+        if (e.which === 32 &&  e.target.selectionStart === 0) {
+        return false;
+        }
+    });
+});
+
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
 
