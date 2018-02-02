@@ -81,13 +81,30 @@ class DashboardController extends Controller
      */
     public function vidUpdate(Request $request, $id)
     {
-        // ophalen van gegevens.
-        $GetVideo = Video::find($id);
-        // gegevens die je hebt ingevoerd ophalen.
-        $GetVideo->VideoLink = request("vid".$id);
-        // Opslaan.
-        $GetVideo->save();
-        // Terugsturen naar de pagina in het video segment.
+        // Nakijken waar je zit met het updaten van de video's.
+        switch($id){
+
+            case 1:
+                $icounter = 1;
+                break;
+
+            case 2:
+                $icounter = 4;
+                break;
+
+        }
+
+        for( $i = 0; $i < 3; $i++){
+            // ophalen van gegevens.
+            $GetVideo = Video::find($icounter);
+            // gegevens die je hebt ingevoerd ophalen.
+            $GetVideo->VideoLink = request("vid".$icounter);
+            // Opslaan.
+            $GetVideo->save();
+            // Optellen van de counter voor de volgende video.
+            $icounter++;
+        }    
+
         return redirect("/dashboard#videoLink");
     }
 
@@ -103,7 +120,7 @@ class DashboardController extends Controller
     //  TODO segment aanmaken en meegeven.
     public function vidUpdateMinecraft(Request $request, $id)
     {
-
+        // Nakijken waar je zit met het updaten van de video's.
         switch($id){
 
             case 1:
@@ -132,6 +149,7 @@ class DashboardController extends Controller
 
         }
 
+        // Voor de delen met enkel 3 video's.
         if($icounter == 15 || $icounter == 18){
             for( $i = 0; $i < 3; $i++){
                 // ophalen van gegevens.
@@ -156,7 +174,6 @@ class DashboardController extends Controller
             }    
         }
 
-       
         // Terugsturen naar de pagina in het video segment.
         return redirect("/dashboard/minecraft/#$id");
     }
