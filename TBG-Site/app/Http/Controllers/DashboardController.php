@@ -108,34 +108,57 @@ class DashboardController extends Controller
 
             case 1:
                 $icounter = 7;
+                break;
 
-                for( $i = 0; $i < 4; $i++){
-                    // ophalen van gegevens.
-                    $GetVideo = Video::find($icounter);
-                    // gegevens die je hebt ingevoerd ophalen.
-                    $GetVideo->VideoLink = request("vid".$icounter);
-                    // Opslaan.
-                    $GetVideo->save();
-                    // Optellen van de counter voor de volgende video.
-                    $icounter++;
-                }
+            case 2:
+                $icounter = 11;
+                break;
+            
+            case 3:
+                $icounter = 15;
+                break;
+                
+            case 4:
+                $icounter = 18;
+                break;
+            
+            case 5:
+                $icounter = 21;
+                break;
 
-                // Terugsturen naar de pagina in het video segment.
-                return redirect("/dashboard/minecraft/#$id");
-
+            case 6:
+                $icounter = 25;
                 break;
 
         }
 
+        if($icounter == 15 || $icounter == 18){
+            for( $i = 0; $i < 3; $i++){
+                // ophalen van gegevens.
+                $GetVideo = Video::find($icounter);
+                // gegevens die je hebt ingevoerd ophalen.
+                $GetVideo->VideoLink = request("vid".$icounter);
+                // Opslaan.
+                $GetVideo->save();
+                // Optellen van de counter voor de volgende video.
+                $icounter++;
+            }  
+        }else{
+            for( $i = 0; $i < 4; $i++){
+                // ophalen van gegevens.
+                $GetVideo = Video::find($icounter);
+                // gegevens die je hebt ingevoerd ophalen.
+                $GetVideo->VideoLink = request("vid".$icounter);
+                // Opslaan.
+                $GetVideo->save();
+                // Optellen van de counter voor de volgende video.
+                $icounter++;
+            }    
+        }
 
-        // ophalen van gegevens.
-        $GetVideo = Video::find($idSegment[0]);
-        // gegevens die je hebt ingevoerd ophalen.
-        $GetVideo->VideoLink = request("vid".$idSegment[0]);
-        // Opslaan.
-        $GetVideo->save();
+       
         // Terugsturen naar de pagina in het video segment.
-        return redirect("/dashboard/minecraft/#$idSegment[1]");
+        return redirect("/dashboard/minecraft/#$id");
     }
 }
 
