@@ -191,7 +191,7 @@
 </section>
 <!-- Video's Home pagina -->
 
-
+<img onclick="topFunction()" id="Top" src="afbeeldingen/boven.png" alt="Ga naar boven">
 
 <script>
 // Nakijken als je op het begin spatie wilt meegeven.
@@ -214,30 +214,26 @@ $(function() {
         }
     });
 });
-</script>
 
-
-<!-- <button onclick="topFunction()" id="Top" title="Go to top">Naar boven</button> -->
-<img onclick="topFunction()" id="Top" src="afbeeldingen\boven.png" alt="Mountain View">
-<script>
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
 
-function scrollFunction() {
-    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
-        document.getElementById("Top").style.display = "block";
-    } else {
-        document.getElementById("Top").style.display = "none";
+    function scrollFunction() {
+        if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+            // Knop rustig laten te voor schijn komen (functie van fadeIn).
+            $("#Top").fadeIn();            
+        } else {
+            $("#Top").fadeOut();
+        }
     }
-}
 
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-}
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        //Click event to scroll to top
+        $('#Top').click(function(){
+            $('html, body').animate({scrollTop : 0},300);
+            return false;
+        });
+    }
 </script>
-
-
-
 @endsection
