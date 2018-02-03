@@ -33,7 +33,10 @@ class DashboardController extends Controller
 
     public function andere()
     {
-        return view('panel.andereVids');
+        //afhalen van gegevens (video linken).
+        $vids = Video::pluck('VideoLink');
+
+        return view('panel.andereVids', compact('vids'));
     }
 
     /**

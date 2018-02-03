@@ -35,9 +35,9 @@ CREATE TABLE IF NOT EXISTS `video` (
   `VideoId` int(11) NOT NULL AUTO_INCREMENT,
   `VideoLink` text NOT NULL,
   PRIMARY KEY (`VideoId`)
-) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=45 DEFAULT CHARSET=latin1;
 
--- Dumpen data van tabel tbg.video: ~5 rows (ongeveer)
+-- Dumpen data van tabel tbg.video: ~44 rows (ongeveer)
 /*!40000 ALTER TABLE `video` DISABLE KEYS */;
 INSERT INTO `video` (`VideoId`, `VideoLink`) VALUES
 	(1, 'https://www.youtube.com/watch?v=d1bYO3uzs40'),
@@ -67,7 +67,23 @@ INSERT INTO `video` (`VideoId`, `VideoLink`) VALUES
 	(25, 'https://www.youtube.com/watch?v=pbq0oMZ9u4A&index=1&list=PLZDG9piGctYe_jy1LNoCqSC3j_rrpEviz'),
 	(26, 'https://www.youtube.com/watch?v=l5a7b1yWlKU&index=2&list=PLZDG9piGctYe_jy1LNoCqSC3j_rrpEviz'),
 	(27, 'https://www.youtube.com/watch?v=yNQ_701uumU&index=3&list=PLZDG9piGctYe_jy1LNoCqSC3j_rrpEviz'),
-	(28, 'https://www.youtube.com/watch?v=GcKLjHezuFs&index=4&list=PLZDG9piGctYe_jy1LNoCqSC3j_rrpEviz');
+	(28, 'https://www.youtube.com/watch?v=GcKLjHezuFs&index=4&list=PLZDG9piGctYe_jy1LNoCqSC3j_rrpEviz'),
+	(29, 'https://www.youtube.com/watch?v=AZ6uEVWMHSM&index=4&list=PLZDG9piGctYd2mKfNbPFPRNaviYASzg-o'),
+	(30, 'https://www.youtube.com/watch?v=rLM8x20wE1M&index=3&list=PLZDG9piGctYd2mKfNbPFPRNaviYASzg-o'),
+	(31, 'https://www.youtube.com/watch?v=Ctsi2KeMD3k&index=2&list=PLZDG9piGctYd2mKfNbPFPRNaviYASzg-o'),
+	(32, 'https://www.youtube.com/watch?v=DVvGPWVWWUI&index=1&list=PLZDG9piGctYd2mKfNbPFPRNaviYASzg-o'),
+	(33, 'https://www.youtube.com/watch?v=Pwbn3UP77ls&index=9&list=PLZDG9piGctYc2_65oj6PDtY8N7Q2eVPpL'),
+	(34, 'https://www.youtube.com/watch?v=S1iH78xMOUY&index=10&list=PLZDG9piGctYc2_65oj6PDtY8N7Q2eVPpL'),
+	(35, 'https://www.youtube.com/watch?v=T0UgPPe698g&index=11&list=PLZDG9piGctYc2_65oj6PDtY8N7Q2eVPpL'),
+	(36, 'https://www.youtube.com/watch?v=88tmbHtZ6LI&index=12&list=PLZDG9piGctYc2_65oj6PDtY8N7Q2eVPpL'),
+	(37, 'https://www.youtube.com/watch?v=AFjqizmchmA&list=PLZDG9piGctYfDJvxS9r1eRWNAEERRmej5&index=7'),
+	(38, 'https://www.youtube.com/watch?v=L0ONGri7Ezs&list=PLZDG9piGctYfDJvxS9r1eRWNAEERRmej5&index=8'),
+	(39, 'https://www.youtube.com/watch?v=bPwDaZ7B3nQ&list=PLZDG9piGctYfDJvxS9r1eRWNAEERRmej5&index=9'),
+	(40, 'https://www.youtube.com/watch?v=GPpUGRfaHqs&list=PLZDG9piGctYfDJvxS9r1eRWNAEERRmej5&index=10&t=1614s'),
+	(41, 'https://www.youtube.com/watch?v=_8TzqQltQ3o&t=2s'),
+	(42, 'https://www.youtube.com/watch?v=p44TszdiiA4'),
+	(43, 'https://www.youtube.com/watch?v=fLNXxHY4I8I'),
+	(44, 'https://www.youtube.com/watch?v=73XkMcRup5s');
 /*!40000 ALTER TABLE `video` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
