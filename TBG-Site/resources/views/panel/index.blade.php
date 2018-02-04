@@ -9,24 +9,40 @@
 <section id="sectionHeadPage">
     <h3>Home pagina</h3>
     <br/>
-    <div>
+
+    <div class="container">
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Teskt editor</button>
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Hulp menu made bij DJJASPER21 and JENSIE1996</h4>
+        <div>
         <!-- Tekst hoofdpagina -->
         <div class="col-sm-3 updateTekstVoorPagina">
             <form class="centerVidLink" method="post" action="updateTekstVoorPagina">
                 <div>
                 {{csrf_field()}}
                     <label id="tekstFronpage" for="tekstFronpageEdit">Tekst hoofdpagina: </label><br/>
-                    <textarea rows="15" cols="50" name="tekstFronpage" placeholder="Tekst hoofdpagina" id="tekstFronpageEdit" required>{{$tekstFront[0]}}</textarea>
+                    <textarea rows="30" cols="105" name="tekstFronpage" placeholder="Tekst hoofdpagina" id="tekstFronpageEdit" required>{{$tekstFront[0]}}</textarea>
                 </div>
                 <br/>
                 <button type="submit" value="Submit"  class="submitButton">Opslaan</button>
             </form> 
         </div>
-        <!-- Tonen van de tekst -->
-        <div class="col-sm-3" id="tekstFrontVoorbeeld">
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="col-sm-3" id="tekstFrontVoorbeeld">
             <?= htmlspecialchars_decode($tekstFront[0]);?>
         </div>
-    </div> 
 
     <div class="centerVidLinkPres">
         <!-- Input veld voor link. -->
