@@ -13,28 +13,37 @@
         <div class="row">
             <div class="col-sm-6">
                 <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/88tmbHtZ6LI"></iframe>
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[32], 32, 11)}}"></iframe>
                 </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-6 vids" id="1">
                 <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/T0UgPPe698g"></iframe>
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[33], 32, 11)}}"></iframe>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-sm-6">
                 <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/S1iH78xMOUY"></iframe>
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[34], 32, 11)}}"></iframe>
                 </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-6" id="2">
                 <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Pwbn3UP77ls"></iframe>
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[35], 32, 11)}}"></iframe>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+
+    if($(window).width() < 767 || $(window).width() == 767){
+        document.getElementById("1").style.marginTop = "10px";
+        document.getElementById("2").style.marginTop = "10px";
+    }
+
+</script>
 
 @endsection

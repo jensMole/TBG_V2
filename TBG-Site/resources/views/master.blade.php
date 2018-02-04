@@ -51,10 +51,10 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
         <!-- SmartMenus jQuery plugin -->
-        <script type="text/javascript" src="/js/jquery.smartmenus.js"></script>
+        <script src="/js/jquery.smartmenus.js"></script>
 
         <!-- SmartMenus jQuery Bootstrap Addon -->
-        <script type="text/javascript" src="/js/jquery.smartmenus.bootstrap.js"></script>
+        <script src="/js/jquery.smartmenus.bootstrap.js"></script>
 
         <script src="/js/Index.js"></script>
     </body>

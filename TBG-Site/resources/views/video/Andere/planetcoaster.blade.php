@@ -13,28 +13,37 @@
         <div class="row">
             <div class="col-sm-6">
                 <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Ctsi2KeMD3k"></iframe>
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[28], 32, 11)}}"></iframe>
                 </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-6" id="1">
                 <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/rLM8x20wE1M"></iframe>
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[29], 32, 11)}}"></iframe>
                 </div>
             </div>
         </div>
         <div class="row">
         <div class="col-sm-6">
                 <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/AZ6uEVWMHSM"></iframe>
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[30], 32, 11)}}"></iframe>
                 </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-6" id="2">
                 <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/KY9TQIBvWpw"></iframe>
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[31], 32, 11)}}"></iframe>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+
+    if($(window).width() < 767 || $(window).width() == 767){
+        document.getElementById("1").style.marginTop = "10px";
+        document.getElementById("2").style.marginTop = "10px";
+    }
+
+</script>
 
 @endsection

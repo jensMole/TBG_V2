@@ -180,6 +180,54 @@ class DashboardController extends Controller
         // Terugsturen naar de pagina in het video segment.
         return redirect("/dashboard/minecraft/#$id");
     }
+
+
+    /**
+     * Updaten van de linken van de video's
+     * 
+     * @param  \Illuminate\Http\Request  $request
+     * @param  id $id ophalen van het id dat wordt meegegeven.
+     * @return \Illuminate\Http\Response
+     */
+
+    //  TODO segment aanmaken en meegeven.
+    public function vidUpdateAndere(Request $request, $id)
+    {
+        // Nakijken waar je zit met het updaten van de video's.
+        switch($id){
+
+            case 1:
+                $icounter = 29;
+                break;
+
+            case 2:
+                $icounter = 33;
+                break;
+            
+            case 3:
+                $icounter = 37;
+                break;
+                
+            case 4:
+                $icounter = 41;
+                break;
+
+        }
+
+        for( $i = 0; $i < 4; $i++){
+            // ophalen van gegevens.
+            $GetVideo = Video::find($icounter);
+            // gegevens die je hebt ingevoerd ophalen.
+            $GetVideo->VideoLink = request("vid".$icounter);
+            // Opslaan.
+            $GetVideo->save();
+            // Optellen van de counter voor de volgende video.
+            $icounter++;
+        }    
+
+        // Terugsturen naar de pagina in het video segment.
+        return redirect("/dashboard/andere/#$id");
+    }
 }
 
 ?>

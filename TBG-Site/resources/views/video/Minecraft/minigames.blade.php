@@ -24,7 +24,7 @@
                     <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[18], 32, 11)}}"></iframe>
                 </div>
             </div>
-            <div class="col-sm-6 vids">
+            <div class="col-sm-6" id ="1">
                 <div class="embed-responsive embed-responsive-16by9">
                     <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[19], 32, 11)}}"></iframe>
                 </div>
@@ -32,5 +32,13 @@
         </div>
     </div>
 </div>
+
+<script>
+
+    if($(window).width() < 767 || $(window).width() == 767){
+        document.getElementById("1").style.marginTop = "10px";
+    }
+
+</script>
 
 @endsection

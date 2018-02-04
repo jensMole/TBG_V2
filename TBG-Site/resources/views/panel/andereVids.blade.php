@@ -45,13 +45,13 @@
 
 
 <div class="row rijen">
-    <form class="centerVidLink" method="post" action="{{action('DashboardController@vidUpdateMinecraft', '1')}}">
+    <form class="centerVidLink" method="post" action="{{action('DashboardController@vidUpdateAndere', '1')}}">
         <!-- Input veld voor link. -->
         <div class="col-sm-3 labelsVids">
             <div>
             {{csrf_field()}}
                 <label class="vidLabel" for="vid29">Video link: </label><br/>
-                <input class="vidLink" size="48" name="vid29" type="text" placeholder="Video link (URL)" id="vid29" value="" required/>
+                <input class="vidLink" size="48" name="vid29" type="text" placeholder="Video link (URL)" id="vid29" value="{{$vids[28]}}" required/>
             </div>
             <br/>
         </div>
@@ -61,7 +61,7 @@
             <div>
             {{csrf_field()}}
                 <label class="vidLabel" for="vid30">Video link: </label><br/>
-                <input class="vidLink" size="48" name="vid30" type="text" placeholder="Video link (URL)" id="vid30" value="" required/>
+                <input class="vidLink" size="48" name="vid30" type="text" placeholder="Video link (URL)" id="vid30" value="{{$vids[29]}}" required/>
             </div>
             <br/>
         </div>
@@ -71,7 +71,7 @@
             <div>
             {{csrf_field()}}
                 <label class="vidLabel" for="vid31">Video link: </label><br/>
-                <input class="vidLink" size="48" name="vid31" type="text" placeholder="Video link (URL)" id="vid31" value="" required/>
+                <input class="vidLink" size="48" name="vid31" type="text" placeholder="Video link (URL)" id="vid31" value="{{$vids[30]}}" required/>
             </div>
             <br/>
         </div>
@@ -81,7 +81,7 @@
             <div>
             {{csrf_field()}}
                 <label class="vidLabel" for="vid32">Video link: </label><br/>
-                <input class="vidLink" size="48" name="vid32" type="text" placeholder="Video link (URL)" id="vid32" value="" required/>
+                <input class="vidLink" size="48" name="vid32" type="text" placeholder="Video link (URL)" id="vid32" value="{{$vids[31]}}" required/>
             </div>
             <br/>
         </div>
@@ -128,13 +128,13 @@
 
 
 <div class="row rijen">
-    <form class="centerVidLink" method="post" action="{{action('DashboardController@vidUpdateMinecraft', '2')}}">
+    <form class="centerVidLink" method="post" action="{{action('DashboardController@vidUpdateAndere', '2')}}">
         <!-- Input veld voor link. -->
         <div class="col-sm-3 labelsVids">
             <div>
             {{csrf_field()}}
                 <label class="vidLabel" for="vid33">Video link: </label><br/>
-                <input class="vidLink" size="48" name="vid33" type="text" placeholder="Video link (URL)" id="vid33" value="" required/>
+                <input class="vidLink" size="48" name="vid33" type="text" placeholder="Video link (URL)" id="vid33" value="{{$vids[32]}}" required/>
             </div>
             <br/>
         </div>
@@ -144,7 +144,7 @@
             <div>
             {{csrf_field()}}
                 <label class="vidLabel" for="vid34">Video link: </label><br/>
-                <input class="vidLink" size="48" name="vid34" type="text" placeholder="Video link (URL)" id="vid34" value="" required/>
+                <input class="vidLink" size="48" name="vid34" type="text" placeholder="Video link (URL)" id="vid34" value="{{$vids[33]}}" required/>
             </div>
             <br/>
         </div>
@@ -154,7 +154,7 @@
             <div>
             {{csrf_field()}}
                 <label class="vidLabel" for="vid35">Video link: </label><br/>
-                <input class="vidLink" size="48" name="vid35" type="text" placeholder="Video link (URL)" id="vid35" value="" required/>
+                <input class="vidLink" size="48" name="vid35" type="text" placeholder="Video link (URL)" id="vid35" value="{{$vids[34]}}" required/>
             </div>
             <br/>
         </div>
@@ -164,7 +164,7 @@
             <div>
             {{csrf_field()}}
                 <label class="vidLabel" for="vid36">Video link: </label><br/>
-                <input class="vidLink" size="48" name="vid36" type="text" placeholder="Video link (URL)" id="vid36" value="" required/>
+                <input class="vidLink" size="48" name="vid36" type="text" placeholder="Video link (URL)" id="vid36" value="{{$vids[35]}}" required/>
             </div>
             <br/>
         </div>
@@ -211,13 +211,13 @@
 
 
 <div class="row rijen">
-    <form class="centerVidLink" method="post" action="{{action('DashboardController@vidUpdateMinecraft', '3')}}">
+    <form class="centerVidLink" method="post" action="{{action('DashboardController@vidUpdateAndere', '3')}}">
         <!-- Input veld voor link. -->
         <div class="col-sm-3 labelsVids">
             <div>
             {{csrf_field()}}
                 <label class="vidLabel" for="vid37">Video link: </label><br/>
-                <input class="vidLink" size="48" name="vid37" type="text" placeholder="Video link (URL)" id="vid37" value="" required/>
+                <input class="vidLink" size="48" name="vid37" type="text" placeholder="Video link (URL)" id="vid37" value="{{$vids[36]}}" required/>
             </div>
             <br/>
         </div>
@@ -227,7 +227,7 @@
             <div>
             {{csrf_field()}}
                 <label class="vidLabel" for="vid38">Video link: </label><br/>
-                <input class="vidLink" size="48" name="vid38" type="text" placeholder="Video link (URL)" id="vid38" value="" required/>
+                <input class="vidLink" size="48" name="vid38" type="text" placeholder="Video link (URL)" id="vid38" value="{{$vids[37]}}" required/>
             </div>
             <br/>
         </div>
@@ -237,7 +237,7 @@
             <div>
             {{csrf_field()}}
                 <label class="vidLabel" for="vid39">Video link: </label><br/>
-                <input class="vidLink" size="48" name="vid39" type="text" placeholder="Video link (URL)" id="vid39" value="" required/>
+                <input class="vidLink" size="48" name="vid39" type="text" placeholder="Video link (URL)" id="vid39" value="{{$vids[38]}}" required/>
             </div>
             <br/>
         </div>
@@ -247,7 +247,7 @@
             <div>
             {{csrf_field()}}
                 <label class="vidLabel" for="vid40">Video link: </label><br/>
-                <input class="vidLink" size="48" name="vid40" type="text" placeholder="Video link (URL)" id="vid40" value="" required/>
+                <input class="vidLink" size="48" name="vid40" type="text" placeholder="Video link (URL)" id="vid40" value="{{$vids[39]}}" required/>
             </div>
             <br/>
         </div>
@@ -294,13 +294,13 @@
 
 
 <div class="row rijen">
-    <form class="centerVidLink" method="post" action="{{action('DashboardController@vidUpdateMinecraft', '4')}}">
+    <form class="centerVidLink" method="post" action="{{action('DashboardController@vidUpdateAndere', '4')}}">
         <!-- Input veld voor link. -->
         <div class="col-sm-3 labelsVids">
             <div>
             {{csrf_field()}}
                 <label class="vidLabel" for="vid41">Video link: </label><br/>
-                <input class="vidLink" size="48" name="vid41" type="text" placeholder="Video link (URL)" id="vid41" value="" required/>
+                <input class="vidLink" size="48" name="vid41" type="text" placeholder="Video link (URL)" id="vid41" value="{{$vids[40]}}" required/>
             </div>
             <br/>
         </div>
@@ -310,7 +310,7 @@
             <div>
             {{csrf_field()}}
                 <label class="vidLabel" for="vid42">Video link: </label><br/>
-                <input class="vidLink" size="48" name="vid42" type="text" placeholder="Video link (URL)" id="vid42" value="" required/>
+                <input class="vidLink" size="48" name="vid42" type="text" placeholder="Video link (URL)" id="vid42" value="{{$vids[41]}}" required/>
             </div>
             <br/>
         </div>
@@ -320,7 +320,7 @@
             <div>
             {{csrf_field()}}
                 <label class="vidLabel" for="vid43">Video link: </label><br/>
-                <input class="vidLink" size="48" name="vid43" type="text" placeholder="Video link (URL)" id="vid43" value="" required/>
+                <input class="vidLink" size="48" name="vid43" type="text" placeholder="Video link (URL)" id="vid43" value="{{$vids[42]}}" required/>
             </div>
             <br/>
         </div>
@@ -330,7 +330,7 @@
             <div>
             {{csrf_field()}}
                 <label class="vidLabel" for="vid44">Video link: </label><br/>
-                <input class="vidLink" size="48" name="vid44" type="text" placeholder="Video link (URL)" id="vid44" value="" required/>
+                <input class="vidLink" size="48" name="vid44" type="text" placeholder="Video link (URL)" id="vid44" value="{{$vids[43]}}" required/>
             </div>
             <br/>
         </div>
