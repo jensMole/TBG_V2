@@ -372,6 +372,11 @@ h3{
 	overflow: auto;
 }
 
+.knopTekstEditor{
+	text-align: center;
+	padding-top: 7%;
+}
+
 .panelFooter{
 	text-align: center;
 }
@@ -394,6 +399,14 @@ h3{
     padding: 10px 15px;
     text-decoration: none;
     display: inline-block;
+}
+
+.centerModal{
+	text-align: center !important;
+}
+
+textarea {
+    resize: none;
 }
 
 #vidLinkTekst, #tekstFronpage, #vid1Label, #vid2Label, #vid3Label{
