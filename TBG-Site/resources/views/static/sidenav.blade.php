@@ -44,10 +44,10 @@
                         </ul>
                     </li>
                     <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Over <span class="caret"></span></a>
+                    <a href="over" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Over <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="over.html">Over</a></li>
-                            <li><a href="htmlcontact.html">Contact</a></li>      
+                            <li><a href="over">Over</a></li>
+                            <li><a href="contact">Contact</a></li>      
                         </ul>
                     </li>
                 <li class="dropdown">

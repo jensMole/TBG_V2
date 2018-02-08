@@ -130,17 +130,17 @@ iframe{
 
 /* Begin over pagina */
 /* content verplaatsen */
-#content{
+#content, #content1{
 	margin-top: 80px;
 }
 
 /* foto jens */
-#Jens{
+#Jens, #Jasper{
 	margin-left: 92px;
 }
 
 /* korte beschrijving */
-#kort{
+#kort, #kortJasper{
  	position: absolute;
  	margin-left: 600px;
  	margin-top: -250px;
@@ -151,7 +151,7 @@ iframe{
 	padding: 5px;
 }
 
-#diep{
+#diep, #diepJasper{
  	margin-left: 25px;
 	margin-right: 25px;
 	margin-top: 20px;
@@ -260,7 +260,27 @@ h2.titelsDown {
 	color:white;
 }
 
+#contact3{
+	font-size:3em;
+	color:white;
+	text-align: center;
+}
+
+#contact4{
+	text-align: center;
+	font-size:1.8em;
+	color:white;
+}
+
 #bericht p{
+    font-size: 140%;
+	background-color: #404040;
+	border-radius: 10px;
+	padding: 5px;
+	text-align: center;
+}
+
+#berichtJasper p{
     font-size: 140%;
 	background-color: #404040;
 	border-radius: 10px;

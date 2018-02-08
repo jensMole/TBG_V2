@@ -23,12 +23,16 @@ Route::get('/maps','MinecraftVidsController@maps');
 Route::get('/minigames','MinecraftVidsController@minigames');
 Route::get('/tutorials','MinecraftVidsController@tutorials');
 Route::get('/snapshots','MinecraftVidsController@snapshots');
+
 // Andere video indeling
 Route::get('/planetcoaster','AndereVidsController@planetcoaster');
 Route::get('/howtoplugins','AndereVidsController@howToPlugins');
 Route::get('/howtowebsites','AndereVidsController@howTowebsites');
 Route::get('/reacties','AndereVidsController@reacties');
 
+// Over 
+Route::get('/over','OverController@over');
+Route::get('/contact','OverController@contact');
 
 // Dashboard
 // Tonen van het dashboard.
