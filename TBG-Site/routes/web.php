@@ -34,6 +34,12 @@ Route::get('/reacties','AndereVidsController@reacties');
 Route::get('/over','OverController@over');
 Route::get('/contact','OverController@contact');
 
+// Extra
+Route::get('/aankondigingen','ExtraController@aankon');
+Route::get('/downloads','ExtraController@downloads');
+
+
+
 // Dashboard
 // Tonen van het dashboard.
 Route::get('/dashboard/minecraft','DashBoardController@minecraft');

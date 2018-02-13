@@ -5,12 +5,12 @@
     <a href="http://www.youtube.com/c/TheBelgiumGamesTBG" target="_blank">YouTube</a>
 
     <!-- Licentie -->
-    <a class="copy" rel="license" target="_blank" href="http://creativecommons.org/licenses/by-sa/4.0/">
+    <a class="copy" rel="license" target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.nl">
         <img alt="Creative Commons-Licentie" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" />
     </a>
     <div style="text-align:center" class="hidden-xs">
         Deze website valt onder een
-        <a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Naamsvermelding-GelijkDelen 4.0 Internationaal-licentie.
+        <a rel="license" target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.nl">Creative Commons Naamsvermelding-GelijkDelen 4.0 Internationaal-licentie.
         </a>&copy; 2017 - 2018 TheBelgiumGames
     </div>
     <div style="text-align:center" class="hidden-xs">

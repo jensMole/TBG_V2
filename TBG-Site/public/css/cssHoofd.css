@@ -48,7 +48,9 @@
 
 
 .row{
-padding-bottom: 10px;
+	padding-bottom: 10px;
+	margin-left: 0px !important;
+	margin-right: 0px !important;
 }
 
 
@@ -351,7 +353,7 @@ h2#muziek, h2#plugin {
 	margin-bottom: 10px;
 }
 
-#note{
+#note, #note1{
 	display: block;
 	margin: 0 auto;
 }
