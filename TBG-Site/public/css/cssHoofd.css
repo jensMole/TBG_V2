@@ -406,7 +406,7 @@ h3{
 	text-align: center;
 }
 
-.vidLink{
+.vidLink, .bericht{
 	color: black;
 	width: 100%;
     padding: 12px 10px;
@@ -434,7 +434,7 @@ textarea {
     resize: none;
 }
 
-#vidLinkTekst, #tekstFronpage, #vid1Label, #vid2Label, #vid3Label{
+#vidLinkTekst, #tekstFronpage, #vid1Label, #vid2Label, #vid3Label, #bericht{
 	font-size: 130%;
 }
 
@@ -464,7 +464,7 @@ textarea {
 	color: white;
 }
 
-.centerVidLink{
+.centerVidLink, .centerBericht{
 	text-align: center;
 }
 
@@ -472,7 +472,7 @@ textarea {
 	padding-top: 110px;
 }
 
-#tekstFronpageEdit{
+#tekstFronpageEdit, #berichtTekst{
 	color: black;
 	z-index: 1000;
 	/* resize: none; */

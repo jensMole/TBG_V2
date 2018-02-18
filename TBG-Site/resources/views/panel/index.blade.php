@@ -210,12 +210,28 @@
 <section id="sectionVideosHomeMinecraft">    
     <h3><a class="notLink" id="videoLink">Aankondigingen pagina</a></h3>
     <div class="row rijen">
-        
-        <h3>Berichten</h3>
+    
+        <br>
+        <h3><a class="notLink" id="berichten">Berichten</a></h3>
         <br/>
 
-                 
-    </div>
+        <div class="col-sm-2">
+        </div>
+
+        <!-- Input veld voor link. -->
+        <div class="col-sm-3 centerBericht">
+            <form class="centerBericht" method="POST" action="addBerichten">
+                <div>
+                {{csrf_field()}}
+                    <label id="bericht" for="berichtTekst">Bericht: </label><br/>
+                    <textarea rows="3" cols="10" class="bericht" size="48" name="bericht" type="text" placeholder="Plaats hier een bericht. Voor link voeg <a> toe." id="berichtTekst" required></textarea>
+                </div>
+                <br/>
+                <button type="submit" value="Submit"  class="submitButton">Voeg bericht toe</button>
+            </form> 
+        </div>
+
+    </div>  
 
     <div class="row rijen">
         
@@ -235,7 +251,7 @@
 </section>
 
 
-<img onclick="topFunction()" id="Top" src="afbeeldingen/boven.png" alt="Ga naar boven">
+<img onclick="topFunction()" id="Top" src="../afbeeldingen/boven.png" alt="Ga naar boven">
 
 <script>
 // Nakijken als je op het begin spatie wilt meegeven.

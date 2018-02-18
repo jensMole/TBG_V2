@@ -56,3 +56,7 @@ Route::post("vidUpdate/{id}","DashboardController@vidUpdate");
 Route::post("vidUpdateMinecraft/{id}","DashboardController@vidUpdateMinecraft");
 // Video's die geupdate moeten worden.
 Route::post("vidUpdateAndere/{id}","DashboardController@vidUpdateAndere");
+
+
+//toevoegen van een nieuw item bij de berichten.
+Route::post("addBerichten", "DashboardController@addBericht");

@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\HoofdPag;
 use App\Video;
+use App\Bericht;
+
+
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -228,6 +231,21 @@ class DashboardController extends Controller
         // Terugsturen naar de pagina in het video segment.
         return redirect("/dashboard/andere/#$id");
     }
+
+
+    public function addBericht(Request $request)
+    {
+
+        // dd( Input::all() );
+
+        $bericht = new Bericht;
+        $bericht->berichten = "<p>".request("bericht")."</p>";
+		$bericht->save();
+
+        //terugsturen naar dashboard
+        return redirect("/dashboard#berichten");
+    }
+
 }
 
 ?>
