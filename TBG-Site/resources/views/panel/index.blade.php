@@ -12,7 +12,7 @@
 
     <div class="container knopTekstEditor col-sm-3">
         <!-- Trigger the modal with a button -->
-        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Teskt editor</button>
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Tekst editor</button>
     </div>
 
     <div class="col-sm-3" id="tekstFrontVoorbeeld">
@@ -201,6 +201,39 @@
     </div>
 </section>
 <!-- Video's Home pagina -->
+
+<br/>
+<hr>
+<br/>
+
+<!-- Video's Home pagina -->
+<section id="sectionVideosHomeMinecraft">    
+    <h3><a class="notLink" id="videoLink">Aankondigingen pagina</a></h3>
+    <div class="row rijen">
+        
+        <h3>Berichten</h3>
+        <br/>
+
+                 
+    </div>
+
+    <div class="row rijen">
+        
+        <h3>Aankondigingen</h3>
+        <br/>
+
+                 
+    </div>
+
+    <div class="row rijen">
+        
+        <h3>Online video's</h3>
+        <br/>
+
+                 
+    </div>
+</section>
+
 
 <img onclick="topFunction()" id="Top" src="afbeeldingen/boven.png" alt="Ga naar boven">
 

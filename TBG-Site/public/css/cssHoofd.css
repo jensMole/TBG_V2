@@ -205,7 +205,8 @@ iframe{
 	background-color: #404040;
 	border-radius: 10px;
 	padding: 5px;
-        margin: 10px;
+	margin: 10px;
+	padding-left: 10px;
 }
 
 .aankondigingen p{
@@ -213,7 +214,8 @@ iframe{
 	background-color: #404040;
 	border-radius: 10px;
 	padding: 5px;
-        margin: 10px;
+	margin: 10px;
+	padding-left: 10px;
 }
 
 .BerichtTitel{
@@ -280,6 +282,7 @@ h2.titelsDown {
 	border-radius: 10px;
 	padding: 5px;
 	text-align: center;
+	padding-left: 10px;
 }
 
 #berichtJasper p{

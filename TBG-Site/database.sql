@@ -16,6 +16,42 @@
 CREATE DATABASE IF NOT EXISTS `tbg` /*!40100 DEFAULT CHARACTER SET latin1 */;
 USE `tbg`;
 
+-- Structuur van  tabel tbg.aankondigingen wordt geschreven
+CREATE TABLE IF NOT EXISTS `aankondigingen` (
+  `aankonId` int(11) NOT NULL AUTO_INCREMENT,
+  `aankondigingen` text,
+  PRIMARY KEY (`aankonId`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+
+-- Dumpen data van tabel tbg.aankondigingen: ~5 rows (ongeveer)
+/*!40000 ALTER TABLE `aankondigingen` DISABLE KEYS */;
+INSERT INTO `aankondigingen` (`aankonId`, `aankondigingen`) VALUES
+	(1, '<p>Woensdag 14/02, 17h00: Cuberunner plugin tutorial.</p>\r'),
+	(2, ' <p>Vrijdag 15/02, 17h00: Css video. Box model. We gaan eindelijk eens een echte site maken.</p>'),
+	(3, '<p>Zaterdag 16/02, 17h00: Update video over de verleden snapshots.</p>'),
+	(4, ' <p>Zondag 17/02, 17h00: Hoverloop. Een nieuw spel dat je zeker zal intreseren.</p>'),
+	(5, '<p>Komende plugin tutorials over: Heb je zelf aanvragen laat het me maar weten via <a href="http://www.youtube.com/c/TheBelgiumGamesTBG" target="_blank">YouTube</a> of via <a href="mailto:the.belgiumg@gmail.com">Mail</a>.</p>');
+/*!40000 ALTER TABLE `aankondigingen` ENABLE KEYS */;
+
+-- Structuur van  tabel tbg.bericht wordt geschreven
+CREATE TABLE IF NOT EXISTS `bericht` (
+  `gegevensId` int(11) NOT NULL AUTO_INCREMENT,
+  `berichten` text,
+  PRIMARY KEY (`gegevensId`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+
+-- Dumpen data van tabel tbg.bericht: ~6 rows (ongeveer)
+/*!40000 ALTER TABLE `bericht` DISABLE KEYS */;
+INSERT INTO `bericht` (`gegevensId`, `berichten`) VALUES
+	(1, ' <p>Als eerste welkom en dat is het.</p>'),
+	(2, '<p>De website wordt vernieuwd.  Eenmaal als deze klaar is komt er een video uit.</p>'),
+	(3, ' <p>Deze pagina is geupdate op 13/02/18 om 09:36.</p>'),
+	(4, ' <p>Ben je op een gsm scroll dan naar onder voor de planning.</p>'),
+	(5, '  <p>Nieuwe banner vanaf 02/08/2017.</p>'),
+	(6, ' <p>We hebben een domein (www.thebelgiumgames.be) :)</p>'),
+	(7, '<p>De website heeft nu een Licentie. Juppie.</p>');
+/*!40000 ALTER TABLE `bericht` ENABLE KEYS */;
+
 -- Structuur van  tabel tbg.hoofdpag wordt geschreven
 CREATE TABLE IF NOT EXISTS `hoofdpag` (
   `gegevensId` int(11) NOT NULL AUTO_INCREMENT,
@@ -24,11 +60,29 @@ CREATE TABLE IF NOT EXISTS `hoofdpag` (
   PRIMARY KEY (`gegevensId`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
--- Dumpen data van tabel tbg.hoofdpag: ~1 rows (ongeveer)
+-- Dumpen data van tabel tbg.hoofdpag: ~0 rows (ongeveer)
 /*!40000 ALTER TABLE `hoofdpag` DISABLE KEYS */;
 INSERT INTO `hoofdpag` (`gegevensId`, `vidLink`, `tekstFrontPage`) VALUES
 	(1, 'https://www.youtube.com/watch?v=d1bYO3uzs40', 'Hallo en welkom op de website van The BelgiumGames.<br/>\r\n                Deze website gaat over de YouTuber Jens en zijn video\'s.<br/><br/>\r\n                Wie is Jens? Hij is een Belgische YouTuber die voor jouw video\'s maakt over Minecraft en andere games.<br/>\r\n                Wat kun je verwachten op deze website? Meer info over de video\'s van Jens, zoals wanneer er een video uitkomt en dan ook nog meer info over Jens zelf.<br/>\r\n                <br/>\r\n                De video\'s die ik maak zijn vaak tutorials en behulpzame video\'s.<br/>\r\n                Geniet van de video\'s en ook van je dag.<br/><br/>\r\n                \r\n                Meer info over opkomende video\'s kan je vinden op de <a href="https://www.thebelgiumgames.be/extra.html">aankondigings</a> pagina.<br/><br/>\r\n                \r\n                Dit is de vernieuwde site van Thebelgiumgames gesponserd door Badskinsgarden.<br/><br/>');
 /*!40000 ALTER TABLE `hoofdpag` ENABLE KEYS */;
+
+-- Structuur van  tabel tbg.onlinevid wordt geschreven
+CREATE TABLE IF NOT EXISTS `onlinevid` (
+  `gegevensId` int(11) NOT NULL AUTO_INCREMENT,
+  `onlineVidTekst` text,
+  PRIMARY KEY (`gegevensId`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+
+-- Dumpen data van tabel tbg.onlinevid: ~6 rows (ongeveer)
+/*!40000 ALTER TABLE `onlinevid` DISABLE KEYS */;
+INSERT INTO `onlinevid` (`gegevensId`, `onlineVidTekst`) VALUES
+	(1, '<p><a href="https://www.youtube.com/watch?v=ljw6g1OMmks&t=1s" target="_blank">VOORRUITGANGEN (advancements) || tutorial</a></p>\r'),
+	(2, '<p><a href="https://youtu.be/kO2ZmZrrgn4" target="_blank">DYNMAP PLUGIN || tutorial [Nederlands / Dutch]</a></p>'),
+	(3, '<p><a href="https://www.youtube.com/watch?v=EphA8dKWM_0" target="_blank">WAAR BLIJVEN DE PLUGIN VIDEO\'S & lezen van reacties</a></p>'),
+	(4, '<p><a href="https://youtu.be/oLCe-irFfWU" target="_blank">KINGDOMCRAFT PLUGIN || tutorial [Nederlands / Dutch]</a></p>'),
+	(5, '<p><a href="https://youtu.be/R_FlnKmCjjs" target="_blank">CTSNC PLUGIN || Tablist, scoreboard Tutorial [Nederlands / Dutch]</a></p>'),
+	(6, '<p><a href="https://youtu.be/rLMHgLDaXHQ" target="_blank">CUSTOM RECEPTEN || tutorial [Nederlands / Dutch]</a></p>');
+/*!40000 ALTER TABLE `onlinevid` ENABLE KEYS */;
 
 -- Structuur van  tabel tbg.video wordt geschreven
 CREATE TABLE IF NOT EXISTS `video` (

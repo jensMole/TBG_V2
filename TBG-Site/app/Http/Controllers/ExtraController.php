@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Bericht;
+use App\Aankondiging;
+use App\onlineVid;
+
 use Illuminate\Http\Request;
 
 class ExtraController extends Controller
@@ -9,8 +13,15 @@ class ExtraController extends Controller
 
     public function aankon()
     {    
+        // Verkrijgen van de berichten.
+        $berichten = Bericht::pluck("berichten");
+        // Verkrijgen van de aankondigingen.
+        $aankondigingen = Aankondiging::pluck("aankondigingen");
+
+        $onlineVid = onlineVid::pluck("onlineVidTekst");
+
         //terug geven van de view
-        return view('extra/aankondigingen');
+        return view('extra/aankondigingen', compact("berichten", "aankondigingen", "onlineVid"));
     }
 
     public function downloads()
