@@ -219,7 +219,7 @@
         </div>
 
         <!-- Input veld voor link. -->
-        <div class="col-sm-3 centerBericht">
+        <div class="col-sm-4 centerBericht">
             <form class="centerBericht" method="POST" action="addBerichten">
                 <div>
                 {{csrf_field()}}
@@ -229,6 +229,43 @@
                 <br/>
                 <button type="submit" value="Submit"  class="submitButton">Voeg bericht toe</button>
             </form> 
+        </div>
+
+        <div class="col-sm-4 berichtenDashboard">
+
+            @foreach ($berichten as $bericht)
+            
+                <?= htmlspecialchars_decode($bericht);?>
+
+            @endforeach
+
+            
+            @foreach ($berichten as $bericht)
+
+            <table class="research table is-fullwidth table-up">
+                <tr class="accordion">
+                    <td style="width:80%;"><?= htmlspecialchars_decode($bericht);?></td>
+                    <td style="width:20%; text-align:center;">
+                        <div class="inline-forms">
+
+                            <a href="" class="card-footer-item btn btn-info btn-lg"><span class="glyphicon glyphicon-edit"></span> Edit</a>
+
+                            <form action="" method="post" class="card-footer-item">
+                                <input name="_method" type="hidden" value="DELETE">
+                                {{ csrf_field() }}
+                                <button class="kb-button" type="submit" id="" value=""><i class="material-icons delete-icon" title="Beacon verwijderen">delete_forever</i></button>
+                            </form>
+                            
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+            @endforeach
+
+        </div>
+
+        <div class="col-sm-2">
         </div>
 
     </div>  

@@ -13,6 +13,8 @@
     <!-- Bootstrap -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
     <!-- SmartMenus jQuery Bootstrap Addon CSS -->
     <link href="/css/jquery.smartmenus.bootstrap.css" rel="stylesheet">
 

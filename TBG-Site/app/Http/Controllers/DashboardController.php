@@ -17,12 +17,13 @@ class DashboardController extends Controller
         $vidLink = HoofdPag::pluck("vidLink");
         $tekstFront = HoofdPag::pluck("tekstFrontPage");
         $vids = Video::pluck('VideoLink');
+        $berichten = Bericht::pluck('berichten');
 
         // https://www.youtube.com/watch?v=p44TszdiiA4
         //url omvormen naar vb. p44TszdiiA4.
         $newVidLink = substr($vidLink, 37, 11);
  
-        return view('panel.index', compact('vidLink','newVidLink','tekstFront','vids'));
+        return view('panel.index', compact('vidLink','newVidLink','tekstFront','vids','berichten'));
     }
 
     public function minecraft()
@@ -238,8 +239,11 @@ class DashboardController extends Controller
 
         // dd( Input::all() );
 
+        // Nieuw bericht aanmaken.
         $bericht = new Bericht;
+        // Toevoegen van het bericht.
         $bericht->berichten = "<p>".request("bericht")."</p>";
+        // Opslaan.
 		$bericht->save();
 
         //terugsturen naar dashboard

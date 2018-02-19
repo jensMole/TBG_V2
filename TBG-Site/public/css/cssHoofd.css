@@ -1,3 +1,5 @@
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css");
+
 /* Afbeelding TBG */
 .wide {
 	height: 250px;
@@ -508,6 +510,11 @@ hr {
 
 .labelsVids{
 	padding-top: 40px;
+}
+
+.berichtenDashboard{
+	margin-left: 50px;;
+	color: white;
 }
 /* Dashboard */
 
