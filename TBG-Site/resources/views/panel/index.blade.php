@@ -232,35 +232,30 @@
         </div>
 
         <div class="col-sm-4 berichtenDashboard">
-
-            @foreach ($berichten as $bericht)
-            
-                <?= htmlspecialchars_decode($bericht);?>
-
-            @endforeach
-
             
             @foreach ($berichten as $bericht)
 
-            <table class="research table is-fullwidth table-up">
-                <tr class="accordion">
-                    <td style="width:80%;"><?= htmlspecialchars_decode($bericht);?></td>
-                    <td style="width:20%; text-align:center;">
+            <table class="table is-fullwidth">
+                <tr>
+                    <td style="width:80%;"><?= htmlspecialchars_decode($bericht["berichten"]);?></td>
+                    <td style="width:10%;">
                         <div class="inline-forms">
 
-                            <a href="" class="card-footer-item btn btn-info btn-lg"><span class="glyphicon glyphicon-edit"></span> Edit</a>
+                            <a href="" class="card-footer-item btn btn-info btn-md"><span class="glyphicon glyphicon-edit"></span> Edit</a>
 
-                            <form action="" method="post" class="card-footer-item">
-                                <input name="_method" type="hidden" value="DELETE">
-                                {{ csrf_field() }}
-                                <button class="kb-button" type="submit" id="" value=""><i class="material-icons delete-icon" title="Beacon verwijderen">delete_forever</i></button>
-                            </form>
-                            
                         </div>
                     </td>
-                </tr>
-            </table>
+                    <td style="width:10%;">
 
+                        <form data-toggle="modal" data-target="#deleteModel" method="post" class="card-footer-item">
+                            <input name="_method" type="hidden" value="DELETE">
+                            {{ csrf_field() }}
+                            <button class="kb-button btn btn-danger btn-md" type="submit" id={{$bericht["gegevensId"]}} value={{$bericht["gegevensId"]}}><span class="glyphicon glyphicon-remove"></span> Verwijder</button>
+                        </form>
+                            
+                    </td>
+                </tr>                
+            </table>
             @endforeach
 
         </div>
@@ -289,6 +284,8 @@
 
 
 <img onclick="topFunction()" id="Top" src="../afbeeldingen/boven.png" alt="Ga naar boven">
+
+@include('panel.delete')
 
 <script>
 // Nakijken als je op het begin spatie wilt meegeven.

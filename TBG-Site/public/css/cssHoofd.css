@@ -470,6 +470,10 @@ textarea {
 	text-align: center;
 }
 
+.centerBericht{
+	height:50%;
+}
+
 .centerVidLinkPres{
 	padding-top: 110px;
 }
