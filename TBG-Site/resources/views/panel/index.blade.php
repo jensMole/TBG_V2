@@ -43,13 +43,13 @@
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog modal-lg">
+    <div class="modal-dialog modal-lg" style="left: auto; width:840px;">
         <div class="modal-content">
             <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <div>
                     <!-- Tekst hoofdpagina -->
-                    <div class="col-sm-3 updateTekstVoorPagina">
+                    <div class="updateTekstVoorPagina">
                         <form class="centerVidLink" method="post" action="updateTekstVoorPagina">
                             <div>
                             {{csrf_field()}}
@@ -57,7 +57,9 @@
                                 <textarea rows="30" cols="105" name="tekstFronpage" placeholder="Tekst hoofdpagina" id="tekstFronpageEdit" required>{{$tekstFront[0]}}</textarea>
                             </div>
                             <br/>
-                            <button type="submit" value="Submit" class="submitButton col-sm-12">Opslaan</button>
+                            <div class="col-xs-3"></div>
+                            <button type="submit" value="Submit" class="submitButton col-xs-6">Opslaan</button>
+                            <div class="col-xs-3"></div>
                         </form>
                     </div>
                 </div>
@@ -247,11 +249,11 @@
                     </td>
                     <td style="width:10%;">
 
-                        <form data-toggle="modal" data-target="#deleteModel" method="post" class="card-footer-item">
-                            <input name="_method" type="hidden" value="DELETE">
+                        <!-- <form data-toggle="modal" data-target="#deleteModel" method="post" class="card-footer-item"> -->
+                            <input name="_method" type="hidden" value="DELETE"/>
                             {{ csrf_field() }}
-                            <button class="kb-button btn btn-danger btn-md" type="submit" id={{$bericht["gegevensId"]}} value={{$bericht["gegevensId"]}}><span class="glyphicon glyphicon-remove"></span> Verwijder</button>
-                        </form>
+                            <button class="kb-button btn btn-danger btn-md" type="submit" data-toggle="modal" data-target="#deleteModel" id={{$bericht["gegevensId"]}} value={{$bericht["gegevensId"]}}><span class="glyphicon glyphicon-remove"></span> Verwijder</button>
+                        <!-- </form> -->
                             
                     </td>
                 </tr>                
