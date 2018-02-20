@@ -44,6 +44,7 @@ Route::get('/downloads','ExtraController@downloads');
 // Tonen van het dashboard.
 Route::get('/dashboard/minecraft','DashBoardController@minecraft');
 Route::get('/dashboard/andere','DashBoardController@andere');
+Route::post('/dashboard/{id}','DashBoardController@destroyBericht');
 Route::resource('/dashboard','DashBoardController');
 
 // updaten van de video link van voorpagina.

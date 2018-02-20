@@ -250,6 +250,16 @@ class DashboardController extends Controller
         return redirect("/dashboard#berichten");
     }
 
+    
+    public function destroyBericht(Bericht $berichtId){
+
+        error_log($berichtId);
+       
+        Bericht::destroy($berichtId->gegevensId);
+
+        return redirect("/dashboard#berichten");
+    }
+
 }
 
 ?>

@@ -252,7 +252,7 @@
                         <!-- <form data-toggle="modal" data-target="#deleteModel" method="post" class="card-footer-item"> -->
                             <input name="_method" type="hidden" value="DELETE"/>
                             {{ csrf_field() }}
-                            <button class="kb-button btn btn-danger btn-md" type="submit" data-toggle="modal" data-target="#deleteModel" id={{$bericht["gegevensId"]}} value={{$bericht["gegevensId"]}}><span class="glyphicon glyphicon-remove"></span> Verwijder</button>
+                            <button onclick='toggleModal({{$bericht["gegevensId"]}});' class="kb-button btn btn-danger btn-md" type="submit" data-toggle="modal" data-target="#deleteModel" id={{$bericht["gegevensId"]}} value={{$bericht["gegevensId"]}}><span class="glyphicon glyphicon-remove"></span> Verwijder</button>
                         <!-- </form> -->
                             
                     </td>

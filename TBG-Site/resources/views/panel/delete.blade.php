@@ -6,7 +6,7 @@
                 <div>
                     <!-- Tekst hoofdpagina -->
                     <div class="updateTekstVoorPagina">
-                        <form class="centerVidLink" id="DeleteBericht" method="post" action="">
+                        <form class="centerVidLink" id="DeleteBericht" method="post" action="/">
                             <div>
                                 {{csrf_field()}}
                                 <div class="field">
@@ -30,13 +30,8 @@
 
 <script>
   function toggleModal(gegevensId) {
-    //   document.getElementById("DeleteBericht").action = ;
-      var element = document.getElementById("confirmModal");
-      element.classList.toggle("is-active");
+      console.log(gegevensId);
+      document.getElementById("DeleteBericht").action = "";
       console.log("testje");
-}
-function ToggleModal() {
-  var element = document.getElementById("confirmModal");
-  element.classList.toggle("is-active");
 }
 </script>
