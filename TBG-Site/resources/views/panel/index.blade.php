@@ -243,7 +243,7 @@
                     <td style="width:10%;">
                         <div class="inline-forms">
 
-                            <a href="" class="card-footer-item btn btn-info btn-md"><span class="glyphicon glyphicon-edit"></span> Edit</a>
+                            <a onclick='toggleModalEdit({{$bericht["gegevensId"]}});' data-toggle="modal" data-target="#editModal" class="card-footer-item btn btn-info btn-md"><span class="glyphicon glyphicon-edit"></span> Edit</a>
 
                         </div>
                     </td>
@@ -289,6 +289,8 @@
 <img onclick="topFunction()" id="Top" src="../afbeeldingen/boven.png" alt="Ga naar boven">
 
 @include('panel.delete')
+
+@include('panel.edit')
 
 <script>
 // Nakijken als je op het begin spatie wilt meegeven.

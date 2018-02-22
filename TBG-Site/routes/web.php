@@ -44,7 +44,6 @@ Route::get('/downloads','ExtraController@downloads');
 // Tonen van het dashboard.
 Route::get('/dashboard/minecraft','DashBoardController@minecraft');
 Route::get('/dashboard/andere','DashBoardController@andere');
-Route::post('/dashboard/{id}','DashBoardController@destroyBericht');
 Route::resource('/dashboard','DashBoardController');
 
 // updaten van de video link van voorpagina.
@@ -57,6 +56,10 @@ Route::post("vidUpdate/{id}","DashboardController@vidUpdate");
 Route::post("vidUpdateMinecraft/{id}","DashboardController@vidUpdateMinecraft");
 // Video's die geupdate moeten worden.
 Route::post("vidUpdateAndere/{id}","DashboardController@vidUpdateAndere");
+// Berichten verwijderen.
+Route::post('/dashboard/{id}','DashBoardController@destroyBericht');
+// Berichten update
+Route::post('/dashboard/update/{id}','DashBoardController@updateBericht');
 
 
 //toevoegen van een nieuw item bij de berichten.

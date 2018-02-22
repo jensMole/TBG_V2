@@ -30,8 +30,6 @@
 
 <script>
   function toggleModal(beaconId) {
-      console.log(beaconId);
       document.getElementById("DeleteBericht").action = "/dashboard/" + beaconId;
-      console.log("testje");
 }
 </script>
