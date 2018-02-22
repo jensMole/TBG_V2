@@ -428,6 +428,17 @@ h3{
     display: inline-block;
 }
 
+.submitButtonDelete{
+	color: black;
+	text-align: center;
+	font-size: 130%;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: inline-block;
+}
+
 .centerModal{
 	text-align: center !important;
 }

@@ -18,7 +18,7 @@
                             </div>
                             <br/>
                             <div class="col-xs-3"></div>
-                            <button type="submit" value="Submit" class="submitButton col-xs-6">Opslaan</button>
+                            <button type="submit" value="Submit" class="submitButtonDelete btn-danger col-xs-6">Verwijderen</button>
                             <div class="col-xs-3"></div>
                         </form>
                     </div>
@@ -29,9 +29,9 @@
 </div>
 
 <script>
-  function toggleModal(gegevensId) {
-      console.log(gegevensId);
-      document.getElementById("DeleteBericht").action = "";
+  function toggleModal(beaconId) {
+      console.log(beaconId);
+      document.getElementById("DeleteBericht").action = "/dashboard/" + beaconId;
       console.log("testje");
 }
 </script>

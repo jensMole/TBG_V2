@@ -251,12 +251,12 @@ class DashboardController extends Controller
     }
 
     
-    public function destroyBericht(Bericht $berichtId){
-
-        error_log($berichtId);
-       
-        Bericht::destroy($berichtId->gegevensId);
-
+    public function destroyBericht($berichtId){
+        // zoek de gegevens in de database.
+        $bericht = Bericht::where('gegevensId', $berichtId);
+        // Verwijder het.
+        $bericht->delete();
+        // Terugsturen naar de pagina.
         return redirect("/dashboard#berichten");
     }
 
