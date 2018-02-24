@@ -61,6 +61,8 @@ Route::post('/dashboard/{id}','DashBoardController@destroyBericht');
 // Berichten update
 Route::post('/dashboard/update/{id}','DashBoardController@updateBericht');
 
+Route::post('dashboard/edit/{id}','DashBoardController@edit');
+
 
 //toevoegen van een nieuw item bij de berichten.
 Route::post("addBerichten", "DashboardController@addBericht");

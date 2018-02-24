@@ -260,6 +260,19 @@ class DashboardController extends Controller
         return redirect("/dashboard#berichten");
     }
 
+
+
+    public function edit($berichtId){
+
+        $bericht = Bericht::find($berichtId);
+
+        $berichtTransform = $bericht["berichten"];
+        
+
+        return view('panel.edit', compact("berichtTransform"));
+
+    }
+
 }
 
 ?>

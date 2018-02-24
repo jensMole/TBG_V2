@@ -242,19 +242,18 @@
                     <td style="width:80%;"><?= htmlspecialchars_decode($bericht["berichten"]);?></td>
                     <td style="width:10%;">
                         <div class="inline-forms">
-
-                            <a onclick='toggleModalEdit({{$bericht["gegevensId"]}});' data-toggle="modal" data-target="#editModal" class="card-footer-item btn btn-info btn-md"><span class="glyphicon glyphicon-edit"></span> Edit</a>
-
+                            <form method="post" action="dashboard/edit/{{$bericht["gegevensId"]}}">
+                                <button type="submit" class="card-footer-item btn btn-info btn-md"><span class="glyphicon glyphicon-edit"></span> Edit</button>
+                            </form>
                         </div>
                     </td>
                     <td style="width:10%;">
 
-                        <!-- <form data-toggle="modal" data-target="#deleteModel" method="post" class="card-footer-item"> -->
                             <input name="_method" type="hidden" value="DELETE"/>
                             {{ csrf_field() }}
                             <!-- Modal openen van de delete functie. -->
                             <button onclick='toggleModal({{$bericht["gegevensId"]}});' class="kb-button btn btn-danger btn-md" type="submit" data-toggle="modal" data-target="#deleteModel" id={{$bericht["gegevensId"]}} value={{$bericht["gegevensId"]}}><span class="glyphicon glyphicon-remove"></span> Verwijder</button>
-                        <!-- </form> -->
+
                             
                     </td>
                 </tr>                
@@ -289,8 +288,6 @@
 <img onclick="topFunction()" id="Top" src="../afbeeldingen/boven.png" alt="Ga naar boven">
 
 @include('panel.delete')
-
-@include('panel.edit')
 
 <script>
 // Nakijken als je op het begin spatie wilt meegeven.

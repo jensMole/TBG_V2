@@ -6,13 +6,18 @@
                 <div>
                     <!-- Tekst hoofdpagina -->
                     <div class="updateTekstVoorPagina">
-                        <form class="centerVidLink" method="post" action="/">
+                        <form class="centerVidLink" id="EditBericht" method="post" action="/">
                             <div>
                             {{csrf_field()}}
                                 <p  style="color:black;">
-                                    Aanpassen van Bericht. {{$berichten}}
+                                    Aanpassen van Bericht.
+
+                                    <p></p>
+
+
+
                                 </p>
-                                <input size="48" name="edit" type="text" placeholder="Plaats hier een bericht. Voor link voeg <a> toe." id="edit" value="" required/>
+                                <input size="48" name="edit" type="text" placeholder="Plaats hier een bericht. Voor link voeg <a> toe." id="edit" value="<?= htmlspecialchars_decode($berichtTransform);?>" required/>
                             </div>
                             <br/>
                             <div class="col-xs-3"></div>
@@ -26,10 +31,8 @@
     </div>
 </div>
 
-
-
 <script>
   function toggleModalEdit(BerichtID) {
-      document.getElementById("DeleteBericht").action = "/dashboard/update/" + BerichtID;
-}
+      document.getElementById("EditBericht").action = "/dashboard/update/" + BerichtID;
+    }
 </script>
