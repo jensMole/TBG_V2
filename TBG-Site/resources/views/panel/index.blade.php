@@ -236,29 +236,38 @@
 
         <div class="col-sm-4 berichtenDashboard">
             <!-- Berichten oplijsten. -->
-            @foreach ($berichten as $bericht)
+            <!-- Nakijken als er geen berichten zijn dan zetten we een basis bericht -->
+            @if ($berichten === false)
 
-            <table class="table is-fullwidth">
-                <tr>
-                    <td style="width:80%;"><?= htmlspecialchars_decode($bericht["berichten"]);?></td>
-                    <td style="width:10%;">
-                        <div class="inline-forms">
-                            <form method="post" action="bericht/edit/{{$bericht["gegevensId"]}}">
-                                {{ csrf_field() }}
-                                <!-- Modal openen voor edit functie. -->
-                                <button type="submit" class="card-footer-item btn btn-info btn-md"><span class="glyphicon glyphicon-edit"></span>Edit</button>
-                            </form>
-                        </div>
-                    </td>
-                    <td style="width:10%;">
-                        <input name="_method" type="hidden" value="DELETE"/>
-                        {{ csrf_field() }}
-                        <!-- Modal openen van de delete functie. -->
-                        <button onclick='toggleModal({{$bericht["gegevensId"]}});' class="kb-button btn btn-danger btn-md" type="submit" data-toggle="modal" data-target="#deleteModel" id={{$bericht["gegevensId"]}} value={{$bericht["gegevensId"]}}><span class="glyphicon glyphicon-remove"></span>Verwijder</button>  
-                    </td>
-                </tr>                
-            </table>
-            @endforeach
+                <h3>Geen berichten om weer te geven</h3>
+
+            @else
+
+                @foreach ($berichten as $bericht)
+
+                <table class="table is-fullwidth">
+                    <tr>
+                        <td style="width:80%;"><?= htmlspecialchars_decode($bericht["berichten"]);?></td>
+                        <td style="width:10%;">
+                            <div class="inline-forms">
+                                <form method="post" action="bericht/edit/{{$bericht["gegevensId"]}}">
+                                    {{ csrf_field() }}
+                                    <!-- Modal openen voor edit functie. -->
+                                    <button type="submit" class="card-footer-item btn btn-info btn-md"><span class="glyphicon glyphicon-edit"></span>Edit</button>
+                                </form>
+                            </div>
+                        </td>
+                        <td style="width:10%;">
+                            <input name="_method" type="hidden" value="DELETE"/>
+                            {{ csrf_field() }}
+                            <!-- Modal openen van de delete functie. -->
+                            <button onclick='toggleModal({{$bericht["gegevensId"]}});' class="kb-button btn btn-danger btn-md" type="submit" data-toggle="modal" data-target="#deleteModel" id={{$bericht["gegevensId"]}} value={{$bericht["gegevensId"]}}><span class="glyphicon glyphicon-remove"></span>Verwijder</button>  
+                        </td>
+                    </tr>                
+                </table>
+                @endforeach
+
+            @endif
 
         </div>
 
@@ -305,6 +314,12 @@ $(function() {
     });
 
     $('body').on('keydown', '.vidLink', function(e) {
+        if (e.which === 32 &&  e.target.selectionStart === 0) {
+        return false;
+        }
+    });
+
+    $('body').on('keydown', '.bericht', function(e) {
         if (e.which === 32 &&  e.target.selectionStart === 0) {
         return false;
         }

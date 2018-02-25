@@ -14,7 +14,12 @@ class ExtraController extends Controller
     public function aankon()
     {    
         // Verkrijgen van de berichten.
-        $berichten = Bericht::pluck("berichten");
+        $berichten = Bericht::orderBy("gegevensId", "desc")->get();
+
+        if (count($berichten) === 0) {
+            $berichten = false;
+        }
+
         // Verkrijgen van de aankondigingen.
         $aankondigingen = Aankondiging::pluck("aankondigingen");
 

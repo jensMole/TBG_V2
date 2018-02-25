@@ -45,6 +45,19 @@
             </div>
         </div>
 
+        <script>
+
+        // Nakijken als je op het begin spatie wilt meegeven.
+        $(function() {
+            $('body').on('keydown', '.bericht', function(e) {
+                if (e.which === 32 &&  e.target.selectionStart === 0) {
+                return false;
+                }
+            });
+        });
+
+        </script>
+
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->

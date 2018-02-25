@@ -17,7 +17,11 @@ class DashboardController extends Controller
         $vidLink = HoofdPag::pluck("vidLink");
         $tekstFront = HoofdPag::pluck("tekstFrontPage");
         $vids = Video::pluck('VideoLink');
-        $berichten = Bericht::all();
+        $berichten = Bericht::orderBy("gegevensId", "desc")->get();
+
+        if (count($berichten) === 0) {
+            $berichten = false;
+        }
 
         // https://www.youtube.com/watch?v=p44TszdiiA4
         //url omvormen naar vb. p44TszdiiA4.

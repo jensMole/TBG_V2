@@ -13,12 +13,20 @@
         <p></p>
         <h3 class="BerichtTitel">Hier komen berichten van jens als er iets belangrijk gaat gebeuren of als hij gewoon iets wilt zeggen.</h3>
         <p></p>
+            <!-- Nakijken als er geen berichten zijn dan zetten we een basis bericht -->
+            @if ($berichten === false)
 
-            @foreach ($berichten as $bericht)
+                <p>Geen berichten om weer te geven.</p>
 
-                <?= htmlspecialchars_decode($bericht);?>
+            @else
 
-            @endforeach
+                @foreach ($berichten as $bericht)
+
+                    <?= htmlspecialchars_decode($bericht["berichten"]);?>
+
+                @endforeach
+
+            @endif
 
         <p></p>    
     </div>
