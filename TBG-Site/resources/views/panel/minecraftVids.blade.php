@@ -45,7 +45,7 @@
 
 
 <div class="row rijen">
-    <form class="centerVidLink" method="post" action="{{action('DashboardController@vidUpdateMinecraft', '1')}}">
+    <form class="centerVidLink" method="post" action="{{action('MinecraftVidsController@vidUpdateMinecraft', '1')}}">
         <!-- Input veld voor link. -->
         <div class="col-sm-3 labelsVids">
             <div>
@@ -125,7 +125,7 @@
 </div>
 
 <div class="row rijen">
-    <form class="centerVidLink" method="post" action="{{action('DashboardController@vidUpdateMinecraft', 2)}}">
+    <form class="centerVidLink" method="post" action="{{action('MinecraftVidsController@vidUpdateMinecraft', 2)}}">
 
         <!-- Input veld voor link. -->
         <div class="col-sm-3 labelsVids">
@@ -202,7 +202,7 @@
 </div>
 
 <div class="row rijen">
-    <form class="centerVidLink" method="post" action="{{action('DashboardController@vidUpdateMinecraft', 3)}}">
+    <form class="centerVidLink" method="post" action="{{action('MinecraftVidsController@vidUpdateMinecraft', 3)}}">
         <!-- Input veld voor link. -->
         <div class="col-sm-4 labelsVids">
             <div>
@@ -266,7 +266,7 @@
 </div>
 
 <div class="row rijen">  
-    <form class="centerVidLink" method="post" action="{{action('DashboardController@vidUpdateMinecraft', 4)}}">
+    <form class="centerVidLink" method="post" action="{{action('MinecraftVidsController@vidUpdateMinecraft', 4)}}">
         <!-- Input veld voor link. -->
         <div class="col-sm-4 labelsVids">
             <div>
@@ -338,7 +338,7 @@
 </div>
 
 <div class="row rijen">
-    <form class="centerVidLink" method="post" action="{{action('DashboardController@vidUpdateMinecraft', 5)}}">
+    <form class="centerVidLink" method="post" action="{{action('MinecraftVidsController@vidUpdateMinecraft', 5)}}">
         <!-- Input veld voor link. -->
         <div class="col-sm-3 labelsVids">
             <div>
@@ -421,7 +421,7 @@
 </div>
 
 <div class="row rijen">
-    <form class="centerVidLink" method="post" action="{{action('DashboardController@vidUpdateMinecraft', 6)}}">
+    <form class="centerVidLink" method="post" action="{{action('MinecraftVidsController@vidUpdateMinecraft', 6)}}">
         <!-- Input veld voor link. -->
         <div class="col-sm-3 labelsVids">
             <div>

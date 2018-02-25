@@ -208,9 +208,9 @@
 <hr>
 <br/>
 
-<!-- Video's Home pagina -->
-<section id="sectionVideosHomeMinecraft">    
-    <h3><a class="notLink" id="videoLink">Aankondigingen pagina</a></h3>
+<!-- Berichten -->
+<section id="sectionTeksten">    
+    <h3><a class="notLink" id="aankondLink">Aankondigingen pagina</a></h3>
     <div class="row rijen">
     
         <br>
@@ -221,12 +221,13 @@
         </div>
 
         <!-- Input veld voor link. -->
+        <!-- Toevoegen van berichten -->
         <div class="col-sm-4 centerBericht">
             <form class="centerBericht" method="POST" action="addBerichten">
                 <div>
                 {{csrf_field()}}
                     <label id="bericht" for="berichtTekst">Bericht: </label><br/>
-                    <textarea rows="3" cols="10" class="bericht" size="48" name="bericht" type="text" placeholder="Plaats hier een bericht. Voor link voeg <a> toe." id="berichtTekst" required></textarea>
+                    <textarea rows="3" cols="10" class="bericht" name="bericht" placeholder="Plaats hier een bericht. Voor link voeg <a> toe." id="berichtTekst" required></textarea>
                 </div>
                 <br/>
                 <button type="submit" value="Submit"  class="submitButton">Voeg bericht toe</button>
@@ -234,7 +235,7 @@
         </div>
 
         <div class="col-sm-4 berichtenDashboard">
-            
+            <!-- Berichten oplijsten. -->
             @foreach ($berichten as $bericht)
 
             <table class="table is-fullwidth">
@@ -242,19 +243,18 @@
                     <td style="width:80%;"><?= htmlspecialchars_decode($bericht["berichten"]);?></td>
                     <td style="width:10%;">
                         <div class="inline-forms">
-                            <form method="post" action="dashboard/edit/{{$bericht["gegevensId"]}}">
-                                <button type="submit" class="card-footer-item btn btn-info btn-md"><span class="glyphicon glyphicon-edit"></span> Edit</button>
+                            <form method="post" action="edit/{{$bericht["gegevensId"]}}">
+                                {{ csrf_field() }}
+                                <!-- Modal openen voor edit functie. -->
+                                <button type="submit" class="card-footer-item btn btn-info btn-md"><span class="glyphicon glyphicon-edit"></span>Edit</button>
                             </form>
                         </div>
                     </td>
                     <td style="width:10%;">
-
-                            <input name="_method" type="hidden" value="DELETE"/>
-                            {{ csrf_field() }}
-                            <!-- Modal openen van de delete functie. -->
-                            <button onclick='toggleModal({{$bericht["gegevensId"]}});' class="kb-button btn btn-danger btn-md" type="submit" data-toggle="modal" data-target="#deleteModel" id={{$bericht["gegevensId"]}} value={{$bericht["gegevensId"]}}><span class="glyphicon glyphicon-remove"></span> Verwijder</button>
-
-                            
+                        <input name="_method" type="hidden" value="DELETE"/>
+                        {{ csrf_field() }}
+                        <!-- Modal openen van de delete functie. -->
+                        <button onclick='toggleModal({{$bericht["gegevensId"]}});' class="kb-button btn btn-danger btn-md" type="submit" data-toggle="modal" data-target="#deleteModel" id={{$bericht["gegevensId"]}} value={{$bericht["gegevensId"]}}><span class="glyphicon glyphicon-remove"></span>Verwijder</button>  
                     </td>
                 </tr>                
             </table>

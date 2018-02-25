@@ -45,7 +45,7 @@
 
 
 <div class="row rijen">
-    <form class="centerVidLink" method="post" action="{{action('DashboardController@vidUpdateAndere', '1')}}">
+    <form class="centerVidLink" method="post" action="{{action('AndereVidsController@vidUpdateAndere', '1')}}">
         <!-- Input veld voor link. -->
         <div class="col-sm-3 labelsVids">
             <div>
@@ -128,7 +128,7 @@
 
 
 <div class="row rijen">
-    <form class="centerVidLink" method="post" action="{{action('DashboardController@vidUpdateAndere', '2')}}">
+    <form class="centerVidLink" method="post" action="{{action('AndereVidsController@vidUpdateAndere', '2')}}">
         <!-- Input veld voor link. -->
         <div class="col-sm-3 labelsVids">
             <div>
@@ -211,7 +211,7 @@
 
 
 <div class="row rijen">
-    <form class="centerVidLink" method="post" action="{{action('DashboardController@vidUpdateAndere', '3')}}">
+    <form class="centerVidLink" method="post" action="{{action('AndereVidsController@vidUpdateAndere', '3')}}">
         <!-- Input veld voor link. -->
         <div class="col-sm-3 labelsVids">
             <div>
@@ -294,7 +294,7 @@
 
 
 <div class="row rijen">
-    <form class="centerVidLink" method="post" action="{{action('DashboardController@vidUpdateAndere', '4')}}">
+    <form class="centerVidLink" method="post" action="{{action('AndereVidsController@vidUpdateAndere', '4')}}">
         <!-- Input veld voor link. -->
         <div class="col-sm-3 labelsVids">
             <div>

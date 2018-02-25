@@ -428,6 +428,18 @@ h3{
     display: inline-block;
 }
 
+.AnulateButton{
+	color: black;
+	text-align: center;
+	font-size: 130%;
+	background-color: maroon; /* red */
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: inline-block;
+}
+
 .submitButtonDelete{
 	color: black;
 	text-align: center;
@@ -495,7 +507,7 @@ textarea {
 	/* resize: none; */
 }
 
-#sectionVideosHomeMinecraft{
+#sectionVideosHomeMinecraft, #sectionTeksten{
 	margin-bottom: 30px;
 	overflow: auto;
 }
