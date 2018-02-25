@@ -276,10 +276,77 @@
 
     </div>  
 
+    <!-- Aankondigingen -->
     <div class="row rijen">
         
-        <h3>Aankondigingen</h3>
+    <br>
+        <h3><a class="notLink" id="aankondigingen">Aankondigingen</a></h3>
         <br/>
+
+        <div class="col-sm-2">
+        </div>
+
+        <!-- Input veld voor link. -->
+        <!-- Toevoegen van berichten -->
+        <div class="col-sm-4 centerBericht">
+        <h1>TODO</h1>
+            <form class="centerBericht" method="POST" action="">
+                <div>
+                {{csrf_field()}}
+                    <label id="aankondiging" for="aankondigingTekst">Aankondiging: </label><br/>
+                    <textarea rows="3" cols="10" class="bericht" name="aankondiging" placeholder="Plaats hier een aankondiging. Voor link voeg <a> toe." id="aankondigingTekst" required></textarea>
+                </div>
+                <br/>
+                <button type="submit" value="Submit"  class="submitButton">Voeg aankondiging toe</button>
+            </form> 
+        </div>
+
+
+        <div class="col-sm-4 berichtenDashboard">
+            <!-- Berichten oplijsten. -->
+            <!-- Nakijken als er geen berichten zijn dan zetten we een basis bericht -->
+                    
+            <!-- TODO -->
+            <h1>TODO</h1>
+
+            @if ($berichten === false)
+
+                <h3>Geen berichten om weer te geven</h3>
+
+            @else
+
+                @foreach ($berichten as $bericht)
+
+                <table class="table is-fullwidth">
+                    <tr>
+                        <td style="width:80%;"><?= htmlspecialchars_decode($bericht["berichten"]);?></td>
+                        <td style="width:10%;">
+                            <div class="inline-forms">
+                                <form method="post" action="bericht/edit/{{$bericht["gegevensId"]}}">
+                                    {{ csrf_field() }}
+                                    <!-- Modal openen voor edit functie. -->
+                                    <button type="submit" class="card-footer-item btn btn-info btn-md"><span class="glyphicon glyphicon-edit"></span>Edit</button>
+                                </form>
+                            </div>
+                        </td>
+                        <td style="width:10%;">
+                            <input name="_method" type="hidden" value="DELETE"/>
+                            {{ csrf_field() }}
+                            <!-- Modal openen van de delete functie. -->
+                            <button onclick='toggleModal({{$bericht["gegevensId"]}});' class="kb-button btn btn-danger btn-md" type="submit" data-toggle="modal" data-target="#deleteModel" id={{$bericht["gegevensId"]}} value={{$bericht["gegevensId"]}}><span class="glyphicon glyphicon-remove"></span>Verwijder</button>  
+                        </td>
+                    </tr>                
+                </table>
+                @endforeach
+
+            @endif
+
+        </div>
+
+        <div class="col-sm-2">
+        </div>
+
+
 
                  
     </div>
