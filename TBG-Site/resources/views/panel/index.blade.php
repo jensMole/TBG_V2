@@ -243,7 +243,7 @@
                     <td style="width:80%;"><?= htmlspecialchars_decode($bericht["berichten"]);?></td>
                     <td style="width:10%;">
                         <div class="inline-forms">
-                            <form method="post" action="edit/{{$bericht["gegevensId"]}}">
+                            <form method="post" action="bericht/edit/{{$bericht["gegevensId"]}}">
                                 {{ csrf_field() }}
                                 <!-- Modal openen voor edit functie. -->
                                 <button type="submit" class="card-footer-item btn btn-info btn-md"><span class="glyphicon glyphicon-edit"></span>Edit</button>

@@ -22,7 +22,7 @@
                         <div>
                             <!-- Tekst hoofdpagina -->
                             <div class="updateTekstVoorPagina">
-                                <form class="centerVidLink" id="EditBericht" method="post" action="updateBericht/<?php echo $ID ?>">
+                                <form class="centerVidLink" id="EditBericht" method="post" action="<?php echo $ID ?>">
                                     <div>
                                         <p  style="color:black;">
                                             Aanpassen van Bericht.

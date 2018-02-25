@@ -57,13 +57,13 @@ Route::post("vidUpdateMinecraft/{id}","MinecraftVidsController@vidUpdateMinecraf
 // Video's die geupdate moeten worden.
 Route::post("vidUpdateAndere/{id}","AndereVidsController@vidUpdateAndere");
 
-
+// Berichten
 //toevoegen van een nieuw item bij de berichten.
 Route::post("addBerichten", "BerichtController@addBericht");
 // Berichten verwijderen.
 Route::post('/dashboard/{id}','BerichtController@destroyBericht');
 // Berichten editeren.
-Route::post('/edit/{id}','BerichtController@edit');
+Route::post('bericht/edit/{id}','BerichtController@edit');
 // Berichten updaten. TODO
-Route::post('/dashboard/update/{id}','DashBoardController@updateBericht');
+Route::post('bericht/edit/updateBericht/{id}','BerichtController@updateBericht');
 
