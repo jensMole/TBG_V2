@@ -42,11 +42,19 @@
         <!--<p>De opkomende video's komen binnenkort.</p>-->
         <!--<p><strong>Er staan momenteel geen video's gepland wegens examens :(</strong></p>-->
         
-        @foreach ($aankondigingen as $aankondiging)
-           
-            <?= htmlspecialchars_decode($aankondiging);?>
+            @if ($aankondigingen === false)
 
-        @endforeach
+                <p>Geen aankondigingen om weer te geven.</p>
+
+            @else
+
+                @foreach ($aankondigingen as $aankondiging)
+
+                    <?= htmlspecialchars_decode($aankondiging["aankondigingen"]);?>
+
+                @endforeach
+
+            @endif
 
         <p></p>
     </div>

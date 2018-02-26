@@ -45,7 +45,7 @@ class BerichtController extends Controller
         // ID verkrijgen van de gegevens.
         $ID = $bericht["gegevensId"];
         // Opsturen van de gegevens naar de edit pagina.
-        return view('panel.edit', compact("berichtTransform", "ID"));
+        return view('panel.edit.editBericht', compact("berichtTransform", "ID"));
     }
 
     // Updaten van het bericht.

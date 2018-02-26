@@ -58,12 +58,21 @@ Route::post("vidUpdateMinecraft/{id}","MinecraftVidsController@vidUpdateMinecraf
 Route::post("vidUpdateAndere/{id}","AndereVidsController@vidUpdateAndere");
 
 // Berichten
-//toevoegen van een nieuw item bij de berichten.
+// toevoegen van een nieuw item bij de berichten.
 Route::post("addBerichten", "BerichtController@addBericht");
 // Berichten verwijderen.
-Route::post('/dashboard/{id}','BerichtController@destroyBericht');
+Route::post('bericht/{id}','BerichtController@destroyBericht');
 // Berichten editeren.
 Route::post('bericht/edit/{id}','BerichtController@edit');
-// Berichten updaten. TODO
+// Berichten updaten.
 Route::post('bericht/edit/updateBericht/{id}','BerichtController@updateBericht');
 
+// Aankondigingen
+// toevoegen van een nieuw item bij de aankondingen.
+Route::post("addAankond", "AankondigingController@addAankon");
+// Aankondiging verwijderen.
+Route::post('aankondiging/{id}','AankondigingController@destroyAankon');
+// Aankondiging editeren.
+Route::post('aankondiging/edit/{id}','AankondigingController@editAankon');
+// Aankondigingen updaten.
+Route::post('aankondiging/edit/updateAankondiging/{id}','AankondigingController@updateAankon');

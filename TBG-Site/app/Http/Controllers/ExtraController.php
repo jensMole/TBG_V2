@@ -15,13 +15,16 @@ class ExtraController extends Controller
     {    
         // Verkrijgen van de berichten.
         $berichten = Bericht::orderBy("gegevensId", "desc")->get();
-
+        // Verkrijgen van de aankondigingen.
+        $aankondigingen = Aankondiging::orderBy("aankonId", "desc")->get();
+        // Als er geen berichten zijn dan sturen we false
         if (count($berichten) === 0) {
             $berichten = false;
         }
-
-        // Verkrijgen van de aankondigingen.
-        $aankondigingen = Aankondiging::pluck("aankondigingen");
+        // Als er geen aankondigingen zijn dan sturen we false
+        if (count($aankondigingen) === 0) {
+            $aankondigingen = false;
+        }
 
         $onlineVid = onlineVid::pluck("onlineVidTekst");
 

@@ -22,20 +22,20 @@
                         <div>
                             <!-- Tekst hoofdpagina -->
                             <div class="updateTekstVoorPagina">
-                                <form class="centerVidLink" id="EditBericht" method="post" action="updateBericht/<?php echo $ID ?>">
+                                <form class="centerVidLink" id="EditAankondiging" method="post" action="updateAankondiging/<?php echo $ID ?>">
                                     <div>
                                         <p  style="color:black;">
-                                            Aanpassen van Bericht.
+                                            Aanpassen van een aankondiging.
                                         </p>
                                         {{csrf_field()}}
-                                        <textarea rows="3" cols="10" class="bericht" name="bericht" placeholder="Plaats hier een bericht. Voor link voeg <a> toe." id="berichtTekst" required><?= htmlspecialchars_decode($berichtTransform);?></textarea>
+                                        <textarea rows="3" cols="10" class="aankonding" name="aankonding" placeholder="Plaats hier een aankondiging. Voor link voeg <a> toe." id="aankondingTekst" required><?= htmlspecialchars_decode($aankondigingTransform);?></textarea>
                                     </div>
                                     <br/>
                                         <div class="col-xs-3"></div>
                                         <button type="submit" value="Submit" class="submitButton col-xs-2">Opslaan</button>
                                         <div class="col-xs-2"></div>
                                         <!-- Terugsturen naar het vorig scherm -->
-                                        <a style="text-decoration:none;" href="{{ URL::previous() }}#berichten" class="AnulateButton col-xs-2">Annuleer</a>
+                                        <a style="text-decoration:none;" href="{{ URL::previous() }}#aankondigingen" class="AnulateButton col-xs-2">Annuleer</a>
                                         <div class="col-xs-3"></div>
                                 </form>
                             </div>
@@ -49,7 +49,7 @@
 
         // Nakijken als je op het begin spatie wilt meegeven.
         $(function() {
-            $('body').on('keydown', '.bericht', function(e) {
+            $('body').on('keydown', '.aankonding', function(e) {
                 if (e.which === 32 &&  e.target.selectionStart === 0) {
                 return false;
                 }

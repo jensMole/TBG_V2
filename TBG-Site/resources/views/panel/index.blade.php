@@ -250,7 +250,7 @@
                         <td style="width:80%;"><?= htmlspecialchars_decode($bericht["berichten"]);?></td>
                         <td style="width:10%;">
                             <div class="inline-forms">
-                                <form method="post" action="bericht/edit/{{$bericht["gegevensId"]}}">
+                                <form method="post" action='bericht/edit/{{$bericht["gegevensId"]}}'>
                                     {{ csrf_field() }}
                                     <!-- Modal openen voor edit functie. -->
                                     <button type="submit" class="card-footer-item btn btn-info btn-md"><span class="glyphicon glyphicon-edit"></span>Edit</button>
@@ -261,7 +261,7 @@
                             <input name="_method" type="hidden" value="DELETE"/>
                             {{ csrf_field() }}
                             <!-- Modal openen van de delete functie. -->
-                            <button onclick='toggleModal({{$bericht["gegevensId"]}});' class="kb-button btn btn-danger btn-md" type="submit" data-toggle="modal" data-target="#deleteModel" id={{$bericht["gegevensId"]}} value={{$bericht["gegevensId"]}}><span class="glyphicon glyphicon-remove"></span>Verwijder</button>  
+                            <button onclick='toggleModalBericht({{$bericht["gegevensId"]}});' class="kb-button btn btn-danger btn-md" type="submit" data-toggle="modal" data-target="#deleteModelBericht" id='{{$bericht["gegevensId"]}}' value='{{$bericht["gegevensId"]}}'><span class="glyphicon glyphicon-remove"></span>Verwijder</button>  
                         </td>
                     </tr>                
                 </table>
@@ -289,8 +289,7 @@
         <!-- Input veld voor link. -->
         <!-- Toevoegen van berichten -->
         <div class="col-sm-4 centerBericht">
-        <h1>TODO</h1>
-            <form class="centerBericht" method="POST" action="">
+            <form class="centerBericht" method="POST" action="addAankond">
                 <div>
                 {{csrf_field()}}
                     <label id="aankondiging" for="aankondigingTekst">Aankondiging: </label><br/>
@@ -305,24 +304,20 @@
         <div class="col-sm-4 berichtenDashboard">
             <!-- Berichten oplijsten. -->
             <!-- Nakijken als er geen berichten zijn dan zetten we een basis bericht -->
-                    
-            <!-- TODO -->
-            <h1>TODO</h1>
+            @if ($aankondigingen === false)
 
-            @if ($berichten === false)
-
-                <h3>Geen berichten om weer te geven</h3>
+                <h3>Geen aankondigingen om weer te geven</h3>
 
             @else
 
-                @foreach ($berichten as $bericht)
+                @foreach ($aankondigingen as $aankondiging)
 
                 <table class="table is-fullwidth">
                     <tr>
-                        <td style="width:80%;"><?= htmlspecialchars_decode($bericht["berichten"]);?></td>
+                        <td style="width:80%;"><?= htmlspecialchars_decode($aankondiging["aankondigingen"]);?></td>
                         <td style="width:10%;">
                             <div class="inline-forms">
-                                <form method="post" action="bericht/edit/{{$bericht["gegevensId"]}}">
+                                <form method="post" action='aankondiging/edit/{{$aankondiging["aankonId"]}}'>
                                     {{ csrf_field() }}
                                     <!-- Modal openen voor edit functie. -->
                                     <button type="submit" class="card-footer-item btn btn-info btn-md"><span class="glyphicon glyphicon-edit"></span>Edit</button>
@@ -333,7 +328,7 @@
                             <input name="_method" type="hidden" value="DELETE"/>
                             {{ csrf_field() }}
                             <!-- Modal openen van de delete functie. -->
-                            <button onclick='toggleModal({{$bericht["gegevensId"]}});' class="kb-button btn btn-danger btn-md" type="submit" data-toggle="modal" data-target="#deleteModel" id={{$bericht["gegevensId"]}} value={{$bericht["gegevensId"]}}><span class="glyphicon glyphicon-remove"></span>Verwijder</button>  
+                            <button onclick='toggleModalAankondiging({{$aankondiging["aankonId"]}});' class="kb-button btn btn-danger btn-md" type="submit" data-toggle="modal" data-target="#deleteModelAankond" id='{{$aankondiging["aankonId"]}}' value='{{$aankondiging["aankonId"]}}'><span class="glyphicon glyphicon-remove"></span>Verwijder</button>  
                         </td>
                     </tr>                
                 </table>
@@ -363,7 +358,8 @@
 
 <img onclick="topFunction()" id="Top" src="../afbeeldingen/boven.png" alt="Ga naar boven">
 
-@include('panel.delete')
+@include('panel.delete.deleteBericht')
+@include('panel.delete.deleteAankondiging')
 
 <script>
 // Nakijken als je op het begin spatie wilt meegeven.

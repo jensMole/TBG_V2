@@ -1,4 +1,4 @@
-<div class="modal fade" id="deleteModel" role="dialog">
+<div class="modal fade" id="deleteModelAankond" role="dialog">
     <div class="modal-dialog modal-lg" style="left: auto;">
         <div class="modal-content">
             <div class="modal-header">
@@ -6,12 +6,12 @@
                 <div>
                     <!-- Tekst hoofdpagina -->
                     <div class="updateTekstVoorPagina">
-                        <form class="centerVidLink" id="DeleteBericht" method="post" action="/">
+                        <form class="centerVidLink" id="DeleteAankondiging" method="post" action="/">
                             <div>
                                 {{csrf_field()}}
                                 <div class="field">
                                     <p  style="color:black;">
-                                    U staat op het punt een bericht te verwijderen!<br>
+                                    U staat op het punt een aankondiging te verwijderen!<br>
                                     Bent u zeker?
                                     </p>
                                 </div><br>
@@ -29,7 +29,7 @@
 </div>
 
 <script>
-  function toggleModal(beaconId) {
-      document.getElementById("DeleteBericht").action = "/dashboard/" + beaconId;
-}
+  function toggleModalAankondiging(aankondID) {
+    document.getElementById("DeleteAankondiging").action = "/aankondiging/" + aankondID;
+  }
 </script>
