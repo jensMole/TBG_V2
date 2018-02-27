@@ -76,3 +76,8 @@ Route::post('aankondiging/{id}','AankondigingController@destroyAankon');
 Route::post('aankondiging/edit/{id}','AankondigingController@editAankon');
 // Aankondigingen updaten.
 Route::post('aankondiging/edit/updateAankondiging/{id}','AankondigingController@updateAankon');
+
+
+// Online video's
+// toevoegen van een nieuw item bij de online video's.
+Route::post("addvid", "onlineVidController@addVid");

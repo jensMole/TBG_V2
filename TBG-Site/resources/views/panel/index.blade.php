@@ -261,7 +261,7 @@
                             <input name="_method" type="hidden" value="DELETE"/>
                             {{ csrf_field() }}
                             <!-- Modal openen van de delete functie. -->
-                            <button onclick='toggleModalBericht({{$bericht["gegevensId"]}});' class="kb-button btn btn-danger btn-md" type="submit" data-toggle="modal" data-target="#deleteModelBericht" id='{{$bericht["gegevensId"]}}' value='{{$bericht["gegevensId"]}}'><span class="glyphicon glyphicon-remove"></span>Verwijder</button>  
+                            <button onclick='toggleModalBericht({{$bericht["gegevensId"]}});' class="kb-button btn btn-danger btn-md" type="submit" data-toggle="modal" data-target="#deleteModelBericht" value='{{$bericht["gegevensId"]}}'><span class="glyphicon glyphicon-remove"></span>Verwijder</button>  
                         </td>
                     </tr>                
                 </table>
@@ -328,7 +328,7 @@
                             <input name="_method" type="hidden" value="DELETE"/>
                             {{ csrf_field() }}
                             <!-- Modal openen van de delete functie. -->
-                            <button onclick='toggleModalAankondiging({{$aankondiging["aankonId"]}});' class="kb-button btn btn-danger btn-md" type="submit" data-toggle="modal" data-target="#deleteModelAankond" id='{{$aankondiging["aankonId"]}}' value='{{$aankondiging["aankonId"]}}'><span class="glyphicon glyphicon-remove"></span>Verwijder</button>  
+                            <button onclick='toggleModalAankondiging({{$aankondiging["aankonId"]}});' class="kb-button btn btn-danger btn-md" type="submit" data-toggle="modal" data-target="#deleteModelAankond" value='{{$aankondiging["aankonId"]}}'><span class="glyphicon glyphicon-remove"></span>Verwijder</button>  
                         </td>
                     </tr>                
                 </table>
@@ -340,17 +340,74 @@
 
         <div class="col-sm-2">
         </div>
-
-
-
                  
     </div>
 
     <div class="row rijen">
         
-        <h3>Online video's</h3>
+        <h3><a class="notLink" id="online">Online video's</a></h3>
         <br/>
 
+        <!-- Input veld voor link. -->
+        <!-- Toevoegen van berichten -->
+        <div class="col-sm-6 centerBericht">
+            <form class="centerBericht" method="POST" action="addvid">
+                <div class="col-sm-6">
+                    {{csrf_field()}}
+                    <label id="onlineVidLinkLabel" for="onlineVid">Link: </label><br>
+                    <textarea rows="1" cols="10" class="bericht" name="onlineVidLink" placeholder="Plaats hier de link van de video." id="onlineVidLink" required></textarea><br><br>
+                </div>
+                <div class="col-sm-6">
+                    {{csrf_field()}}
+                    <label id="onlineVidTekstLabel" for="onlineVid">Tekst: </label><br>
+                    <textarea rows="1" cols="10" class="bericht" name="onlineVidTekst" placeholder="Plaats hier de tekst die getoond moet worden." id="onlineVidTekst" required></textarea>
+                </div>
+                <br>
+                <button style="margin-top: 25px;" type="submit" value="Submit"  class="submitButton col-sm-6">Voeg online video toe</button>
+            </form> 
+        </div>
+
+
+        <div class="col-sm-4 berichtenDashboard">
+            <!-- Berichten oplijsten. -->
+            <!-- Nakijken als er geen berichten zijn dan zetten we een basis bericht -->
+            <h1>TODO</h1>
+            @if ($aankondigingen === false)
+
+                <h3>Geen aankondigingen om weer te geven</h3>
+
+            @else
+
+                @foreach ($aankondigingen as $aankondiging)
+
+                <table class="table is-fullwidth">
+                    <tr>
+                        <td style="width:80%;"><?= htmlspecialchars_decode($aankondiging["aankondigingen"]);?></td>
+                        <td style="width:10%;">
+                            <div class="inline-forms">
+                                <form method="post" action='aankondiging/edit/{{$aankondiging["aankonId"]}}'>
+                                    {{ csrf_field() }}
+                                    <!-- Modal openen voor edit functie. -->
+                                    <button type="submit" class="card-footer-item btn btn-info btn-md"><span class="glyphicon glyphicon-edit"></span>Edit</button>
+                                </form>
+                            </div>
+                        </td>
+                        <td style="width:10%;">
+                            <input name="_method" type="hidden" value="DELETE"/>
+                            {{ csrf_field() }}
+                            <!-- Modal openen van de delete functie. -->
+                            <button onclick='toggleModalAankondiging({{$aankondiging["aankonId"]}});' class="kb-button btn btn-danger btn-md" type="submit" data-toggle="modal" data-target="#deleteModelAankond" value='{{$aankondiging["aankonId"]}}'><span class="glyphicon glyphicon-remove"></span>Verwijder</button>  
+                        </td>
+                    </tr>                
+                </table>
+                @endforeach
+
+            @endif
+
+        </div>
+
+        <div class="col-sm-2">
+        </div>
                  
     </div>
 </section>
