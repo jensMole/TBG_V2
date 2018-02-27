@@ -27,40 +27,37 @@ class OnlineVidController extends Controller
         return redirect("/dashboard#online");
     }
 
-
-
-
-
-
-
-
-
-
-    // Verwijderen van een aankondiging
-    public function destroyAankon($aankonId){
+    // Verwijderen van een onlineVid
+    public function destroyOnlineVid($onlineVidId){
         // zoek de gegevens in de database.
-        $aankond = Aankondiging::where('aankonId', $aankonId);
+        $aankond = OnlineVid::where('gegevensId', $onlineVidId);
         // Verwijder het.
         $aankond->delete();
         // Terugsturen naar de pagina.
-        return redirect("/dashboard#aankondigingen");
+        return redirect("/dashboard#online");
     }
 
-    // Editeren van een aankondiging.
-    public function editAankon($aankondigingId){
-        // Zoek het aankondiging met behulp van het ID.
-        $aankondiging = Aankondiging::find($aankondigingId);
-        // Verkrijg het aankondiging.
-        $aankondigingAfgehaald = $aankondiging["aankondigingen"];
+    // Editeren van een online video.
+    public function editOnlineVid($onlineVidID){
+        // Zoek de online video met behulp van het ID.
+        $onlineVid = OnlineVid::find($onlineVidID);
+        // Verkrijg de online video.
+        $onlineVidAfgehaald = $onlineVid["onlineVidTekst"];
         // Haal eerste p element weg.
-        $aankondigingTransformStart = substr($aankondigingAfgehaald, 3); 
+        $onlineVidTransformStart = substr($onlineVidAfgehaald, 3); 
         // Haal achterste p element weg.
-        $aankondigingTransform = rtrim($aankondigingTransformStart, "</p>");
+        $onlineVidTransform = rtrim($onlineVidTransformStart, "</p>");
         // ID verkrijgen van de gegevens.
-        $ID = $aankondiging["aankonId"];
+        $ID = $onlineVid["gegevensId"];
         // Opsturen van de gegevens naar de edit pagina.
-        return view('panel.edit.editAankondiging', compact("aankondigingTransform", "ID"));
+        return view('panel.edit.editOnlineVid', compact("onlineVidTransform", "ID"));
     }
+
+
+
+
+
+
 
     // Updaten van het aankondiging.
     public function updateAankon(Request $request, $id)

@@ -34,9 +34,9 @@ class AankondigingController extends Controller
 
     // Editeren van een aankondiging.
     public function editAankon($aankondigingId){
-        // Zoek het aankondiging met behulp van het ID.
+        // Zoek de aankondiging met behulp van het ID.
         $aankondiging = Aankondiging::find($aankondigingId);
-        // Verkrijg het aankondiging.
+        // Verkrijg de aankondiging.
         $aankondigingAfgehaald = $aankondiging["aankondigingen"];
         // Haal eerste p element weg.
         $aankondigingTransformStart = substr($aankondigingAfgehaald, 3); 

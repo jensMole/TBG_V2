@@ -6,6 +6,7 @@ use App\HoofdPag;
 use App\Video;
 use App\Bericht;
 use App\Aankondiging;
+use App\OnlineVid;
 
 
 use Illuminate\Http\Request;
@@ -20,6 +21,9 @@ class DashboardController extends Controller
         $vids = Video::pluck('VideoLink');
         $berichten = Bericht::orderBy("gegevensId", "desc")->get();
         $aankondigingen = Aankondiging::orderBy("aankonId", "desc")->get();
+        $OnlineVideos = OnlineVid::orderBy("gegevensId", "desc")->get();
+        $GenoegVideos = true;
+        
         // Nakijken als er berichten zijn anders sturen we false.
         if (count($berichten) === 0) {
             $berichten = false;
@@ -29,11 +33,15 @@ class DashboardController extends Controller
             $aankondigingen = false;
         }
 
+        if (count($OnlineVideos) >= 6){
+            $GenoegVideos = false;
+        }
+
         // https://www.youtube.com/watch?v=p44TszdiiA4
         //url omvormen naar vb. p44TszdiiA4.
         $newVidLink = substr($vidLink, 37, 11);
  
-        return view('panel.index', compact('vidLink','newVidLink','tekstFront','vids','berichten', 'aankondigingen'));
+        return view('panel.index', compact('vidLink','newVidLink','tekstFront','vids','berichten', 'aankondigingen', 'OnlineVideos', 'GenoegVideos'));
     }
 
     public function minecraft()

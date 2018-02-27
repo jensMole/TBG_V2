@@ -345,7 +345,7 @@
 
     <div class="row rijen">
         
-        <h3><a class="notLink" id="online">Online video's</a></h3>
+        <h3><a class="notLink" id="online">Online video's (Max 6)</a></h3>
         <br/>
 
         <!-- Input veld voor link. -->
@@ -363,7 +363,17 @@
                     <textarea rows="1" cols="10" class="bericht" name="onlineVidTekst" placeholder="Plaats hier de tekst die getoond moet worden." id="onlineVidTekst" required></textarea>
                 </div>
                 <br>
-                <button style="margin-top: 25px;" type="submit" value="Submit"  class="submitButton col-sm-6">Voeg online video toe</button>
+
+                @if ($GenoegVideos == false )
+                    
+                    <button style="margin-top: 25px; background-color: gray;" type="submit" value="Submit" title="Max 6. Je kan er geen meer toevoegen." class="submitButton col-sm-6" disabled>Voeg online video toe</button>
+
+                @else
+
+                    <button style="margin-top: 25px;" type="submit" value="Submit"  class="submitButton col-sm-6">Voeg online video toe</button>
+
+                @endif
+
             </form> 
         </div>
 
@@ -378,14 +388,14 @@
 
             @else
 
-                @foreach ($aankondigingen as $aankondiging)
+                @foreach ($OnlineVideos as $onlineVid)
 
                 <table class="table is-fullwidth">
                     <tr>
-                        <td style="width:80%;"><?= htmlspecialchars_decode($aankondiging["aankondigingen"]);?></td>
+                        <td style="width:80%;"><?= htmlspecialchars_decode($onlineVid["onlineVidTekst"]);?></td>
                         <td style="width:10%;">
                             <div class="inline-forms">
-                                <form method="post" action='aankondiging/edit/{{$aankondiging["aankonId"]}}'>
+                                <form method="post" action='onlinevid/edit/{{$onlineVid["gegevensId"]}}'>
                                     {{ csrf_field() }}
                                     <!-- Modal openen voor edit functie. -->
                                     <button type="submit" class="card-footer-item btn btn-info btn-md"><span class="glyphicon glyphicon-edit"></span>Edit</button>
@@ -396,7 +406,7 @@
                             <input name="_method" type="hidden" value="DELETE"/>
                             {{ csrf_field() }}
                             <!-- Modal openen van de delete functie. -->
-                            <button onclick='toggleModalAankondiging({{$aankondiging["aankonId"]}});' class="kb-button btn btn-danger btn-md" type="submit" data-toggle="modal" data-target="#deleteModelAankond" value='{{$aankondiging["aankonId"]}}'><span class="glyphicon glyphicon-remove"></span>Verwijder</button>  
+                            <button onclick='toggleModalOnlineVid({{$onlineVid["gegevensId"]}});' class="kb-button btn btn-danger btn-md" type="submit" data-toggle="modal" data-target="#deleteModelOnlineVid" value='{{$onlineVid["gegevensId"]}}'><span class="glyphicon glyphicon-remove"></span>Verwijder</button>  
                         </td>
                     </tr>                
                 </table>
@@ -417,6 +427,7 @@
 
 @include('panel.delete.deleteBericht')
 @include('panel.delete.deleteAankondiging')
+@include('panel.delete.deleteOnlineVid')
 
 <script>
 // Nakijken als je op het begin spatie wilt meegeven.

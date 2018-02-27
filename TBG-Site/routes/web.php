@@ -81,3 +81,7 @@ Route::post('aankondiging/edit/updateAankondiging/{id}','AankondigingController@
 // Online video's
 // toevoegen van een nieuw item bij de online video's.
 Route::post("addvid", "onlineVidController@addVid");
+// Online video's verwijderen.
+Route::post('onlinevideo/{id}','onlineVidController@destroyOnlineVid');
+// Online video's editeren.
+Route::post('onlinevid/edit/{id}','onlineVidController@editOnlineVid');
