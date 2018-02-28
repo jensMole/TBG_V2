@@ -20,7 +20,7 @@ class DashboardController extends Controller
         $tekstFront = HoofdPag::pluck("tekstFrontPage");
         $vids = Video::pluck('VideoLink');
         $berichten = Bericht::orderBy("gegevensId", "desc")->get();
-        $aankondigingen = Aankondiging::orderBy("aankonId", "desc")->get();
+        $aankondigingen = Aankondiging::get();
         $OnlineVideos = OnlineVid::orderBy("gegevensId", "desc")->get();
         $GenoegVideos = true;
         

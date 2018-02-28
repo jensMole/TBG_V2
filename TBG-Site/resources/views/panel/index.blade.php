@@ -211,6 +211,7 @@
 <!-- Berichten -->
 <section id="sectionTeksten">    
     <h3><a class="notLink" id="aankondLink">Aankondigingen pagina</a></h3>
+
     <div class="row rijen">
     
         <br>
@@ -355,7 +356,7 @@
         <br/>
 
         <!-- Input veld voor link. -->
-        <!-- Toevoegen van berichten -->
+        <!-- Toevoegen van online video's -->
         <div class="col-sm-6 centerBericht">
             <form class="centerBericht" method="POST" action="addvid">
                 <div class="col-sm-6">
@@ -385,8 +386,8 @@
 
 
         <div class="col-sm-4 berichtenDashboard">
-            <!-- Berichten oplijsten. -->
-            <!-- Nakijken als er geen berichten zijn dan zetten we een basis bericht -->
+            <!-- online video's oplijsten. -->
+            <!-- Nakijken als er geen online video's zijn dan zetten we een basis bericht -->
             @if ($OnlineVideos === false)
 
                 <h3>Geen Online Videos om weer te geven</h3>
@@ -433,7 +434,158 @@
 
 <section>
 
-    
+    <h3><a class="notLink" id="downloadsPag">Downloads pagina</a></h3>
+
+    <div class="row rijen">
+
+        <h1>TODO</h1>
+
+        <h3><a class="notLink" id="muziek">Muziek</a></h3>
+        <br/>
+
+        <!-- Input veld voor link. -->
+        <!-- Toevoegen van muziek -->
+        <div class="col-sm-6 centerBericht">
+            <form class="centerBericht" method="POST" action="addvid">
+                <div class="col-sm-6">
+                    {{csrf_field()}}
+                    <label id="onlineVidLinkLabel" for="onlineVidLink">Link: </label><br>
+                    <textarea rows="1" cols="10" class="bericht" name="onlineVidLink" placeholder="Plaats hier de link van de video." id="onlineVidLink" required></textarea><br><br>
+                </div>
+                <div class="col-sm-6">
+                    {{csrf_field()}}
+                    <label id="onlineVidTekstLabel" for="onlineVidTekst">Tekst: </label><br>
+                    <textarea rows="1" cols="10" class="bericht" name="onlineVidTekst" placeholder="Plaats hier de tekst die getoond moet worden." id="onlineVidTekst" required></textarea>
+                </div>
+                <br>
+
+                @if ($GenoegVideos == false )
+                    
+                    <button style="margin-top: 25px; left: -25%; background-color: gray;" type="submit" value="Submit" title="Max 6. Je kan er geen meer toevoegen." class="submitButton col-sm-6" disabled>Voeg online video toe</button>
+
+                @else
+
+                    <button style="margin-top: 25px; left: -25%;" type="submit" value="Submit"  class="submitButton col-sm-6">Voeg online video toe</button>
+
+                @endif
+
+            </form> 
+        </div>
+
+
+        <div class="col-sm-4 berichtenDashboard">
+            <!-- Muziek oplijsten. -->
+            <!-- Nakijken als er geen muziek is dan zetten we een basis bericht -->
+            @if ($OnlineVideos === false)
+
+                <h3>Geen Online Videos om weer te geven</h3>
+
+            @else
+
+                @foreach ($OnlineVideos as $onlineVid)
+
+                <table class="table is-fullwidth">
+                    <tr>
+                        <td style="width:80%;"><?= htmlspecialchars_decode($onlineVid["onlineVidTekst"]);?></td>
+                        <td style="width:10%;">
+                            <div class="inline-forms">
+                                <form method="post" action='onlinevid/edit/{{$onlineVid["gegevensId"]}}'>
+                                    {{ csrf_field() }}
+                                    <!-- Modal openen voor edit functie. -->
+                                    <button type="submit" class="card-footer-item btn btn-info btn-md"><span class="glyphicon glyphicon-edit"></span>Edit</button>
+                                </form>
+                            </div>
+                        </td>
+                        <td style="width:10%;">
+                            <input name="_method" type="hidden" value="DELETE"/>
+                            {{ csrf_field() }}
+                            <!-- Modal openen van de delete functie. -->
+                            <button onclick='toggleModalOnlineVid({{$onlineVid["gegevensId"]}});' class="kb-button btn btn-danger btn-md" type="submit" data-toggle="modal" data-target="#deleteModelOnlineVid" value='{{$onlineVid["gegevensId"]}}'><span class="glyphicon glyphicon-remove"></span>Verwijder</button>  
+                        </td>
+                    </tr>                
+                </table>
+                @endforeach
+
+            @endif
+
+        </div>
+
+        <div class="col-sm-2">
+        </div>
+                 
+    </div>
+
+    <div class="row rijen">
+
+        <h1>TODO</h1>
+
+        <h3><a class="notLink" id="plugins">plugins</a></h3>
+        <br/>
+
+        <!-- Input veld voor link. -->
+        <!-- Toevoegen van plugins -->
+        <div class="col-sm-6 centerBericht">
+            <form class="centerBericht" method="POST" action="addvid">
+                <div class="col-sm-6">
+                    {{csrf_field()}}
+                    <label id="onlineVidLinkLabel" for="onlineVidLink">Link: </label><br>
+                    <textarea rows="1" cols="10" class="bericht" name="onlineVidLink" placeholder="Plaats hier de link van de video." id="onlineVidLink" required></textarea><br><br>
+                </div>
+                <div class="col-sm-6">
+                    {{csrf_field()}}
+                    <label id="onlineVidTekstLabel" for="onlineVidTekst">Tekst: </label><br>
+                    <textarea rows="1" cols="10" class="bericht" name="onlineVidTekst" placeholder="Plaats hier de tekst die getoond moet worden." id="onlineVidTekst" required></textarea>
+                </div>
+                <br>
+
+                @if ($GenoegVideos == false )
+                    
+                    <button style="margin-top: 25px; left: -25%; background-color: gray;" type="submit" value="Submit" title="Max 6. Je kan er geen meer toevoegen." class="submitButton col-sm-6" disabled>Voeg online video toe</button>
+
+                @else
+
+                    <button style="margin-top: 25px; left: -25%;" type="submit" value="Submit"  class="submitButton col-sm-6">Voeg online video toe</button>
+
+                @endif
+
+            </form> 
+        </div>
+
+
+        <div class="col-sm-4 berichtenDashboard">
+            <!-- plugins oplijsten. -->
+            @if ($OnlineVideos === false)
+
+                <h3>Geen Online Videos om weer te geven</h3>
+
+            @else
+
+                @foreach ($OnlineVideos as $onlineVid)
+
+                <table class="table is-fullwidth">
+                    <tr>
+                        <td style="width:80%;"><?= htmlspecialchars_decode($onlineVid["onlineVidTekst"]);?></td>
+                        <td style="width:20%;">
+                            <div class="inline-forms">
+                                <form method="post" action='onlinevid/edit/{{$onlineVid["gegevensId"]}}'>
+                                    {{ csrf_field() }}
+                                    <!-- Modal openen voor edit functie. -->
+                                    <button type="submit" class="card-footer-item btn btn-info btn-md"><span class="glyphicon glyphicon-edit"></span>Edit</button>
+                                </form>
+                            </div>
+                        </td>
+                    </tr>                
+                </table>
+                @endforeach
+
+            @endif
+
+        </div>
+
+        <div class="col-sm-2">
+        </div>
+                 
+    </div>
 
 </section>
 

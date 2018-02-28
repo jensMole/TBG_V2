@@ -16,7 +16,7 @@ class ExtraController extends Controller
         // Verkrijgen van de berichten.
         $berichten = Bericht::orderBy("gegevensId", "desc")->get();
         // Verkrijgen van de aankondigingen.
-        $aankondigingen = Aankondiging::orderBy("aankonId", "desc")->get();
+        $aankondigingen = Aankondiging::get();
         // Verkrijgen van de online Video's.
         $onlineVid = OnlineVid::orderBy("gegevensId", "desc")->get();
 
