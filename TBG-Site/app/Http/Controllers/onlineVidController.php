@@ -41,35 +41,31 @@ class OnlineVidController extends Controller
     public function editOnlineVid($onlineVidID){
         // Zoek de online video met behulp van het ID.
         $onlineVid = OnlineVid::find($onlineVidID);
-        // Verkrijg de online video.
-        $onlineVidAfgehaald = $onlineVid["onlineVidTekst"];
-        // Haal eerste p element weg.
-        $onlineVidTransformStart = substr($onlineVidAfgehaald, 3); 
-        // Haal achterste p element weg.
-        $onlineVidTransform = rtrim($onlineVidTransformStart, "</p>");
+        // Verkrijg de online video link.
+        $onlineVidLink = $onlineVid["Link"];
+        // Verkrijg de online video tekst.
+        $onlineVidtekst = $onlineVid["Tekst"];
         // ID verkrijgen van de gegevens.
         $ID = $onlineVid["gegevensId"];
         // Opsturen van de gegevens naar de edit pagina.
-        return view('panel.edit.editOnlineVid', compact("onlineVidTransform", "ID"));
+        return view('panel.edit.editOnlineVid', compact("onlineVidLink", "onlineVidtekst", "ID"));
     }
 
-
-
-
-
-
-
-    // Updaten van het aankondiging.
-    public function updateAankon(Request $request, $id)
+    // Updaten van de online video.
+    public function updateOnlineVideo(Request $request, $id)
     {
         // ophalen van gegevens met het meegegeven ID.
-        $Getaankondiging = Aankondiging::find($id);
-        // gegevens die je hebt ingevoerd ophalen en de p elementen er terug aan vullen.
-        $Getaankondiging->aankondigingen = "<p>".request("aankonding")."</p>";
+        $GetOnlineVid = OnlineVid::find($id);
+        // Toevoegen van een Link van de video.
+        $GetOnlineVid->Link = request("onlineVidLinkEdit");
+        // Toevoegen van de tekst van de video die getoond wordt.
+        $GetOnlineVid->Tekst = request("onlineVidTekstEdit");
+        // Toevoegen van de tekst van de video die getoond wordt.
+        $GetOnlineVid->onlineVidTekst = "<p><a href='".request("onlineVidLinkEdit")."' target='_blank'>".request("onlineVidTekstEdit")."</a></p>"; 
         // Opslaan.
-        $Getaankondiging->save();
+        $GetOnlineVid->save();
         //terugsturen naar dashboard
-        return redirect("/dashboard#aankondigingen");
+        return redirect("/dashboard#online");
     }
 }
 ?>

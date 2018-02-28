@@ -85,3 +85,5 @@ Route::post("addvid", "onlineVidController@addVid");
 Route::post('onlinevideo/{id}','onlineVidController@destroyOnlineVid');
 // Online video's editeren.
 Route::post('onlinevid/edit/{id}','onlineVidController@editOnlineVid');
+// Online video updaten.
+Route::post('onlinevid/edit/updateOnlineVideo/{id}','onlineVidController@updateOnlineVideo');

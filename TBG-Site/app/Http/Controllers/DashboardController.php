@@ -28,11 +28,18 @@ class DashboardController extends Controller
         if (count($berichten) === 0) {
             $berichten = false;
         }
+
         // Nakijken als er aankondigingen zijn anders sturen we false.
         if (count($aankondigingen) === 0) {
             $aankondigingen = false;
         }
 
+        // Nakijken als er aankondigingen zijn anders sturen we false.
+        if (count($OnlineVideos) === 0) {
+            $OnlineVideos = false;
+        }
+
+        // Nakijken als er 6 of meer online video's er al zijn en dan zetten we de knop uit.
         if (count($OnlineVideos) >= 6){
             $GenoegVideos = false;
         }

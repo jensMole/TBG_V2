@@ -217,7 +217,7 @@
         <h3><a class="notLink" id="berichten">Berichten</a></h3>
         <br/>
 
-        <div class="col-sm-2">
+        <div class="col-sm-1">
         </div>
 
         <!-- Input veld voor link. -->
@@ -232,6 +232,9 @@
                 <br/>
                 <button type="submit" value="Submit"  class="submitButton">Voeg bericht toe</button>
             </form> 
+        </div>
+
+        <div class="col-sm-1">
         </div>
 
         <div class="col-sm-4 berichtenDashboard">
@@ -283,7 +286,7 @@
         <h3><a class="notLink" id="aankondigingen">Aankondigingen</a></h3>
         <br/>
 
-        <div class="col-sm-2">
+        <div class="col-sm-1">
         </div>
 
         <!-- Input veld voor link. -->
@@ -298,6 +301,9 @@
                 <br/>
                 <button type="submit" value="Submit"  class="submitButton">Voeg aankondiging toe</button>
             </form> 
+        </div>
+
+        <div class="col-sm-1">
         </div>
 
 
@@ -354,23 +360,23 @@
             <form class="centerBericht" method="POST" action="addvid">
                 <div class="col-sm-6">
                     {{csrf_field()}}
-                    <label id="onlineVidLinkLabel" for="onlineVid">Link: </label><br>
+                    <label id="onlineVidLinkLabel" for="onlineVidLink">Link: </label><br>
                     <textarea rows="1" cols="10" class="bericht" name="onlineVidLink" placeholder="Plaats hier de link van de video." id="onlineVidLink" required></textarea><br><br>
                 </div>
                 <div class="col-sm-6">
                     {{csrf_field()}}
-                    <label id="onlineVidTekstLabel" for="onlineVid">Tekst: </label><br>
+                    <label id="onlineVidTekstLabel" for="onlineVidTekst">Tekst: </label><br>
                     <textarea rows="1" cols="10" class="bericht" name="onlineVidTekst" placeholder="Plaats hier de tekst die getoond moet worden." id="onlineVidTekst" required></textarea>
                 </div>
                 <br>
 
                 @if ($GenoegVideos == false )
                     
-                    <button style="margin-top: 25px; background-color: gray;" type="submit" value="Submit" title="Max 6. Je kan er geen meer toevoegen." class="submitButton col-sm-6" disabled>Voeg online video toe</button>
+                    <button style="margin-top: 25px; left: -25%; background-color: gray;" type="submit" value="Submit" title="Max 6. Je kan er geen meer toevoegen." class="submitButton col-sm-6" disabled>Voeg online video toe</button>
 
                 @else
 
-                    <button style="margin-top: 25px;" type="submit" value="Submit"  class="submitButton col-sm-6">Voeg online video toe</button>
+                    <button style="margin-top: 25px; left: -25%;" type="submit" value="Submit"  class="submitButton col-sm-6">Voeg online video toe</button>
 
                 @endif
 
@@ -381,10 +387,9 @@
         <div class="col-sm-4 berichtenDashboard">
             <!-- Berichten oplijsten. -->
             <!-- Nakijken als er geen berichten zijn dan zetten we een basis bericht -->
-            <h1>TODO</h1>
-            @if ($aankondigingen === false)
+            @if ($OnlineVideos === false)
 
-                <h3>Geen aankondigingen om weer te geven</h3>
+                <h3>Geen Online Videos om weer te geven</h3>
 
             @else
 

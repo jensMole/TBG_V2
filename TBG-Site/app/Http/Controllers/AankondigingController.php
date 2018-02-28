@@ -48,7 +48,7 @@ class AankondigingController extends Controller
         return view('panel.edit.editAankondiging', compact("aankondigingTransform", "ID"));
     }
 
-    // Updaten van het aankondiging.
+    // Updaten van de aankondiging.
     public function updateAankon(Request $request, $id)
     {
         // ophalen van gegevens met het meegegeven ID.

@@ -70,11 +70,19 @@
         <p></p>
         <!-- Hier staan de video's die al geweest zijn. Zonder datum hier zetten. 6MAX-->
         
+        @if($onlineVid === false)
+
+             <p>Geen online video's om weer te geven.</p>
+
+        @else
+
             @foreach ($onlineVid as $online)
             
-                <?= htmlspecialchars_decode($online);?>
+                <?= htmlspecialchars_decode($online["onlineVidTekst"]);?>
 
             @endforeach 
+
+        @endif
         
         <p></p>
     </div>
