@@ -18,7 +18,7 @@
                         <ul class="dropdown-menu">
                             <li><a href="/video">Video's</a></li>
                             <li><a href="/plugins">Minecraft<span class="caret"></span></a>
-                               
+                                
                                 <!-- Dit moet dan verder aangevuld worden -->
                                 <ul class="dropdown-menu">
                                     <li><a href="/plugins">Plugin's</a></li>
@@ -27,6 +27,7 @@
                                     <li><a href="/minigames">Minigames</a></li>
                                     <li><a href="/tutorials">Toturials</a></li>
                                     <li><a href="/snapshots">Snapshots</a></li>
+                                    <li class="divider visible-xs"></li>
                                 </ul>
 
                             </li>
@@ -41,13 +42,15 @@
                                 </ul>
                                 
                             </li>
+                            <li class="divider visible-xs"></li>
                         </ul>
                     </li>
                     <li class="dropdown">
                     <a href="over" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Over <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="over">Over</a></li>
-                            <li><a href="contact">Contact</a></li>      
+                            <li><a href="contact">Contact</a></li> 
+                            <li class="divider visible-xs"></li>     
                         </ul>
                     </li>
                 <li class="dropdown">
