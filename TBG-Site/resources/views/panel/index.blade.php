@@ -446,28 +446,20 @@
         <!-- Input veld voor link. -->
         <!-- Toevoegen van muziek -->
         <div class="col-sm-6 centerBericht">
-            <form class="centerBericht" method="POST" action="addvid">
+            <form class="centerBericht" method="POST" action="addMuziek">
                 <div class="col-sm-6">
                     {{csrf_field()}}
-                    <label id="onlineVidLinkLabel" for="onlineVidLink">Link: </label><br>
-                    <textarea rows="1" cols="10" class="bericht" name="onlineVidLink" placeholder="Plaats hier de link van de video." id="onlineVidLink" required></textarea><br><br>
+                    <label id="onlineMuziekLinkLabel" for="onlineMuziekLink">Link: </label><br>
+                    <textarea rows="1" cols="10" class="bericht" name="onlineMuziekLink" placeholder="Plaats hier de link van de muziek." id="onlineMuziekLink" required></textarea><br><br>
                 </div>
                 <div class="col-sm-6">
                     {{csrf_field()}}
-                    <label id="onlineVidTekstLabel" for="onlineVidTekst">Tekst: </label><br>
-                    <textarea rows="1" cols="10" class="bericht" name="onlineVidTekst" placeholder="Plaats hier de tekst die getoond moet worden." id="onlineVidTekst" required></textarea>
+                    <label id="onlineMuziekTekstLabel" for="onlineMuziekTekst">Tekst: </label><br>
+                    <textarea rows="1" cols="10" class="bericht" name="onlineMuziekTekst" placeholder="Plaats hier de tekst die getoond moet worden." id="onlionlineMuziekTekstneVidTekst" required></textarea>
                 </div>
                 <br>
 
-                @if ($GenoegVideos == false )
-                    
-                    <button style="margin-top: 25px; left: -25%; background-color: gray;" type="submit" value="Submit" title="Max 6. Je kan er geen meer toevoegen." class="submitButton col-sm-6" disabled>Voeg online video toe</button>
-
-                @else
-
-                    <button style="margin-top: 25px; left: -25%;" type="submit" value="Submit"  class="submitButton col-sm-6">Voeg online video toe</button>
-
-                @endif
+                <button style="margin-top: 25px; left: -25%;" type="submit" value="Submit"  class="submitButton col-sm-6">Voeg muziek toe</button>
 
             </form> 
         </div>
@@ -476,20 +468,20 @@
         <div class="col-sm-4 berichtenDashboard">
             <!-- Muziek oplijsten. -->
             <!-- Nakijken als er geen muziek is dan zetten we een basis bericht -->
-            @if ($OnlineVideos === false)
+            @if ($muziek === false)
 
                 <h3>Geen Online Videos om weer te geven</h3>
 
             @else
 
-                @foreach ($OnlineVideos as $onlineVid)
+                @foreach ($muziek as $muziekLink)
 
                 <table class="table is-fullwidth">
                     <tr>
-                        <td style="width:80%;"><?= htmlspecialchars_decode($onlineVid["onlineVidTekst"]);?></td>
+                        <td style="width:80%;"><?= htmlspecialchars_decode($muziekLink["onlineLinkTekst"]);?></td>
                         <td style="width:10%;">
                             <div class="inline-forms">
-                                <form method="post" action='onlinevid/edit/{{$onlineVid["gegevensId"]}}'>
+                                <form method="post" action='muziek/edit/{{$muziekLink["muziekId"]}}'>
                                     {{ csrf_field() }}
                                     <!-- Modal openen voor edit functie. -->
                                     <button type="submit" class="card-footer-item btn btn-info btn-md"><span class="glyphicon glyphicon-edit"></span>Edit</button>
@@ -500,7 +492,7 @@
                             <input name="_method" type="hidden" value="DELETE"/>
                             {{ csrf_field() }}
                             <!-- Modal openen van de delete functie. -->
-                            <button onclick='toggleModalOnlineVid({{$onlineVid["gegevensId"]}});' class="kb-button btn btn-danger btn-md" type="submit" data-toggle="modal" data-target="#deleteModelOnlineVid" value='{{$onlineVid["gegevensId"]}}'><span class="glyphicon glyphicon-remove"></span>Verwijder</button>  
+                            <button onclick='toggleModalOnlineVid({{$muziekLink["muziekId"]}});' class="kb-button btn btn-danger btn-md" type="submit" data-toggle="modal" data-target="#deleteModelMuziek" value='{{$muziekLink["muziekId"]}}'><span class="glyphicon glyphicon-remove"></span>Verwijder</button>  
                         </td>
                     </tr>                
                 </table>
@@ -588,6 +580,10 @@
     </div>
 
 </section>
+
+<br/>
+<hr>
+<br/>
 
 
 <img onclick="topFunction()" id="Top" src="../afbeeldingen/boven.png" alt="Ga naar boven">

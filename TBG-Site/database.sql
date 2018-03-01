@@ -65,6 +65,22 @@ INSERT INTO `hoofdpag` (`gegevensId`, `vidLink`, `tekstFrontPage`) VALUES
 	(1, 'https://www.youtube.com/watch?v=d1bYO3uzs40', 'Hallo en welkom op de website van The BelgiumGames.<br/>\r\n                Deze website gaat over de YouTuber Jens en zijn video\'s.<br/><br/>\r\n                Wie is Jens? Hij is een Belgische YouTuber die voor jouw video\'s maakt over Minecraft en andere games.<br/>\r\n                Wat kun je verwachten op deze website? Meer info over de video\'s van Jens, zoals wanneer er een video uitkomt en dan ook nog meer info over Jens zelf.<br/>\r\n                <br/>\r\n                De video\'s die ik maak zijn vaak tutorials en behulpzame video\'s.<br/>\r\n                Geniet van de video\'s en ook van je dag.<br/><br/>\r\n                \r\n                Meer info over opkomende video\'s kan je vinden op de <a href="https://www.thebelgiumgames.be/extra.html">aankondigings</a> pagina.<br/><br/>\r\n                \r\n                Dit is de vernieuwde site van Thebelgiumgames gesponserd door Badskinsgarden. <br/><br/>');
 /*!40000 ALTER TABLE `hoofdpag` ENABLE KEYS */;
 
+-- Structuur van  tabel tbg.muziek wordt geschreven
+CREATE TABLE IF NOT EXISTS `muziek` (
+  `muziekId` int(11) NOT NULL AUTO_INCREMENT,
+  `link` text NOT NULL,
+  `tekst` text NOT NULL,
+  `onlineLinkTekst` text,
+  PRIMARY KEY (`muziekId`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+-- Dumpen data van tabel tbg.muziek: ~2 rows (ongeveer)
+/*!40000 ALTER TABLE `muziek` DISABLE KEYS */;
+INSERT INTO `muziek` (`muziekId`, `link`, `tekst`, `onlineLinkTekst`) VALUES
+	(1, 'http://www.epidemicsound.com/', 'epische muziek', '<a href=\'http://www.epidemicsound.com/\' target=\'_blank\'>epische muziek</a>'),
+	(2, 'https://www.bensound.com/', 'Bensound (gratis muziek)', '<a href=\'https://www.bensound.com/\' target=\'_blank\'>Bensound (gratis muziek)</a>');
+/*!40000 ALTER TABLE `muziek` ENABLE KEYS */;
+
 -- Structuur van  tabel tbg.onlinevid wordt geschreven
 CREATE TABLE IF NOT EXISTS `onlinevid` (
   `gegevensId` int(11) NOT NULL AUTO_INCREMENT,
@@ -74,12 +90,25 @@ CREATE TABLE IF NOT EXISTS `onlinevid` (
   PRIMARY KEY (`gegevensId`)
 ) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
 
--- Dumpen data van tabel tbg.onlinevid: ~1 rows (ongeveer)
+-- Dumpen data van tabel tbg.onlinevid: ~2 rows (ongeveer)
 /*!40000 ALTER TABLE `onlinevid` DISABLE KEYS */;
 INSERT INTO `onlinevid` (`gegevensId`, `Link`, `Tekst`, `onlineVidTekst`) VALUES
 	(19, 'https://www.youtube.com/watch?v=rZSV-pC9ZNw', 'testje', '<p><a href=\'https://www.youtube.com/watch?v=rZSV-pC9ZNw\' target=\'_blank\'>testje</a></p>'),
 	(20, 'https://www.youtube.com/watch?v=rZSV-pC9ZNw', 'blup', '<p><a href=\'https://www.youtube.com/watch?v=rZSV-pC9ZNw\' target=\'_blank\'>blup</a></p>');
 /*!40000 ALTER TABLE `onlinevid` ENABLE KEYS */;
+
+-- Structuur van  tabel tbg.plugins wordt geschreven
+CREATE TABLE IF NOT EXISTS `plugins` (
+  `pluginsId` int(11) NOT NULL AUTO_INCREMENT,
+  `link` text NOT NULL,
+  `tekst` text NOT NULL,
+  `onlinePluginTekst` text NOT NULL,
+  PRIMARY KEY (`pluginsId`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- Dumpen data van tabel tbg.plugins: ~0 rows (ongeveer)
+/*!40000 ALTER TABLE `plugins` DISABLE KEYS */;
+/*!40000 ALTER TABLE `plugins` ENABLE KEYS */;
 
 -- Structuur van  tabel tbg.video wordt geschreven
 CREATE TABLE IF NOT EXISTS `video` (

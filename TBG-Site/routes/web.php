@@ -87,3 +87,15 @@ Route::post('onlinevideo/{id}','onlineVidController@destroyOnlineVid');
 Route::post('onlinevid/edit/{id}','onlineVidController@editOnlineVid');
 // Online video updaten.
 Route::post('onlinevid/edit/updateOnlineVideo/{id}','onlineVidController@updateOnlineVideo');
+
+
+// Online Muziek
+// toevoegen van een nieuw item bij de muziek.
+Route::post("addMuziek", "MuziekController@addMuziek");
+
+// Online video's verwijderen.
+Route::post('onlinevideo/{id}','onlineVidController@destroyOnlineVid');
+// Online video's editeren.
+Route::post('onlinevid/edit/{id}','onlineVidController@editOnlineVid');
+// Online video updaten.
+Route::post('onlinevid/edit/updateOnlineVideo/{id}','onlineVidController@updateOnlineVideo');
