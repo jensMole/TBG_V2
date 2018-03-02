@@ -447,13 +447,13 @@
             <form class="centerBericht" method="POST" action="addMuziek">
                 <div class="col-sm-6">
                     {{csrf_field()}}
-                    <label id="onlineMuziekLinkLabel" for="onlineMuziekLink">Link: </label><br>
-                    <textarea rows="1" cols="10" class="bericht" name="onlineMuziekLink" placeholder="Plaats hier de link van de muziek." id="onlineMuziekLink" required></textarea><br><br>
+                    <label id="MuziekLinkLabel" for="MuziekLink">Link: </label><br>
+                    <textarea rows="1" cols="10" class="bericht" name="MuziekLink" placeholder="Plaats hier de link van de muziek." id="MuziekLink" required></textarea><br><br>
                 </div>
                 <div class="col-sm-6">
                     {{csrf_field()}}
-                    <label id="onlineMuziekTekstLabel" for="onlineMuziekTekst">Tekst: </label><br>
-                    <textarea rows="1" cols="10" class="bericht" name="onlineMuziekTekst" placeholder="Plaats hier de tekst die getoond moet worden." id="onlineMuziekTekst" required></textarea>
+                    <label id="MuziekTekstLabel" for="MuziekTekst">Tekst: </label><br>
+                    <textarea rows="1" cols="10" class="bericht" name="MuziekTekst" placeholder="Plaats hier de tekst die getoond moet worden." id="MuziekTekst" required></textarea>
                 </div>
                 <br>
 
@@ -520,7 +520,57 @@
         <h3><a class="notLink" id="plugins">plugins</a></h3>
         <br/>
 
-        
+         <!-- Input veld voor link. -->
+        <!-- Toevoegen van muziek -->
+        <div class="col-sm-6 centerBericht">
+            <form class="centerBericht" method="POST" action="addPlugins">
+                <div class="col-sm-6">
+                    {{csrf_field()}}
+                    <label id="pluginsLinkLabel" for="pluginsLink">Link: </label><br>
+                    <textarea rows="1" cols="10" class="bericht" name="pluginsLink" placeholder="Plaats hier de link van de plugins." id="pluginsLink" required></textarea><br><br>
+                </div>
+                <div class="col-sm-6">
+                    {{csrf_field()}}
+                    <label id="pluginsTekstLabel" for="pluginsTekst">Tekst: </label><br>
+                    <textarea rows="1" cols="10" class="bericht" name="pluginsTekst" placeholder="Plaats hier de tekst die getoond moet worden." id="pluginsTekst" required></textarea>
+                </div>
+                <br>
+                <button style="margin-top: 25px; left: -25%;" type="submit" value="Submit"  class="submitButton col-sm-6">Voeg plugin toe</button>
+            </form>
+
+            <p>
+                <strong>Let op.</strong> Als je eentje toevoegd wordt de laatste in de lijst verwijderd.<br>
+                Dit doen we omdat we ons steeds aan 9 plugins houden op de pagina.
+            </p>
+
+        </div>
+
+        <div class="col-sm-4 berichtenDashboard">
+            <!-- Muziek oplijsten. -->
+            <!-- Nakijken als er geen muziek is dan zetten we een basis bericht -->
+
+            @foreach ($plugin as $pluginLink)
+
+            <table class="table is-fullwidth">
+                <tr>
+                    <td style="width:80%;"><?= htmlspecialchars_decode($pluginLink["onlinePluginTekst"]);?></td>
+                    <td style="width:20%;">
+                        <div class="inline-forms">
+                            <form method="post" action='plugin/edit/{{$pluginLink["pluginsId"]}}'>
+                                {{ csrf_field() }}
+                                <!-- Modal openen voor edit functie. -->
+                                <button style="width: 100px;" type="submit" class="card-footer-item btn btn-info btn-md"><span class="glyphicon glyphicon-edit"></span>Edit</button>
+                            </form>
+                        </div>
+                    </td>
+                </tr>                
+            </table>
+            @endforeach
+
+        </div>
+
+        <div class="col-sm-2">
+        </div>        
                  
     </div>
 

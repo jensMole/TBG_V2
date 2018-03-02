@@ -2,31 +2,45 @@
 
 namespace App\Http\Controllers;
 
-use App\Muziek;
+use App\Plugin;
 
 use Illuminate\Http\Request;
 
-class MuziekController extends Controller
+class PluginsController extends Controller
 {
 
- // Toevoegen van een muziek.
- public function addMuziek(Request $request)
+ // Toevoegen van een plugin.
+ public function addPlugin(Request $request)
  {
-     // Nieuwe muziek aanmaken.
-     $muziek = new Muziek;
-     // Toevoegen van een Link van de muziek.
-     $muziek->link = request("MuziekLink");
-     // Toevoegen van de tekst van de muziek die getoond wordt.
-     $muziek->tekst = request("MuziekTekst");
-     // Toevoegen van de tekst van de muziek die getoond wordt.
-     $muziek->onlineLinkTekst = "<a href='".request("MuziekLink")."' target='_blank'>".request("MuziekTekst")."</a>";
 
-     // Opslaan.
-     $muziek->save();
+    // We gaan eerst de oudste weghalen (Dus eerste ID).
+    $oudsteId = Plugin::pluck('pluginsId')->first();
 
-     //terugsturen naar dashboard
-     return redirect("/dashboard#muziek");
+    // zoek de gegevens in de database.
+    $pluginDelete = Plugin::where('pluginsId', $oudsteId);
+    // Verwijder het.
+    $pluginDelete->delete();
+
+    // Nieuwe muziek aanmaken.
+    $plugin = new Plugin;
+    // Toevoegen van een Link van de plugin.
+    $plugin->link = request("pluginsLink");
+    // Toevoegen van de tekst van de plugin die getoond wordt.
+    $plugin->tekst = request("pluginsTekst");
+    // Toevoegen van de tekst van de plugin die getoond wordt.
+    $plugin->onlinePluginTekst = "<a href='".request("pluginsLink")."' target='_blank'>".request("pluginsTekst")."</a>";
+
+    // Opslaan.
+    $plugin->save();
+
+    //terugsturen naar dashboard
+    return redirect("/dashboard#plugins");
  }
+
+
+
+
+
 
  // Verwijderen van muziek
  public function destroyMuziek($muziekId){

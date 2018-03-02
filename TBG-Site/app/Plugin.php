@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Plugins extends Model
+class Plugin extends Model
 {
     protected $table = "plugins";
     protected $fillable = ['pluginsId', 'link', 'tekst', 'onlinePluginTekst'];

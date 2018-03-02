@@ -98,3 +98,16 @@ Route::post('muziek/{id}','MuziekController@destroyMuziek');
 Route::post('muziek/edit/{id}','MuziekController@editMuziek');
 // muziek updaten.
 Route::post('muziek/edit/updateMuziek/{id}','MuziekController@updateMuziek');
+
+
+// Plugins
+// toevoegen van een nieuw item bij de plugins.
+Route::post("addPlugins", "PluginsController@addPlugin");
+
+
+// Muziek verwijderen.
+Route::post('muziek/{id}','MuziekController@destroyMuziek');
+// Muziek editeren.
+Route::post('muziek/edit/{id}','MuziekController@editMuziek');
+// muziek updaten.
+Route::post('muziek/edit/updateMuziek/{id}','MuziekController@updateMuziek');

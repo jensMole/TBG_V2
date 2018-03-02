@@ -8,6 +8,7 @@ use App\Bericht;
 use App\Aankondiging;
 use App\OnlineVid;
 use App\Muziek;
+use App\Plugin;
 
 
 use Illuminate\Http\Request;
@@ -24,6 +25,7 @@ class DashboardController extends Controller
         $aankondigingen = Aankondiging::get();
         $OnlineVideos = OnlineVid::orderBy("gegevensId", "desc")->get();
         $muziek = Muziek::orderBy("muziekId", "desc")->get();
+        $plugin = Plugin::orderBy("pluginsId", "desc")->get();
 
         $GenoegVideos = true;
         $genoegMuziek = true;
@@ -62,7 +64,7 @@ class DashboardController extends Controller
         //url omvormen naar vb. p44TszdiiA4.
         $newVidLink = substr($vidLink, 37, 11);
  
-        return view('panel.index', compact('vidLink','newVidLink','tekstFront','vids','berichten', 'aankondigingen', 'OnlineVideos', 'GenoegVideos', 'muziek', 'genoegMuziek'));
+        return view('panel.index', compact('vidLink','newVidLink','tekstFront','vids','berichten', 'aankondigingen', 'OnlineVideos', 'GenoegVideos', 'muziek', 'genoegMuziek', 'plugin'));
     }
 
     public function minecraft()

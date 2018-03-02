@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS `aankondigingen` (
   PRIMARY KEY (`aankonId`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
--- Dumpen data van tabel tbg.aankondigingen: ~4 rows (ongeveer)
+-- Dumpen data van tabel tbg.aankondigingen: ~5 rows (ongeveer)
 /*!40000 ALTER TABLE `aankondigingen` DISABLE KEYS */;
 INSERT INTO `aankondigingen` (`aankonId`, `aankondigingen`) VALUES
 	(1, '<p>Woensdag 14/02, 17h00: Cuberunner plugin tutorial.</p>\r'),
@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `bericht` (
   PRIMARY KEY (`gegevensId`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
--- Dumpen data van tabel tbg.bericht: ~7 rows (ongeveer)
+-- Dumpen data van tabel tbg.bericht: ~6 rows (ongeveer)
 /*!40000 ALTER TABLE `bericht` DISABLE KEYS */;
 INSERT INTO `bericht` (`gegevensId`, `berichten`) VALUES
 	(1, ' <p>Als eerste welkom en dat is het.</p>'),
@@ -72,13 +72,13 @@ CREATE TABLE IF NOT EXISTS `muziek` (
   `tekst` text NOT NULL,
   `onlineLinkTekst` text,
   PRIMARY KEY (`muziekId`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
 
 -- Dumpen data van tabel tbg.muziek: ~2 rows (ongeveer)
 /*!40000 ALTER TABLE `muziek` DISABLE KEYS */;
 INSERT INTO `muziek` (`muziekId`, `link`, `tekst`, `onlineLinkTekst`) VALUES
-	(1, 'http://www.epidemicsound.com/', 'epische muziek', '<a href=\'http://www.epidemicsound.com/\' target=\'_blank\'>epische muziek</a>'),
-	(2, 'https://www.bensound.com/', 'Bensound (gratis muziek)', '<a href=\'https://www.bensound.com/\' target=\'_blank\'>Bensound (gratis muziek)</a>');
+	(10, 'https://www.one.com/nl/', 'one', '<a href=\'https://www.one.com/nl/\' target=\'_blank\'>one</a>'),
+	(11, 'https://www.one.com/nl/', 'two', '<a href=\'https://www.one.com/nl/\' target=\'_blank\'>two</a>');
 /*!40000 ALTER TABLE `muziek` ENABLE KEYS */;
 
 -- Structuur van  tabel tbg.onlinevid wordt geschreven
@@ -90,7 +90,7 @@ CREATE TABLE IF NOT EXISTS `onlinevid` (
   PRIMARY KEY (`gegevensId`)
 ) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
 
--- Dumpen data van tabel tbg.onlinevid: ~2 rows (ongeveer)
+-- Dumpen data van tabel tbg.onlinevid: ~0 rows (ongeveer)
 /*!40000 ALTER TABLE `onlinevid` DISABLE KEYS */;
 INSERT INTO `onlinevid` (`gegevensId`, `Link`, `Tekst`, `onlineVidTekst`) VALUES
 	(19, 'https://www.youtube.com/watch?v=rZSV-pC9ZNw', 'testje', '<p><a href=\'https://www.youtube.com/watch?v=rZSV-pC9ZNw\' target=\'_blank\'>testje</a></p>'),
@@ -104,10 +104,20 @@ CREATE TABLE IF NOT EXISTS `plugins` (
   `tekst` text NOT NULL,
   `onlinePluginTekst` text NOT NULL,
   PRIMARY KEY (`pluginsId`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
 -- Dumpen data van tabel tbg.plugins: ~0 rows (ongeveer)
 /*!40000 ALTER TABLE `plugins` DISABLE KEYS */;
+INSERT INTO `plugins` (`pluginsId`, `link`, `tekst`, `onlinePluginTekst`) VALUES
+	(2, 'https://www.curseforge.com/minecraft/bukkit-plugins/vault', 'Vault', '<a href=\'https://www.curseforge.com/minecraft/bukkit-plugins/vault\' target=\'_blank\'>Vault</a>'),
+	(3, 'https://dev.bukkit.org/projects/worldguard', 'Worldguard', '<a href=\'https://dev.bukkit.org/projects/worldguard\' target=\'_blank\'>Worldguard</a>'),
+	(4, 'https://dev.bukkit.org/projects/skyblock', 'Skyblock', '<a href=\'https://dev.bukkit.org/projects/skyblock\' target=\'_blank\'>Skyblock</a>'),
+	(5, 'https://dev.bukkit.org/projects/citizens', 'Citizens', '<a href=\'https://dev.bukkit.org/projects/citizens\' target=\'_blank\'>Citizens</a>'),
+	(6, 'https://www.spigotmc.org/resources/openaudiomc-open-source-audio-client.30691/', 'Openaudio', '<a href=\'https://www.spigotmc.org/resources/openaudiomc-open-source-audio-client.30691/\' target=\'_blank\'>Openaudio</a>'),
+	(7, 'https://www.spigotmc.org/resources/cuberunner.19715/', 'Cuberunner', '<a href=\'https://www.spigotmc.org/resources/cuberunner.19715/\' target=\'_blank\'>Cuberunner</a>'),
+	(8, 'https://www.spigotmc.org/resources/perworldplugins-unofficial-update-version.6454/', 'perworldsplugin', '<a href=\'https://www.spigotmc.org/resources/perworldplugins-unofficial-update-version.6454/\' target=\'_blank\'>perworldsplugin</a>'),
+	(9, 'https://www.spigotmc.org/resources/hideandcustomplugins.4503/', 'hideandcustomplugins', '<a href=\'https://www.spigotmc.org/resources/hideandcustomplugins.4503/\' target=\'_blank\'>hideandcustomplugins</a>'),
+	(10, 'https://www.spigotmc.org/resources/mobarena.34110/', 'mobarena', '<a href=\'https://www.spigotmc.org/resources/mobarena.34110/\' target=\'_blank\'>mobarena</a>');
 /*!40000 ALTER TABLE `plugins` ENABLE KEYS */;
 
 -- Structuur van  tabel tbg.video wordt geschreven
@@ -117,7 +127,7 @@ CREATE TABLE IF NOT EXISTS `video` (
   PRIMARY KEY (`VideoId`)
 ) ENGINE=InnoDB AUTO_INCREMENT=45 DEFAULT CHARSET=latin1;
 
--- Dumpen data van tabel tbg.video: ~44 rows (ongeveer)
+-- Dumpen data van tabel tbg.video: ~0 rows (ongeveer)
 /*!40000 ALTER TABLE `video` DISABLE KEYS */;
 INSERT INTO `video` (`VideoId`, `VideoLink`) VALUES
 	(1, 'https://www.youtube.com/watch?v=d1bYO3uzs40'),
