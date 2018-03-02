@@ -15,9 +15,9 @@ class MuziekController extends Controller
      // Nieuwe muziek aanmaken.
      $muziek = new Muziek;
      // Toevoegen van een Link van de muziek.
-     $muziek->Link = request("onlineMuziekLink");
+     $muziek->link = request("onlineMuziekLink");
      // Toevoegen van de tekst van de muziek die getoond wordt.
-     $muziek->Tekst = request("onlineMuziekTekst");
+     $muziek->tekst = request("onlineMuziekTekst");
      // Toevoegen van de tekst van de muziek die getoond wordt.
      $muziek->onlineLinkTekst = "<a href='".request("onlineMuziekLink")."' target='_blank'>".request("onlineMuziekTekst")."</a>";
 
@@ -28,49 +28,45 @@ class MuziekController extends Controller
      return redirect("/dashboard#muziek");
  }
 
-
-
-
-
- // Verwijderen van een onlineVid
- public function destroyOnlineVid($onlineVidId){
+ // Verwijderen van muziek
+ public function destroyMuziek($muziekId){
      // zoek de gegevens in de database.
-     $aankond = OnlineVid::where('gegevensId', $onlineVidId);
+     $muziek = Muziek::where('muziekId', $muziekId);
      // Verwijder het.
-     $aankond->delete();
+     $muziek->delete();
      // Terugsturen naar de pagina.
-     return redirect("/dashboard#online");
+     return redirect("/dashboard#muziek");
  }
 
- // Editeren van een online video.
- public function editOnlineVid($onlineVidID){
+ // Editeren van Muziek.
+ public function editMuziek($muziekId){
      // Zoek de online video met behulp van het ID.
-     $onlineVid = OnlineVid::find($onlineVidID);
+     $muziek = Muziek::find($muziekId);
      // Verkrijg de online video link.
-     $onlineVidLink = $onlineVid["Link"];
+     $muziekLink = $muziek["link"];
      // Verkrijg de online video tekst.
-     $onlineVidtekst = $onlineVid["Tekst"];
+     $muziektekst = $muziek["tekst"];
      // ID verkrijgen van de gegevens.
-     $ID = $onlineVid["gegevensId"];
+     $ID = $muziek["muziekId"];
      // Opsturen van de gegevens naar de edit pagina.
-     return view('panel.edit.editOnlineVid', compact("onlineVidLink", "onlineVidtekst", "ID"));
+     return view('panel.edit.editMuziek', compact("muziekLink", "muziektekst", "ID"));
  }
 
- // Updaten van de online video.
- public function updateOnlineVideo(Request $request, $id)
+ // Updaten van muziek.
+ public function updateMuziek(Request $request, $id)
  {
      // ophalen van gegevens met het meegegeven ID.
-     $GetOnlineVid = OnlineVid::find($id);
+     $GetMuziek = Muziek::find($id);
      // Toevoegen van een Link van de video.
-     $GetOnlineVid->Link = request("onlineVidLinkEdit");
+     $GetMuziek->link = request("MuziekLinkEdit");
      // Toevoegen van de tekst van de video die getoond wordt.
-     $GetOnlineVid->Tekst = request("onlineVidTekstEdit");
+     $GetMuziek->tekst = request("MuziekTekstEdit");
      // Toevoegen van de tekst van de video die getoond wordt.
-     $GetOnlineVid->onlineVidTekst = "<p><a href='".request("onlineVidLinkEdit")."' target='_blank'>".request("onlineVidTekstEdit")."</a></p>"; 
+     $GetMuziek->onlineLinkTekst = "<a href='".request("MuziekLinkEdit")."' target='_blank'>".request("MuziekTekstEdit")."</a>"; 
      // Opslaan.
-     $GetOnlineVid->save();
+     $GetMuziek->save();
      //terugsturen naar dashboard
-     return redirect("/dashboard#online");
+     return redirect("/dashboard#muziek");
  }
 }
 ?>

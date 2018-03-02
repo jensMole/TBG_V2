@@ -6,11 +6,13 @@ use App\Bericht;
 use App\Aankondiging;
 use App\OnlineVid;
 
+use App\Muziek;
+
 use Illuminate\Http\Request;
 
 class ExtraController extends Controller
 {
-
+    // Alles van aankondigingen gebeurt hier.
     public function aankon()
     {    
         // Verkrijgen van de berichten.
@@ -39,10 +41,20 @@ class ExtraController extends Controller
         return view('extra/aankondigingen', compact("berichten", "aankondigingen", "onlineVid"));
     }
 
+    // alles van downloads gebeurt hier.
     public function downloads()
     {
+        // Verkrijgen van de berichten.
+        $muziek = Muziek::orderBy("muziekId", "desc")->get();
+
+        // Nakijken als er muziek linken zijn anders sturen we false.
+        if (count($muziek) === 0) {
+            $muziek = false;
+        }
+
+
         //terug geven van de view
-        return view('extra/downloads');
+        return view('extra/downloads', compact('muziek'));
     }
 
 }

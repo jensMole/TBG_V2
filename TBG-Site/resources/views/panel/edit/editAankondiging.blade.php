@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="nl">
     <head>
-    <title>Edit Bericht</title>
+    <title>Edit aankondigingen</title>
     <link rel="shortcut icon" href="../../afbeeldingen/youtubeTBG.png"/>
 
     <!-- Bootstrap -->

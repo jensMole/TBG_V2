@@ -26,7 +26,8 @@ class DashboardController extends Controller
         $muziek = Muziek::orderBy("muziekId", "desc")->get();
 
         $GenoegVideos = true;
-        
+        $genoegMuziek = true;
+
         // Nakijken als er berichten zijn anders sturen we false.
         if (count($berichten) === 0) {
             $berichten = false;
@@ -37,9 +38,14 @@ class DashboardController extends Controller
             $aankondigingen = false;
         }
 
-        // Nakijken als er aankondigingen zijn anders sturen we false.
+        // Nakijken als er online video's zijn anders sturen we false.
         if (count($OnlineVideos) === 0) {
             $OnlineVideos = false;
+        }
+
+        // Nakijken als er muziek linken zijn anders sturen we false.
+        if (count($muziek) === 0) {
+            $muziek = false;
         }
 
         // Nakijken als er 6 of meer online video's er al zijn en dan zetten we de knop uit.
@@ -47,11 +53,16 @@ class DashboardController extends Controller
             $GenoegVideos = false;
         }
 
+        // Nakijken als er 8 of meer muziek items er al zijn en dan zetten we de knop uit.
+        if (count($muziek) >= 8){
+            $genoegMuziek = false;
+        }
+
         // https://www.youtube.com/watch?v=p44TszdiiA4
         //url omvormen naar vb. p44TszdiiA4.
         $newVidLink = substr($vidLink, 37, 11);
  
-        return view('panel.index', compact('vidLink','newVidLink','tekstFront','vids','berichten', 'aankondigingen', 'OnlineVideos', 'GenoegVideos', 'muziek'));
+        return view('panel.index', compact('vidLink','newVidLink','tekstFront','vids','berichten', 'aankondigingen', 'OnlineVideos', 'GenoegVideos', 'muziek', 'genoegMuziek'));
     }
 
     public function minecraft()
