@@ -11,8 +11,13 @@
 |
 */
 
-// Tonen van de index (voorpagina).
+Auth::routes();
+// Sturen naar home page.
 Route::get('/', 'HomeController@index');
+
+// Voor als je bent aangemeld naar het dashboard.
+Route::get('/home', 'DashBoardController@index');
+
 // Video's hoofd pagina.
 Route::get('/video','VideoController@index');
 

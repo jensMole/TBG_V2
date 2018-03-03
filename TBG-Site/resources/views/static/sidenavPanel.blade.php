@@ -16,7 +16,19 @@
             <li><a href="/dashboard/minecraft">Minecraft</a></li>
             <li><a href="/dashboard/andere">Andere</a></li>
             <li><a href="/">Ga naar front page</a></li>
-            <li><a href="/">Log out</a></li>
+            <li>    
+            
+                <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                    <i class="fa fa-sign-out" aria-hidden="true"></i> Logout
+                </a>
+
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        {{ csrf_field() }}
+                </form>
+
+                <!-- <a href="/">Log out</a> -->
+        
+            </li>
         </ul>
         </div><!--/.nav-collapse -->
     </div><!--/.container-fluid -->

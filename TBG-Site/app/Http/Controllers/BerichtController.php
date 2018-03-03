@@ -8,6 +8,17 @@ use Illuminate\Http\Request;
 
 class BerichtController extends Controller
 {
+
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     // Toevoegen van een bericht.
     public function addBericht(Request $request)
     {
