@@ -37,50 +37,35 @@ class PluginsController extends Controller
     return redirect("/dashboard#plugins");
  }
 
-
-
-
-
-
- // Verwijderen van muziek
- public function destroyMuziek($muziekId){
-     // zoek de gegevens in de database.
-     $muziek = Muziek::where('muziekId', $muziekId);
-     // Verwijder het.
-     $muziek->delete();
-     // Terugsturen naar de pagina.
-     return redirect("/dashboard#muziek");
- }
-
- // Editeren van Muziek.
- public function editMuziek($muziekId){
+ // Editeren van Plugin.
+ public function editPlugin($pluginId){
      // Zoek de online video met behulp van het ID.
-     $muziek = Muziek::find($muziekId);
+     $plugin = Plugin::find($pluginId);
      // Verkrijg de online video link.
-     $muziekLink = $muziek["link"];
+     $pluginLink = $plugin["link"];
      // Verkrijg de online video tekst.
-     $muziektekst = $muziek["tekst"];
+     $pluginTekst = $plugin["tekst"];
      // ID verkrijgen van de gegevens.
-     $ID = $muziek["muziekId"];
+     $ID = $plugin["pluginsId"];
      // Opsturen van de gegevens naar de edit pagina.
-     return view('panel.edit.editMuziek', compact("muziekLink", "muziektekst", "ID"));
+     return view('panel.edit.editPlugin', compact("pluginLink", "pluginTekst", "ID"));
  }
 
- // Updaten van muziek.
- public function updateMuziek(Request $request, $id)
+ // Updaten van plugin.
+ public function updatePlugin(Request $request, $id)
  {
      // ophalen van gegevens met het meegegeven ID.
-     $GetMuziek = Muziek::find($id);
+     $Getplugin = Plugin::find($id);
      // Toevoegen van een Link van de video.
-     $GetMuziek->link = request("MuziekLinkEdit");
+     $Getplugin->link = request("pluginLinkEdit");
      // Toevoegen van de tekst van de video die getoond wordt.
-     $GetMuziek->tekst = request("MuziekTekstEdit");
+     $Getplugin->tekst = request("pluginTekstEdit");
      // Toevoegen van de tekst van de video die getoond wordt.
-     $GetMuziek->onlineLinkTekst = "<a href='".request("MuziekLinkEdit")."' target='_blank'>".request("MuziekTekstEdit")."</a>"; 
+     $Getplugin->onlinePluginTekst = "<a href='".request("pluginLinkEdit")."' target='_blank'>".request("pluginTekstEdit")."</a>"; 
      // Opslaan.
-     $GetMuziek->save();
+     $Getplugin->save();
      //terugsturen naar dashboard
-     return redirect("/dashboard#muziek");
+     return redirect("/dashboard#plugins");
  }
 }
 ?>

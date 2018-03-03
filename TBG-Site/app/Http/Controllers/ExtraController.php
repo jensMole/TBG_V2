@@ -47,6 +47,8 @@ class ExtraController extends Controller
         // Verkrijgen van de berichten.
         $muziek = Muziek::orderBy("muziekId", "desc")->get();
 
+        
+
         // Nakijken als er muziek linken zijn anders sturen we false.
         if (count($muziek) === 0) {
             $muziek = false;
