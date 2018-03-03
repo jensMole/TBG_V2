@@ -11,7 +11,7 @@
     <div style="text-align:center" class="hidden-xs">
         Deze website valt onder een
         <a rel="license" target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.nl">Creative Commons Naamsvermelding-GelijkDelen 4.0 Internationaal-licentie.
-        </a>&copy; 2017 - 2018 TheBelgiumGames
+        </a>&copy; 2016 - 2018 TheBelgiumGames
     </div>
     <div style="text-align:center" class="hidden-xs">
             Domein gesponsord door:

@@ -204,7 +204,7 @@ iframe{
 	padding: 5px 0px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .vids{
 		padding-bottom: 3px;
 	}
@@ -476,10 +476,13 @@ textarea {
 }
 
 .vidFrontDash{
-	border-style: solid;
-    border-width: 5px;
-	border-color: gray;
 	margin-top: -40px;
+}
+
+@media (max-width: 768px) {
+    #tekstFrontVoorbeeld{
+		border: 0 !important;
+	}
 }
 
 .vid{
@@ -488,8 +491,24 @@ textarea {
 	border-color: gray;
 }
 
+@media (max-width: 768px) {
+    .vidFrontDashTransform {
+		margin-top: 65px;
+	}
+}
+
+.vidsDashboard{
+	margin-bottom: 8px;
+}
+
 .hoofdPag{
 	position:relative;
+}
+
+@media (max-width: 768px) {
+    #tekstFrontVoorbeeld{
+		border: 0 !important;
+	}
 }
 
 #tekstFrontVoorbeeld{
@@ -548,9 +567,22 @@ hr {
 }
 
 .berichtenDashboard{
-	margin-left: 50px;;
+	margin-left: 100px;
 	color: white;
 }
+
+@media (max-width: 767px) {
+    .berichtenDashboard {
+		margin-left: 0px !important;
+	}
+}
+
+@media (min-width: 767px) {
+    .knoppen {
+		left: -25%;
+	}
+}
+
 /* Dashboard */
 
 /* footer */

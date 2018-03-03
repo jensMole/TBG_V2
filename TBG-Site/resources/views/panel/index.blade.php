@@ -12,7 +12,7 @@
 
     <div class="container knopTekstEditor col-sm-3">
         <!-- Trigger the modal with a button -->
-        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Tekst editor</button>
+        <button type="button" style="margin-bottom: 20px;" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Tekst editor</button>
     </div>
 
     <div class="col-sm-3" id="tekstFrontVoorbeeld">
@@ -33,7 +33,7 @@
             </form> 
         </div>
         <!-- video voorstelling -->
-        <div class="col-sm-3">
+        <div class="vidFrontDashTransform col-sm-3">
             <div class="embed-responsive embed-responsive-16by9 vidFrontDash">
                 <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{$newVidLink}}"></iframe>
             </div>
@@ -42,7 +42,7 @@
 </section>
 
 <!-- Modal -->
-<div class="modal fade" id="myModal" role="dialog">
+<div style="overflow-x:scroll;" class="modal fade col-xs-12 col-sm-12" id="myModal" role="dialog">
     <div class="modal-dialog modal-lg" style="left: auto; width:840px;">
         <div class="modal-content">
             <div class="modal-header">
@@ -82,21 +82,21 @@
 
         <!-- video voorstelling -->
         <div class="col-sm-4">
-            <div class="embed-responsive embed-responsive-16by9 vids">
+            <div class="embed-responsive embed-responsive-16by9 vidsDashboard">
                 <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[0], 32, 11)}}"></iframe>
             </div>
         </div>
 
         <!-- video voorstelling -->
         <div class="col-sm-4">
-            <div class="embed-responsive embed-responsive-16by9 vids">
+            <div class="embed-responsive embed-responsive-16by9 vidsDashboard">
                 <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[1], 32, 11)}}"></iframe>
             </div>
         </div>
 
         <!-- video voorstelling -->
         <div class="col-sm-4">
-            <div class="embed-responsive embed-responsive-16by9 vids">
+            <div class="embed-responsive embed-responsive-16by9 ">
                 <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[2], 32, 11)}}"></iframe>
             </div>
         </div>            
@@ -146,21 +146,21 @@
 
         <!-- video voorstelling -->
         <div class="col-sm-4">
-            <div class="embed-responsive embed-responsive-16by9 vids">
+            <div class="embed-responsive embed-responsive-16by9 vidsDashboard">
                 <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[3], 32, 11)}}"></iframe>
             </div>
         </div>
 
         <!-- video voorstelling -->
         <div class="col-sm-4">
-            <div class="embed-responsive embed-responsive-16by9 vids">
+            <div class="embed-responsive embed-responsive-16by9 vidsDashboard">
                 <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[4], 32, 11)}}"></iframe>
             </div>
         </div>
 
         <!-- video voorstelling -->
         <div class="col-sm-4">
-            <div class="embed-responsive embed-responsive-16by9 vids">
+            <div class="embed-responsive embed-responsive-16by9 ">
                 <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[5], 32, 11)}}"></iframe>
             </div>
         </div>
@@ -209,7 +209,7 @@
 <br/>
 
 <!-- Berichten -->
-<section id="sectionTeksten">    
+<section style="overflow-x:hidden;" id="sectionTeksten">    
     <h3><a class="notLink" id="aankondLink">Aankondigingen pagina</a></h3>
 
     <div class="row rijen">
@@ -231,7 +231,7 @@
                     <textarea rows="3" cols="10" class="bericht" name="bericht" placeholder="Plaats hier een bericht. Voor link voeg <a> toe." id="berichtTekst" required></textarea>
                 </div>
                 <br/>
-                <button type="submit" value="Submit"  class="submitButton">Voeg bericht toe</button>
+                <button type="submit" value="Submit" style="margin-bottom: 20px;" class="submitButton">Voeg bericht toe</button>
             </form> 
         </div>
 
@@ -300,7 +300,7 @@
                     <textarea rows="3" cols="10" class="bericht" name="aankondiging" placeholder="Plaats hier een aankondiging. Voor link voeg <a> toe." id="aankondigingTekst" required></textarea>
                 </div>
                 <br/>
-                <button type="submit" value="Submit"  class="submitButton">Voeg aankondiging toe</button>
+                <button type="submit" value="Submit" style="margin-bottom: 20px;" class="submitButton">Voeg aankondiging toe</button>
             </form> 
         </div>
 
@@ -373,11 +373,11 @@
 
                 @if ($GenoegVideos == false )
                     
-                    <button style="margin-top: 25px; left: -25%; background-color: gray;" type="submit" value="Submit" title="Max 6. Je kan er geen meer toevoegen." class="submitButton col-sm-6" disabled>Voeg online video toe</button>
+                    <button style="margin-top: 25px; background-color: gray; margin-bottom: 20px;" type="submit" value="Submit" title="Max 6. Je kan er geen meer toevoegen." class="submitButton col-sm-6 knoppen" disabled>Voeg online video toe</button>
 
                 @else
 
-                    <button style="margin-top: 25px; left: -25%;" type="submit" value="Submit"  class="submitButton col-sm-6">Voeg online video toe</button>
+                    <button style="margin-top: 25px; margin-bottom: 20px;" type="submit" value="Submit"  class="submitButton col-sm-6 knoppen">Voeg online video toe</button>
 
                 @endif
 
@@ -459,11 +459,11 @@
 
                 @if ($genoegMuziek == false )
                     
-                    <button style="margin-top: 25px; left: -25%; background-color: gray;" type="submit" value="Submit" title="Max 8. Je kan er geen meer toevoegen." class="submitButton col-sm-6" disabled>Voeg muziek toe</button>
+                    <button style="margin-top: 25px; background-color: gray; margin-bottom: 20px;" type="submit" value="Submit" title="Max 8. Je kan er geen meer toevoegen." class="submitButton col-sm-6 knoppen" disabled>Voeg muziek toe</button>
 
                 @else
 
-                    <button style="margin-top: 25px; left: -25%;" type="submit" value="Submit"  class="submitButton col-sm-6">Voeg muziek toe</button>
+                    <button style="margin-top: 25px; margin-bottom: 20px;" type="submit" value="Submit"  class="submitButton col-sm-6 knoppen">Voeg muziek toe</button>
 
                 @endif
 
@@ -533,7 +533,7 @@
                     <textarea rows="1" cols="10" class="bericht" name="pluginsTekst" placeholder="Plaats hier de tekst die getoond moet worden." id="pluginsTekst" required></textarea>
                 </div>
                 <br>
-                <button style="margin-top: 25px; left: -25%;" type="submit" value="Submit"  class="submitButton col-sm-6">Voeg plugin toe</button>
+                <button style="margin-top: 25px; margin-bottom: 20px;" type="submit" value="Submit" class="submitButton col-sm-6 knoppen">Voeg plugin toe</button>
             </form>
 
             <p>
