@@ -600,3 +600,27 @@ a:hover{
 	background-color: #555;
   }
   /* scrollspy */
+
+  /* Scrollbar */
+  /* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #505050;
+    border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3; 
+}
+  /* Scrollbar */
