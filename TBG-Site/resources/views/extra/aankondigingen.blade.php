@@ -6,31 +6,8 @@
 
 @section('content')
 
-<!-- Berichten Jens -->
 <div class="row">
-    <div class="berichten col-md-6 col-xs-12">
-        <h2 class="BerichtTitel">Berichten van Jens</h2>
-        <p></p>
-        <h3 class="BerichtTitel">Hier komen berichten van jens als er iets belangrijk gaat gebeuren of als hij gewoon iets wilt zeggen.</h3>
-        <p></p>
-            <!-- Nakijken als er geen berichten zijn dan zetten we een basis bericht -->
-            @if ($berichten === false)
-
-                <p>Geen berichten om weer te geven.</p>
-
-            @else
-
-                @foreach ($berichten as $bericht)
-
-                    <?= htmlspecialchars_decode($bericht["berichten"]);?>
-
-                @endforeach
-
-            @endif
-
-        <p></p>    
-    </div>
-    
+       
     <!-- Aankondegingen -->
     <div class="aankondigingen col-md-6 col-xs-12">
         <h2 class="AankondigengenTitel">aankondigingen</h2>
@@ -58,6 +35,31 @@
 
         <p></p>
     </div>
+
+    <!-- Berichten Jens -->
+    <div class="berichten col-md-6 col-xs-12">
+        <h2 class="BerichtTitel">Berichten van Jens</h2>
+        <p></p>
+        <h3 class="BerichtTitel">Hier komen berichten van jens als er iets belangrijk gaat gebeuren of als hij gewoon iets wilt zeggen.</h3>
+        <p></p>
+            <!-- Nakijken als er geen berichten zijn dan zetten we een basis bericht -->
+            @if ($berichten === false)
+
+                <p>Geen berichten om weer te geven.</p>
+
+            @else
+
+                @foreach ($berichten as $bericht)
+
+                    <?= htmlspecialchars_decode($bericht["berichten"]);?>
+
+                @endforeach
+
+            @endif
+
+        <p></p>    
+    </div>
+
 </div>
 
 <div class="row">

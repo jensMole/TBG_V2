@@ -273,24 +273,28 @@ h2.titelsDown {
 	font-size:3em;
 	color:white;
 	text-align: center;
+	margin: 10px;
 }
 
 #contact2{
 	text-align: center;
 	font-size:1.8em;
 	color:white;
+	margin: 10px;
 }
 
 #contact3{
 	font-size:3em;
 	color:white;
 	text-align: center;
+	margin: 10px;
 }
 
 #contact4{
 	text-align: center;
 	font-size:1.8em;
 	color:white;
+	margin: 10px;
 }
 
 #bericht p{
@@ -300,6 +304,7 @@ h2.titelsDown {
 	padding: 5px;
 	text-align: center;
 	padding-left: 10px;
+	margin: 15px;
 }
 
 #berichtJasper p{
@@ -308,6 +313,7 @@ h2.titelsDown {
 	border-radius: 10px;
 	padding: 5px;
 	text-align: center;
+	margin: 15px;
 }
 /* Einde contact pagina */
 
@@ -618,7 +624,7 @@ a:hover{
 	display: none;
 	position: fixed;
 	bottom: 20px;
-	right: 30px;
+	right: 0px;
 	z-index: 99;
 	border: none;
 	outline: none;
@@ -655,4 +661,4 @@ a:hover{
 ::-webkit-scrollbar-thumb:hover {
     background: #b3b3b3; 
 }
-  /* Scrollbar */
+/* Scrollbar */

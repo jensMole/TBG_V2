@@ -34,7 +34,7 @@
     <!-- diepere info -->
     <div class="row">
         <div id="diep" class="col-sm-12">
-            <p class="visible-xs visible-sm"><strong>Meer info te vinden op de PC.</strong></p>
+            <p class="visible-xs visible-sm"><strong>Meer info is te vinden op de PC.</strong></p>
             <p>Meer info over Jens</p>
             <p>
             Mijn naam is Jens (21 jaar) en ik ben met YouTube begonnen omdat ik eens iets anders wou proberen. Mijn YouTube carriere begon
@@ -78,8 +78,8 @@
     <!-- diepere info -->
     <div class="row">
         <div id="diepJasper" class="col-sm-12">
-            <p class="visible-xs visible-sm"><strong>Meer info te vinden op de PC.</strong></p>
-            <p>De lange tekst (interessant voor wie graag leest)</p>
+            <p class="visible-xs visible-sm"><strong>Meer info is te vinden op de PC.</strong></p>
+            <p>Meer info over Jasper</p>
             <p>
             Dus hoe begon het  ? Wel in 2013 wou ik met mijn beste vriend een server maken en ik vond geen enkele YouYuber
             die dat kon uitleggen :'( maar ik bleef doorzoeken en toen vond ik Molenaers games het oude YouTube kanaal en daar vind ik de toturial :).

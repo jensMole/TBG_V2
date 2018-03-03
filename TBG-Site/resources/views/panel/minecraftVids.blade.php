@@ -16,28 +16,28 @@
     <br/>
     <!-- video voorstelling -->
     <div class="col-sm-3">
-        <div class="embed-responsive embed-responsive-16by9 vids">
+        <div class="embed-responsive embed-responsive-16by9 vidsDashboard">
             <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[6], 32, 11)}}"></iframe>
         </div>
     </div>
 
     <!-- video voorstelling -->
     <div class="col-sm-3">
-        <div class="embed-responsive embed-responsive-16by9 vids">
+        <div class="embed-responsive embed-responsive-16by9 vidsDashboard">
             <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[7], 32, 11)}}"></iframe>
         </div>
     </div>
 
     <!-- video voorstelling -->
     <div class="col-sm-3">
-        <div class="embed-responsive embed-responsive-16by9 vids">
+        <div class="embed-responsive embed-responsive-16by9 vidsDashboard">
             <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[8], 32, 11)}}"></iframe>
         </div>
     </div>
 
     <!-- video voorstelling -->
     <div class="col-sm-3">
-        <div class="embed-responsive embed-responsive-16by9 vids">
+        <div class="embed-responsive embed-responsive-16by9">
             <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[9], 32, 11)}}"></iframe>
         </div>
     </div>
@@ -99,25 +99,25 @@
     <br/>
 
     <div class="col-sm-3">
-        <div class="embed-responsive embed-responsive-16by9 vids">
+        <div class="embed-responsive embed-responsive-16by9 vidsDashboard">
             <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[10], 32, 11)}}"></iframe>
         </div>
     </div>
 
     <div class="col-sm-3">
-        <div class="embed-responsive embed-responsive-16by9 vids">
+        <div class="embed-responsive embed-responsive-16by9 vidsDashboard">
             <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[11], 32, 11)}}"></iframe>
         </div>
     </div>
 
     <div class="col-sm-3">
-        <div class="embed-responsive embed-responsive-16by9 vids">
+        <div class="embed-responsive embed-responsive-16by9 vidsDashboard">
             <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[12], 32, 11)}}"></iframe>
         </div>
     </div>
 
     <div class="col-sm-3">
-        <div class="embed-responsive embed-responsive-16by9 vids">
+        <div class="embed-responsive embed-responsive-16by9">
             <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[13], 32, 11)}}"></iframe>
         </div>
     </div>   
@@ -181,21 +181,21 @@
 
     <!-- video voorstelling -->
     <div class="col-sm-4">
-        <div class="embed-responsive embed-responsive-16by9 vids">
+        <div class="embed-responsive embed-responsive-16by9 vidsDashboard">
             <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[14], 32, 11)}}"></iframe>
         </div>
     </div>
 
     <!-- video voorstelling -->
     <div class="col-sm-4">
-        <div class="embed-responsive embed-responsive-16by9 vids">
+        <div class="embed-responsive embed-responsive-16by9 vidsDashboard">
             <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[15], 32, 11)}}"></iframe>
         </div>
     </div>
 
     <!-- video voorstelling -->
     <div class="col-sm-4">
-        <div class="embed-responsive embed-responsive-16by9 vids">
+        <div class="embed-responsive embed-responsive-16by9">
             <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[16], 32, 11)}}"></iframe>
         </div>
     </div>   
@@ -246,20 +246,20 @@
     <br/>
     <!-- video voorstelling -->
     <div class="col-sm-4">
-        <div class="embed-responsive embed-responsive-16by9 vids">
+        <div class="embed-responsive embed-responsive-16by9 vidsDashboard">
             <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[17], 32, 11)}}"></iframe>
         </div>
     </div>
 
     <!-- video voorstelling -->
     <div class="col-sm-4">
-        <div class="embed-responsive embed-responsive-16by9 vids">
+        <div class="embed-responsive embed-responsive-16by9 vidsDashboard">
             <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[18], 32, 11)}}"></iframe>
         </div>
     </div>
 
     <div class="col-sm-4">
-        <div class="embed-responsive embed-responsive-16by9 vids">
+        <div class="embed-responsive embed-responsive-16by9">
             <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[19], 32, 11)}}"></iframe>
         </div>
     </div>       
@@ -310,28 +310,28 @@
     <br/>
     <!-- video voorstelling -->
     <div class="col-sm-3">
-        <div class="embed-responsive embed-responsive-16by9 vids">
+        <div class="embed-responsive embed-responsive-16by9 vidsDashboard">
             <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[20], 32, 11)}}"></iframe>
         </div>
     </div>
 
         <!-- video voorstelling -->
         <div class="col-sm-3">
-        <div class="embed-responsive embed-responsive-16by9 vids">
+        <div class="embed-responsive embed-responsive-16by9 vidsDashboard">
             <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[21], 32, 11)}}"></iframe>
         </div>
     </div>
 
         <!-- video voorstelling -->
         <div class="col-sm-3">
-        <div class="embed-responsive embed-responsive-16by9 vids">
+        <div class="embed-responsive embed-responsive-16by9 vidsDashboard">
             <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[22], 32, 11)}}"></iframe>
         </div>
     </div>
 
     <!-- video voorstelling -->
     <div class="col-sm-3">
-        <div class="embed-responsive embed-responsive-16by9 vids">
+        <div class="embed-responsive embed-responsive-16by9">
             <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[23], 32, 11)}}"></iframe>
         </div>
     </div>
@@ -393,28 +393,28 @@
     <br/>
     <!-- video voorstelling -->
     <div class="col-sm-3">
-        <div class="embed-responsive embed-responsive-16by9 vids">
+        <div class="embed-responsive embed-responsive-16by9 vidsDashboard">
             <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[24], 32, 11)}}"></iframe>
         </div>
     </div>
 
     <!-- video voorstelling -->
     <div class="col-sm-3">
-        <div class="embed-responsive embed-responsive-16by9 vids">
+        <div class="embed-responsive embed-responsive-16by9 vidsDashboard">
             <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[25], 32, 11)}}"></iframe>
         </div>
     </div>
 
     <!-- video voorstelling -->
     <div class="col-sm-3">
-        <div class="embed-responsive embed-responsive-16by9 vids">
+        <div class="embed-responsive embed-responsive-16by9 vidsDashboard">
             <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[26], 32, 11)}}"></iframe>
         </div>
     </div>
 
     <!-- video voorstelling -->
     <div class="col-sm-3">
-        <div class="embed-responsive embed-responsive-16by9 vids">
+        <div class="embed-responsive embed-responsive-16by9">
             <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[27], 32, 11)}}"></iframe>
         </div>
     </div> 
@@ -465,6 +465,10 @@
     <button type="submit" value="Submit"  class="submitButton">Opslaan</button>
     </form>
 </div>
+
+<br/>
+<hr>
+<br/>
 
 <br><br><br>
 

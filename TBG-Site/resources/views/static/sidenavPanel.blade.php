@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default" style="border-color: #999;">
     <div class="container-fluid">
         <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -16,6 +16,7 @@
             <li><a href="/dashboard/minecraft">Minecraft</a></li>
             <li><a href="/dashboard/andere">Andere</a></li>
             <li><a href="/">Ga naar front page</a></li>
+            <li><a href="/">Log out</a></li>
         </ul>
         </div><!--/.nav-collapse -->
     </div><!--/.container-fluid -->
