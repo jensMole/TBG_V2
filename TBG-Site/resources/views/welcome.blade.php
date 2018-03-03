@@ -52,7 +52,7 @@
             
     <!-- Video's -->
     <div id="video" class="container">
-        <div class="row">
+        <div class="row" style="padding-bottom: 80px;">
             <div class="col-sm-6">
                 <div class="embed-responsive embed-responsive-16by9">
                     <iframe class="embed-responsive-item" src="https://www.youtube.com/embed?start=0&max-results=1&controls=1&showinfo=1&rel=0&listType=user_uploads&list=molenaersgames"></iframe>

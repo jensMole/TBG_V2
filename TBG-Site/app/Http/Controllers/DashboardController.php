@@ -49,16 +49,17 @@ class DashboardController extends Controller
         if (count($muziek) === 0) {
             $muziek = false;
         }
+        // Nakijken als er 8 of meer muziek items er al zijn en dan zetten we de knop uit.
+        else if (count($muziek) >= 8){
+            $genoegMuziek = false;
+        }
 
         // Nakijken als er 6 of meer online video's er al zijn en dan zetten we de knop uit.
         if (count($OnlineVideos) >= 6){
             $GenoegVideos = false;
         }
 
-        // Nakijken als er 8 of meer muziek items er al zijn en dan zetten we de knop uit.
-        if (count($muziek) >= 8){
-            $genoegMuziek = false;
-        }
+        
 
         // https://www.youtube.com/watch?v=p44TszdiiA4
         //url omvormen naar vb. p44TszdiiA4.
