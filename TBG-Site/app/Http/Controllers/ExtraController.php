@@ -7,6 +7,7 @@ use App\Aankondiging;
 use App\OnlineVid;
 
 use App\Muziek;
+use App\Plugin;
 
 use Illuminate\Http\Request;
 
@@ -47,16 +48,16 @@ class ExtraController extends Controller
         // Verkrijgen van de berichten.
         $muziek = Muziek::orderBy("muziekId", "desc")->get();
 
-        
+        // Verkrijgen van de Plugins
+        $plugins = Plugin::orderBy("pluginsId", "desc")->get();
 
         // Nakijken als er muziek linken zijn anders sturen we false.
         if (count($muziek) === 0) {
             $muziek = false;
         }
 
-
         //terug geven van de view
-        return view('extra/downloads', compact('muziek'));
+        return view('extra/downloads', compact('muziek', 'plugins'));
     }
 
 }

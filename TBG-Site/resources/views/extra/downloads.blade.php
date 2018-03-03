@@ -50,22 +50,28 @@
     <h2 id="plugin">Plugins</h2>
 </div>
 
-<!-- Tekst als afbeeldingen weg gaan (gsm/tablet) -->
 <div class="row">
-    <div class="col-sm-4 Plugins">
-        <h3 class="tekstPlugin"><a href="https://mcadmin.net/" target="_blank">lorem ipsum</a></h3>
-        <h3 class="tekstPlugin"><a href="https://mods.curse.com/bukkit-plugins/minecraft/vault" target="_blank">lorem ipsum</a></h3>
-        <h3 class="tekstPlugin"><a href="https://dev.bukkit.org/projects/worldguard" target="_blank">lorem ipsum</a></h3>
+
+    <div class="col-sm-4 Plugins" style="padding-top:30px;">
+
+    <!-- Aantal bijhouden. -->
+    <?php $aantal = 0; ?>
+
+    @foreach ($plugins as $plugin)
+        
+        <h3 class="tekstPlugin"><?= htmlspecialchars_decode($plugin["onlinePluginTekst"]);?></h3>
+
+        <?php $aantal++ ?>
+
+        @if($aantal == 3 || $aantal == 6 )
+
+            </div><div class="col-sm-4 Plugins" style="padding-top:30px;">
+
+        @endif
+
+    @endforeach
+
     </div>
-    <div class="col-sm-4 Plugins">
-        <h3 class="tekstPlugin"><a href="https://dev.bukkit.org/projects/skyblock" target="_blank">lorem ipsum</a></h3>
-        <h3 class="tekstPlugin"><a href="https://dev.bukkit.org/projects/citizens" target="_blank">lorem ipsum</a></h3>
-        <h3 class="tekstPlugin"><a href="https://dev.bukkit.org/projects/citizens" target="_blank">lorem ipsum</a></h3>
-    </div>
-    <div class="col-sm-4 Plugins">
-        <h3 class="tekstPlugin"><a href="https://dev.bukkit.org/projects/skyblock" target="_blank">lorem ipsum</a></h3>
-        <h3 class="tekstPlugin"><a href="https://dev.bukkit.org/projects/citizens" target="_blank">lorem ipsum</a></h3>
-        <h3 class="tekstPlugin"><a href="https://dev.bukkit.org/projects/citizens" target="_blank">lorem ipsum</a></h3>
-    </div>
+
 </div>
 @endsection

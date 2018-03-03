@@ -515,13 +515,11 @@
 
     <div class="row rijen">
 
-        <h1>TODO</h1>
-
         <h3><a class="notLink" id="plugins">plugins</a></h3>
-        <br/>
+        <br/><br>
 
          <!-- Input veld voor link. -->
-        <!-- Toevoegen van muziek -->
+        <!-- Toevoegen van plugin -->
         <div class="col-sm-6 centerBericht">
             <form class="centerBericht" method="POST" action="addPlugins">
                 <div class="col-sm-6">
@@ -546,8 +544,8 @@
         </div>
 
         <div class="col-sm-4 berichtenDashboard">
-            <!-- Muziek oplijsten. -->
-            <!-- Nakijken als er geen muziek is dan zetten we een basis bericht -->
+            <!-- plugins oplijsten. -->
+            <!-- Nakijken als er geen plugin is dan zetten we een basis bericht -->
 
             @foreach ($plugin as $pluginLink)
 

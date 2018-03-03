@@ -19,7 +19,6 @@
                             <li><a href="/video">Video's</a></li>
                             <li><a href="/plugins">Minecraft<span class="caret"></span></a>
                                 
-                                <!-- Dit moet dan verder aangevuld worden -->
                                 <ul class="dropdown-menu">
                                     <li><a href="/plugins">Plugin's</a></li>
                                     <li><a href="/mods">Mod's</a></li>
@@ -33,7 +32,6 @@
                             </li>
                             <li><a href="/planetcoaster">Andere<span class="caret"></span></a>
                                 
-                                <!-- Dit moet dan verder aangevuld worden -->
                                 <ul class="dropdown-menu">
                                     <li><a href="/planetcoaster">Planet Coaster</a></li>
                                     <li><a href="/howtoplugins">Hoe maak je plugins</a></li>
