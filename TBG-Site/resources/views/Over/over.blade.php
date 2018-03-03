@@ -8,29 +8,33 @@
 
 <!-- begin content -->
 <div id="content">
-    <!-- Foto Jens -->
-    <div id="Jens" class="hidden-xs">
-        <img src="afbeeldingen/jensHoofd.png" alt="Foto Jens" Title="Jens, owner van The BelgiumGames"/>
-    </div>
-    <!-- Einde foto Jens -->
-    
-    <!-- korte beschrijving -->
-    <div class="row">
-        <div id="kort" class="hidden-xs hidden-sm">
-            <p>
-            Hallo allemaal en welkom terug bij The Belgiumgames. Hier ben ik vandaag met een korte beschrijving van mij zelf.<br/>
-            Ik ben Jens en ik ben de "Owner" van The BelgiumGames.<br/>
-            Ik maak video's over Minecraft en soms eens een andere game.<br/>
-            Ik hoop dat je hier onder wat nuttige info vindt van mij.
-            </p>
+
+    <div>
+
+        <!-- Foto Jens -->
+        <div id="Jens">
+            <img class="img-responsive" src="afbeeldingen/jensHoofd.png" alt="Foto Jens" Title="Jens, owner van The BelgiumGames"/>
         </div>
-        <!-- einde korte beschrijving -->
+        <!-- Einde foto Jens -->
+        
+        <!-- korte beschrijving -->
+        <div class="row">
+            <div id="kort" class="hidden-xs hidden-sm" style="margin-right: 25px;">
+                <p>
+                Hallo allemaal en welkom terug bij The Belgiumgames. Hier ben ik vandaag met een korte beschrijving van mij zelf.<br/>
+                Ik ben Jens en ik ben de "Owner" van The BelgiumGames.<br/>
+                Ik maak video's over Minecraft en soms eens een andere game.<br/>
+                Ik hoop dat je hier onder wat nuttige info vindt van mij.
+                </p>
+            </div>
+            <!-- einde korte beschrijving -->
+        </div>
     </div>
     
     <!-- diepere info -->
     <div class="row">
-        <div id="diep" class="col-sm-4">
-            <p class="visible-xs visible-sm"><strong>Meer info te vinden op de PC en tablet versies.</strong></p>
+        <div id="diep" class="col-sm-12">
+            <p class="visible-xs visible-sm"><strong>Meer info te vinden op de PC.</strong></p>
             <p>Meer info over Jens</p>
             <p>
             Mijn naam is Jens (21 jaar) en ik ben met YouTube begonnen omdat ik eens iets anders wou proberen. Mijn YouTube carriere begon
@@ -53,14 +57,14 @@
 <div id="content1">
     <!-- Foto Jasper -->
                     <!-- ID blijft het zelfde -->
-    <div id="Jasper" class="hidden-xs">
-        <img src="afbeeldingen/jasper.jpg" alt="Foto Jasper" Title="Jasper, CO owner van Thebelgiumgames"/>
+    <div id="Jasper">
+        <img class="img-responsive" src="afbeeldingen/jasper.jpg" alt="Foto Jasper" Title="Jasper, CO owner van Thebelgiumgames"/>
     </div>
     <!-- Einde foto Jens -->
     
     <!-- korte beschrijving -->
     <div class="row">
-        <div id="kortJasper" class="hidden-xs hidden-sm">
+        <div id="kortJasper" class="hidden-xs hidden-sm" style="margin-right: 25px;">
             <p>
             Hallo iedereen ik ben Jasper ik ben 13 en  zit al heeel lang in de tbg comminutie.<br/>
             Ik werk ook vaak aan de website zoals nu dit heb ik gedaan dit is allemaal in code :-)<br/>
@@ -73,8 +77,8 @@
     
     <!-- diepere info -->
     <div class="row">
-        <div id="diepJasper" class="col-sm-4">
-            <p class="visible-xs visible-sm"><strong>Meer info te vinden op de PC en tablet versies.</strong></p>
+        <div id="diepJasper" class="col-sm-12">
+            <p class="visible-xs visible-sm"><strong>Meer info te vinden op de PC.</strong></p>
             <p>De lange tekst (interessant voor wie graag leest)</p>
             <p>
             Dus hoe begon het  ? Wel in 2013 wou ik met mijn beste vriend een server maken en ik vond geen enkele YouYuber

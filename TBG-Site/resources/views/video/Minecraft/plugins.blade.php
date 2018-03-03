@@ -11,7 +11,7 @@
     <h1 id="AnderVid">Plugin video's</h1>
     <div class="container">
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-6 vids">
                 <div class="embed-responsive embed-responsive-16by9">
                     <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[6], 32, 11)}}"></iframe>
                 </div>
@@ -23,7 +23,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-6 vids">
                 <div class="embed-responsive embed-responsive-16by9">
                     <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{substr($vids[8], 32, 11)}}"></iframe>
                 </div>
