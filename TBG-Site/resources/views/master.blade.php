@@ -51,6 +51,5 @@
         <!-- SmartMenus jQuery Bootstrap Addon -->
         <script src="/js/jquery.smartmenus.bootstrap.js"></script>
 
-        <script src="/js/Index.js"></script>
     </body>
 </html>

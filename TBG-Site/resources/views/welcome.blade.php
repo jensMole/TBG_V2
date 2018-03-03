@@ -65,4 +65,7 @@
             </div>
         </div>
     </div>
+
+    <script src="/js/Index.js"></script>
+
 @endsection
