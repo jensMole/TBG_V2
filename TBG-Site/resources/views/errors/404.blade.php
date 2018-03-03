@@ -23,6 +23,7 @@
 
         body {
             background-image: url("afbeeldingen/404.png");
+            background-position: 50% 0;
             color: white;
         }
 
