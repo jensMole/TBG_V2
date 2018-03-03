@@ -29,7 +29,7 @@
 </div>
 
 <script>
-  function toggleModalOnlineVid(muziekID) {
+  function toggleModalMuziek(muziekID) {
     document.getElementById("DeleteMuziek").action = "/muziek/" + muziekID;
   }
 </script>

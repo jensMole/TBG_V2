@@ -498,7 +498,7 @@
                             <input name="_method" type="hidden" value="DELETE"/>
                             {{ csrf_field() }}
                             <!-- Modal openen van de delete functie. -->
-                            <button onclick='toggleModalOnlineVid({{$muziekLink["muziekId"]}});' class="kb-button btn btn-danger btn-md" type="submit" data-toggle="modal" data-target="#deleteModelMuziek" value='{{$muziekLink["muziekId"]}}'><span class="glyphicon glyphicon-remove"></span>Verwijder</button>  
+                            <button onclick='toggleModalMuziek({{$muziekLink["muziekId"]}});' class="kb-button btn btn-danger btn-md" type="submit" data-toggle="modal" data-target="#deleteModelMuziek" value='{{$muziekLink["muziekId"]}}'><span class="glyphicon glyphicon-remove"></span>Verwijder</button>  
                         </td>
                     </tr>                
                 </table>
