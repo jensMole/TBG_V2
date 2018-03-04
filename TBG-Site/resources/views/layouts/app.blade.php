@@ -23,15 +23,12 @@
             background-position: 50% 0;
         }
         #loginscherm-kleur {
+            border-color: #999;
             background-color: #505050;
         }
 
         #loginscherm-tekstkleur {
-            color: black;
-        }
-       
-        #loginscherm-balkkleur {
-            color: blue;
+            color: white;
         }
 
         #app{
@@ -39,7 +36,9 @@
         }
 
         .panel-heading {
-            background-color: blue !important;
+            border-color: #999;
+            color: white !important;
+            background-color: #7d1935 !important;
         }
     </style>
 <!-- achtergrond -->
