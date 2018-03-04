@@ -36,7 +36,7 @@
         }
 
         .panel-heading {
-            border-color: #999;
+            border-color: #999 !important;;
             color: white !important;
             background-color: #7d1935 !important;
         }
