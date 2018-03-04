@@ -8,6 +8,16 @@ use Illuminate\Http\Request;
 
 class AankondigingController extends Controller
 {
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     // Toevoegen van een aankondiging.
     public function addAankon(Request $request)
     {

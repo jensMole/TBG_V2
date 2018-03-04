@@ -9,6 +9,16 @@ use Illuminate\Http\Request;
 class PluginsController extends Controller
 {
 
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
  // Toevoegen van een plugin.
  public function addPlugin(Request $request)
  {

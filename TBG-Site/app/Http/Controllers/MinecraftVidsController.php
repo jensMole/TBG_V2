@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 
 class MinecraftVidsController extends Controller
 {
+
     /**
      * Create a new controller instance.
      *
@@ -15,7 +16,7 @@ class MinecraftVidsController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth')->except(['plugins', 'mods', 'maps', 'minigames', 'minigames', 'tutorials', 'snapshots']);
     }
 
     public function plugins()

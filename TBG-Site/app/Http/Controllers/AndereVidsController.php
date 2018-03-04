@@ -9,6 +9,16 @@ use Illuminate\Http\Request;
 class AndereVidsController extends Controller
 {
 
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth')->except(['planetcoaster', 'howToPlugins', 'howTowebsites', 'reacties']);
+    }
+
     public function planetcoaster()
     {
         // ophalen van de url van de video uit database.
