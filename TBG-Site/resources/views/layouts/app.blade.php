@@ -14,6 +14,19 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <!-- Achtergrond -->
+    <style>
+
+        body {
+            background-image: url("afbeeldingen/404.png");
+            background-position: 50% 0;
+            color: white;
+        }
+    
+    </style>
+<!-- achtergrond -->
+
 </head>
 <body>
     <div id="app">
