@@ -21,9 +21,26 @@
         body {
             background-image: url("afbeeldingen/404.png");
             background-position: 50% 0;
-            color: white;
         }
-    
+        #loginscherm-kleur {
+            background-color: #505050;
+        }
+
+        #loginscherm-tekstkleur {
+            color: black;
+        }
+       
+        #loginscherm-balkkleur {
+            color: blue;
+        }
+
+        #app{
+            padding-top:80px;
+        }
+
+        .panel-heading {
+            background-color: blue !important;
+        }
     </style>
 <!-- achtergrond -->
 
