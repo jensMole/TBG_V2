@@ -55,6 +55,10 @@ class DashboardController extends Controller
         if (count($OnlineVideos) === 0) {
             $OnlineVideos = false;
         }
+        // Nakijken als er 6 of meer online video's er al zijn en dan zetten we de knop uit.
+        else if (count($OnlineVideos) >= 6){
+            $GenoegVideos = false;
+        }
 
         // Nakijken als er muziek linken zijn anders sturen we false.
         if (count($muziek) === 0) {
@@ -65,10 +69,7 @@ class DashboardController extends Controller
             $genoegMuziek = false;
         }
 
-        // Nakijken als er 6 of meer online video's er al zijn en dan zetten we de knop uit.
-        if (count($OnlineVideos) >= 6){
-            $GenoegVideos = false;
-        }
+        
 
         
 
