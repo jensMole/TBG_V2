@@ -29,7 +29,7 @@
                                         </p>
                                         {{csrf_field()}}
                                         <label id="pluginTekstLabel" for="pluginTekst" style="color:black">Tekst: </label><br>
-                                        <textarea rows="3" cols="10" class="bericht" name="pluginTekstEdit" placeholder="Plaats hier de link van plugin" id="pluginTekst" required><?= htmlspecialchars_decode($pluginTekst);?></textarea>
+                                        <textarea rows="3" cols="10" class="bericht" maxlength="25" name="pluginTekstEdit" placeholder="Plaats hier de link van plugin" id="pluginTekst" required><?= htmlspecialchars_decode($pluginTekst);?></textarea>
                                         <label id="pluginlinkLabel" for="pluginLink" style="color:black">Link: </label><br>
                                         <textarea rows="3" cols="10" class="bericht" name="pluginLinkEdit" placeholder="Plaats hier de tekst die getoond moet worden." id="pluginLink" required><?= htmlspecialchars_decode($pluginLink);?></textarea>
                                     </div>

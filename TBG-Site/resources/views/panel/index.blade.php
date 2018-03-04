@@ -530,7 +530,7 @@
                 <div class="col-sm-6">
                     {{csrf_field()}}
                     <label id="pluginsTekstLabel" for="pluginsTekst">Tekst: </label><br>
-                    <textarea rows="1" cols="10" class="bericht" name="pluginsTekst" placeholder="Plaats hier de tekst die getoond moet worden." id="pluginsTekst" required></textarea>
+                    <textarea rows="1" cols="10" maxlength="25" class="bericht" name="pluginsTekst" placeholder="Plaats hier de tekst die getoond moet worden." id="pluginsTekst" required></textarea>
                 </div>
                 <br>
                 <button style="margin-top: 25px; margin-bottom: 20px;" type="submit" value="Submit" class="submitButton col-sm-6 knoppen">Voeg plugin toe</button>
