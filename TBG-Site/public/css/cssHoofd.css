@@ -662,3 +662,8 @@ a:hover{
     background: #b3b3b3; 
 }
 /* Scrollbar */
+
+::selection {
+    background-color: #808080;
+    color: #b3b3b3;
+}
