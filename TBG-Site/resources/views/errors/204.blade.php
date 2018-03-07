@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="nl">
     <head>
-    <title>Oeps iets misgegaan</title>
+    <title>Geen inhoud</title>
     <link rel="shortcut icon" href="afbeeldingen/youtubeTBG.png"/>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,8 +32,8 @@
     </head>
     <body>
 
-        <h1>Helaas is er iets misgelopen: Je hebt geen toestemming om dit te doen</h1>
-        <h3>(errorcode: 405 ERR_NAME_NOT_RESOLVED)</h3>
+        <h1>Deze pagina bevat geen inhoud (toch raar dat je dit ziet he ????)</h1>
+        <h3>(errorcode: 204 NO_CONTENT)</h3>
         <p style="text-align:center; font-size: 150%">
             Probeer het later nog eens of probeer Jens of Jasper te bereiken via <a target="_blank" href="https://www.youtube.com/c/TheBelgiumGamesTBG">YouTube</a> of via <a href="mailto:the.belgiumg@gmail.com">Mail</a>. 
         </p>

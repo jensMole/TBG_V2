@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="nl">
     <head>
-    <title>Oeps iets misgegaan</title>
+    <title>Oops ...</title>
     <link rel="shortcut icon" href="afbeeldingen/youtubeTBG.png"/>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,8 +32,8 @@
     </head>
     <body>
 
-        <h1>Helaas is er iets misgelopen: Je hebt geen toestemming om dit te doen</h1>
-        <h3>(errorcode: 405 ERR_NAME_NOT_RESOLVED)</h3>
+        <h1>Headers van de aanvraag te lang</h1>
+        <h3>(errorcode: 431)</h3>
         <p style="text-align:center; font-size: 150%">
             Probeer het later nog eens of probeer Jens of Jasper te bereiken via <a target="_blank" href="https://www.youtube.com/c/TheBelgiumGamesTBG">YouTube</a> of via <a href="mailto:the.belgiumg@gmail.com">Mail</a>. 
         </p>
