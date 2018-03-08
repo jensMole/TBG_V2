@@ -32,7 +32,7 @@
     </head>
     <body>
 
-        <h1>Zie andere (rare uitleg ik weet het)</h1>
+        <h1>Zie andere</h1>
         <h3>(errorcode: 303 SEE_OTHERS)</h3>
         <p style="text-align:center; font-size: 150%">
             Probeer het later nog eens of probeer Jens of Jasper te bereiken via <a target="_blank" href="https://www.youtube.com/c/TheBelgiumGamesTBG">YouTube</a> of via <a href="mailto:the.belgiumg@gmail.com">Mail</a>. 
