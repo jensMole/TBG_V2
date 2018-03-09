@@ -8,7 +8,7 @@
 
 <!-- Video's -->
 <div>
-    <h1 id="AnderVid">De "Hoe maak je een plugin ?" serie</h1>
+    <h1 id="AnderVid">De "Hoe maak je een plugin?" serie</h1>
     <div class="container">
         <div class="row">
             <div class="col-sm-6">

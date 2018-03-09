@@ -8,7 +8,7 @@
 
 <!-- Video's -->
 <div>
-<h1 id="AnderVid">tutorial video's</h1>
+<h1 id="AnderVid">Tutorial video's</h1>
     <div class="container">
         <div class="row">
             <div class="col-sm-6">

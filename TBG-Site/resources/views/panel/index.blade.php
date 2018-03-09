@@ -12,7 +12,7 @@
 
     <div class="container knopTekstEditor col-sm-3">
         <!-- Trigger the modal with a button -->
-        <button type="button" style="margin-bottom: 20px;" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Tekst editor</button>
+        <button type="button" style="margin-bottom: 20px;" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Tekst Editor</button>
     </div>
 
     <div class="col-sm-3" id="tekstFrontVoorbeeld">
@@ -212,75 +212,7 @@
 <section style="overflow-x:hidden;" id="sectionTeksten">    
     <h3><a class="notLink" id="aankondLink">Aankondigingen pagina</a></h3>
 
-    <div class="row rijen">
-    
-        <br>
-        <h3><a class="notLink" id="berichten">Berichten</a></h3>
-        <br/>
-
-        <div class="col-sm-1">
-        </div>
-
-        <!-- Input veld voor link. -->
-        <!-- Toevoegen van berichten -->
-        <div class="col-sm-4 centerBericht">
-            <form class="centerBericht" method="POST" action="addBerichten">
-                <div>
-                {{csrf_field()}}
-                    <label id="bericht" for="berichtTekst">Bericht: </label><br/>
-                    <textarea rows="3" cols="10" class="bericht" name="bericht" placeholder="Plaats hier een bericht. Voor link voeg <a> toe." id="berichtTekst" required></textarea>
-                </div>
-                <br/>
-                <button type="submit" value="Submit" style="margin-bottom: 20px;" class="submitButton">Voeg bericht toe</button>
-            </form> 
-        </div>
-
-        <div class="col-sm-1">
-        </div>
-
-        <div class="col-sm-4 berichtenDashboard">
-            <!-- Berichten oplijsten. -->
-            <!-- Nakijken als er geen berichten zijn dan zetten we een basis bericht -->
-            @if ($berichten === false)
-
-                <h3>Geen berichten om weer te geven</h3>
-
-            @else
-
-                @foreach ($berichten as $bericht)
-
-                <table class="table is-fullwidth">
-                    <tr>
-                        <td style="width:80%;"><?= htmlspecialchars_decode($bericht["berichten"]);?></td>
-                        <td style="width:10%;">
-                            <div class="inline-forms">
-                                <form method="post" action='bericht/edit/{{$bericht["gegevensId"]}}'>
-                                    {{ csrf_field() }}
-                                    <!-- Modal openen voor edit functie. -->
-                                    <button type="submit" class="card-footer-item btn btn-info btn-md"><span class="glyphicon glyphicon-edit"></span>Edit</button>
-                                </form>
-                            </div>
-                        </td>
-                        <td style="width:10%;">
-                            <input name="_method" type="hidden" value="DELETE"/>
-                            {{ csrf_field() }}
-                            <!-- Modal openen van de delete functie. -->
-                            <button onclick='toggleModalBericht({{$bericht["gegevensId"]}});' class="kb-button btn btn-danger btn-md" type="submit" data-toggle="modal" data-target="#deleteModelBericht" value='{{$bericht["gegevensId"]}}'><span class="glyphicon glyphicon-remove"></span>Verwijder</button>  
-                        </td>
-                    </tr>                
-                </table>
-                @endforeach
-
-            @endif
-
-        </div>
-
-        <div class="col-sm-2">
-        </div>
-
-    </div>  
-
-    <!-- Aankondigingen -->
+        <!-- Aankondigingen -->
     <div class="row rijen">
         
     <br>
@@ -351,6 +283,76 @@
     </div>
 
     <div class="row rijen">
+    
+        <br>
+        <h3><a class="notLink" id="berichten">Berichten</a></h3>
+        <br/>
+
+        <div class="col-sm-1">
+        </div>
+
+        <!-- Input veld voor link. -->
+        <!-- Toevoegen van berichten -->
+        <div class="col-sm-4 centerBericht">
+            <form class="centerBericht" method="POST" action="addBerichten">
+                <div>
+                {{csrf_field()}}
+                    <label id="bericht" for="berichtTekst">Bericht: </label><br/>
+                    <textarea rows="3" cols="10" class="bericht" name="bericht" placeholder="Plaats hier een bericht. Voor link voeg <a> toe." id="berichtTekst" required></textarea>
+                </div>
+                <br/>
+                <button type="submit" value="Submit" style="margin-bottom: 20px;" class="submitButton">Voeg bericht toe</button>
+            </form> 
+        </div>
+
+        <div class="col-sm-1">
+        </div>
+
+        <div class="col-sm-4 berichtenDashboard">
+            <!-- Berichten oplijsten. -->
+            <!-- Nakijken als er geen berichten zijn dan zetten we een basis bericht -->
+            @if ($berichten === false)
+
+                <h3>Geen berichten om weer te geven</h3>
+
+            @else
+
+                @foreach ($berichten as $bericht)
+
+                <table class="table is-fullwidth">
+                    <tr>
+                        <td style="width:80%;"><?= htmlspecialchars_decode($bericht["berichten"]);?></td>
+                        <td style="width:10%;">
+                            <div class="inline-forms">
+                                <form method="post" action='bericht/edit/{{$bericht["gegevensId"]}}'>
+                                    {{ csrf_field() }}
+                                    <!-- Modal openen voor edit functie. -->
+                                    <button type="submit" class="card-footer-item btn btn-info btn-md"><span class="glyphicon glyphicon-edit"></span>Edit</button>
+                                </form>
+                            </div>
+                        </td>
+                        <td style="width:10%;">
+                            <input name="_method" type="hidden" value="DELETE"/>
+                            {{ csrf_field() }}
+                            <!-- Modal openen van de delete functie. -->
+                            <button onclick='toggleModalBericht({{$bericht["gegevensId"]}});' class="kb-button btn btn-danger btn-md" type="submit" data-toggle="modal" data-target="#deleteModelBericht" value='{{$bericht["gegevensId"]}}'><span class="glyphicon glyphicon-remove"></span>Verwijder</button>  
+                        </td>
+                    </tr>                
+                </table>
+                @endforeach
+
+            @endif
+
+        </div>
+
+        <div class="col-sm-2">
+        </div>
+
+    </div>  
+
+
+
+    <div class="row rijen">
         
         <h3><a class="notLink" id="online">Online video's (Max 6)</a></h3>
         <br/>
@@ -373,7 +375,7 @@
 
                 @if ($GenoegVideos == false )
                     
-                    <button style="margin-top: 25px; background-color: gray; margin-bottom: 20px;" type="submit" value="Submit" title="Max 6. Je kan er geen meer toevoegen." class="submitButton col-sm-6 knoppen" disabled>Voeg online video toe</button>
+                    <button style="margin-top: 25px; background-color: gray; margin-bottom: 20px;" type="submit" value="Submit" title="Max 6. Je kan er geen meer toevoegen." class="submitButton col-sm-6 knoppen" disabled>Max 6. Je kan er geen meer toevoegen.</button>
 
                 @else
 

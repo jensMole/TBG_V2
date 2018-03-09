@@ -15,7 +15,7 @@
             <li><a href="/dashboard">Home</a></li>
             <li><a href="/dashboard/minecraft">Minecraft</a></li>
             <li><a href="/dashboard/andere">Andere</a></li>
-            <li><a href="/">Ga naar front page</a></li>
+            <li><a href="/">Ga naar home page</a></li>
             <li>    
             
                 <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">

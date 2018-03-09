@@ -10,7 +10,7 @@
        
     <!-- Aankondegingen -->
     <div class="aankondigingen col-md-6 col-xs-12">
-        <h2 class="AankondigengenTitel">aankondigingen</h2>
+        <h2 class="AankondigengenTitel">Aankondigingen</h2>
         <p></p>
         <h3 class="AankondigengenTitel">Hier komen aankondigingen voor toekomstige video's. Ook kan je hier info vinden over livestreams.</h3> 
         <p></p>
@@ -68,7 +68,7 @@
     <div class="berichten col-md-6 col-sm-12 col-xs-12">
         <h2 class="AankondigengenTitel">Online video's</h2>
         <p></p>
-        <h3 class="AankondigengenTitel">Hier staan de video's die online staan op YouTube.</h3> 
+        <h3 class="AankondigengenTitel">Hier staan een paar video's die online staan op YouTube.</h3> 
         <p></p>
         <!-- Hier staan de video's die al geweest zijn. Zonder datum hier zetten. 6MAX-->
         

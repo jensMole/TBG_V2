@@ -6,7 +6,7 @@
 
 @section('content')
 
-<h1>DOWNLOADS</h1>
+<h1>Downloads</h1>
 <h2 id="muziek">Muziek</h2>
 <div class="row">
 

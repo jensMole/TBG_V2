@@ -114,12 +114,15 @@ body{
 	display: block;
 	margin: auto;
 	padding-top: 20px;
+	margin-top: 20px;
+	margin-bottom: 10px;
 }
 
 #YT{
 	display: block;
 	margin: auto;
 	padding-top: 20px;
+	margin-bottom: 20px;
 }
 
 #FB{
@@ -663,6 +666,7 @@ a:hover{
 }
 /* Scrollbar */
 
+/* Kleur als je iets selecteerd */
 ::selection {
     background-color: #808080;
     color: #b3b3b3;

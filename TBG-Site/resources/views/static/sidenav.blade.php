@@ -54,7 +54,7 @@
                 <li class="dropdown">
                     <a href="aankondigingen" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Extra <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="aankondigingen">aankondigingen</a></li>
+                        <li><a href="aankondigingen">Aankondigingen</a></li>
                         <li><a href="downloads">Downloads</a></li>
                     </ul>
                 </li>

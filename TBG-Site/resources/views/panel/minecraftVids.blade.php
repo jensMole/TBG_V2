@@ -6,7 +6,7 @@
 
 @section('content')
 
-<h1>MINECRAFT VIDS PAG</h1>
+<h1>Minecraft video's</h1>
 
 <hr>
 
