@@ -44,11 +44,6 @@
                                 <button type="submit" class="btn btn-primary">
                                     Login
                                 </button>
-                                <!-- weggelaten 
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    Wachtwoord vergeten ?
-                                </a>
-                                -->
                             </div>
                         </div>
                     </form>

@@ -14,7 +14,7 @@
                 <li><a href="/">Home</a></li>
                 <!-- class="active" -->
                     <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Video's <span class="caret"></span></a>
+                    <a href="/video" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Video's <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="/video">Video's</a></li>
                             <li><a href="/plugins">Minecraft<span class="caret"></span></a>
@@ -52,7 +52,7 @@
                         </ul>
                     </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Extra <span class="caret"></span></a>
+                    <a href="aankondigingen" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Extra <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="aankondigingen">aankondigingen</a></li>
                         <li><a href="downloads">Downloads</a></li>
