@@ -23,6 +23,20 @@
         -->
     
     <!-- Tekst -->
+
+    <div class="row">
+        <!-- Foto Jens -->
+        <div class="fotoJens hidden-xs hidden-sm hidden-md">
+            <img id="fotoJens" src="afbeeldingen/jensHoofd.png" alt="Foto Jens" Title="Jens, owner van The BelgiumGames"/>
+        </div>
+    </div>
+
+    <div>
+
+        
+
+    </div>
+
     <div>
         <div class="col-sm-6">
             <p id="uitleg">   
@@ -31,15 +45,10 @@
             </p>
         </div>
         
-        <!-- Foto Jens -->
-        <div class="col-sm-3 fotoJens hidden-xs hidden-sm hidden-md">
-            <img id="fotoJens" src="afbeeldingen/jensHoofd.png" alt="Foto Jens" Title="Jens, owner van The BelgiumGames"/>
-        </div>
-        
         <!-- foto's twit, Yt, FB -->
         <div id="LinkenFoto" class="col-sm-3 hidden-xs hidden-sm hidden-md">
             <a href="https://twitter.com/TBG_Jensie1996" target="_blank">
-                <img id="twit" src="afbeeldingen/twitter-Logo.png" alt="Twitter foto" title="Klik om naar mijn Twitter te gaan"/>
+                <img id="twit" src="afbeeldingen/twitter-logo-silhouette.png" alt="Twitter foto" title="Klik om naar mijn Twitter te gaan"/>
             </a>
             <a href="http://www.youtube.com/c/TheBelgiumGamesTBG" target="_blank">
                 <img id="YT" src="afbeeldingen/YT.png" alt="YT Foto" title="Klik om naar mijn YouTube te gaan"/>

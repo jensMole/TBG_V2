@@ -1,19 +1,11 @@
 @import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css");
 
-/* Afbeelding TBG */
-.wide {
-	height: 250px;
-    background-image: url('/afbeeldingen/banner.jpg');
-    background-size: contain;
-    background-position: top center;
-    background-attachment: fixed;
-    background-repeat: repeat-x;
-    margin-bottom: 0px;
-}
-
 .nav.navbar-nav li a {
+    color: rgb(216, 216, 216) !important;
+}
+.nav.navbar-nav li a:hover, .nav.navbar-nav li a:active, .nav.navbar-nav li a:after {
     color: white !important;
-    background-color: #7D1935 !important
+    background-color: #505050;
 }
 .active a{
 	color: black !important;
@@ -23,22 +15,20 @@
 	font-size: 130%;
 }
 .navbar-default{
-	background-color:#7D1935;
+	background-color:#2a2a2a;
+	border: 0;
 }
 .navbar-default li:hover{
-	background-color: #6D1935;
+	background-color: #2a2a2a;
 }
-/* .navbar-default li:hover a{
-	color: black !IMPORTANT;
-} */
 .dropdown-menu a{
 	color: black !important;
 }
 .dropdown-menu{
-    background-color: #7D1935 !important;
+    background-color: #404040 !important;
 }
 .dropdown-menu ul{
-    background-color: #7D1935;
+    background-color: #404040;
 }
 .navbar-brand{
 	color: White !important;
@@ -49,12 +39,14 @@
 	margin-right: 0px !important;
 }
 .dropdown a{
-    background-color: #7D1935;
+    background-color: #404040;
 }
 
 .navbar-collapse {
     border-top: 0px !important;
 }
+
+
 
 @media (min-width: 768px) {
     .navbar .navbar-nav {
@@ -102,11 +94,9 @@ body{
 
 /* foto */
 #fotoJens{
-    display: block;
-	margin: auto;
-	margin-top: 30px;
-	margin-left: 50px;
-	box-shadow: #606060 8px 8px 5px;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* linken Foto */

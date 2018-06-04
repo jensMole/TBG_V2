@@ -30,7 +30,7 @@
     </head>
     <body>
 
-        <div class="wide hidden-xs hidden-sm hidden-md"></div>
+        <!-- <div class="wide hidden-xs hidden-sm hidden-md"></div> -->
 
         @include('static.sidenav')
           
