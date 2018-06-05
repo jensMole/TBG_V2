@@ -28,7 +28,7 @@
             <img id="fotoJens" src="afbeeldingen/jensHoofd.png" alt="Foto Jens" Title="Jens, owner van The BelgiumGames"/>
         </div>
 
-        <p class="titelFoto">Jens M.</p>
+        <p class="titelFoto">Jens Molenaers</p>
     </div>
 
     <div class="row icons">

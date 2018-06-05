@@ -26,7 +26,6 @@
                                     <li><a href="/minigames">Minigames</a></li>
                                     <li><a href="/tutorials">Toturials</a></li>
                                     <li><a href="/snapshots">Snapshots</a></li>
-                                    <li class="divider visible-xs"></li>
                                 </ul>
 
                             </li>
@@ -40,7 +39,6 @@
                                 </ul>
                                 
                             </li>
-                            <li class="divider visible-xs"></li>
                         </ul>
                     </li>
                     <li class="dropdown">
@@ -48,7 +46,7 @@
                         <ul class="dropdown-menu">
                             <li><a href="over">Over</a></li>
                             <li><a href="contact">Contact</a></li> 
-                            <li class="divider visible-xs"></li>     
+                            <!-- <li class="divider visible-xs"></li>      -->
                         </ul>
                     </li>
                 <li class="dropdown">

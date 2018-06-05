@@ -6,12 +6,22 @@
 
 @section('content')
 
+<div class="row achtergrond">
+    <!-- Foto Jens -->
+    <div class="fotoJens">
+        <img id="fotoJens" src="afbeeldingen/jensHoofdklein.png" alt="Foto Jens" Title="Jens, owner van The BelgiumGames"/>
+    </div>
+</div>
+
+<div class="row videoTitel">
+
+    <h1>Video's</h1>
+
+</div>
+
 <div id="content">
     <!-- Minecraft video's -->
     <div id="Minecraft">
-        
-        <a href="/plugins"><h1 id="Mine">Minecraft Video's</h1></a>
-        
         <div class="container">
             <div class="row">
                 <div class="col-sm-4 vids" style="padding-bottom: 15px;">
@@ -37,9 +47,6 @@
     
     <!-- Andere video's -->
     <div id="Andere">
-        
-        <a href="/planetcoaster"><h1 id="Ander">Andere Video's</h1></a>
-        
         <div class="container">
             <div class="row">
                 <div class="col-sm-4 vids" style="padding-bottom: 15px;">
