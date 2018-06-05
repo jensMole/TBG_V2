@@ -21,44 +21,64 @@
                 
                 Dit is trouwens nu in PHP geschreven                  
         -->
-    
-    <!-- Tekst -->
 
-    <div class="row">
+    <div class="row achtergrond">
         <!-- Foto Jens -->
-        <div class="fotoJens hidden-xs hidden-sm hidden-md">
+        <div class="fotoJens">
             <img id="fotoJens" src="afbeeldingen/jensHoofd.png" alt="Foto Jens" Title="Jens, owner van The BelgiumGames"/>
         </div>
+
+        <p class="titelFoto">Jens M.</p>
     </div>
 
-    <div>
+    <div class="row icons">
 
-        
+        <h4>
+            Hallo en welkom op de website van The BelgiumGames
+        </h4>
+
+        <br>
+
+        <a href="https://twitter.com/TBG_Jensie1996" target="_blank">
+            <img src="afbeeldingen/twitter-logo-silhouette.png" alt="Twitter foto" title="Klik om naar mijn Twitter te gaan"/>
+        </a>
+
+        <a href="http://www.youtube.com/c/TheBelgiumGamesTBG" target="_blank">
+            <img src="afbeeldingen/youtube.png" alt="YT Foto" title="Klik om naar mijn YouTube te gaan"/>
+        </a>
+
+        <a href="https://www.instagram.com/jensie1996/" target="_blank">
+            <img src="afbeeldingen/instagram-logo.png" alt="Instagram Foto" title="Klik om naar mijn Instgram te gaan"/>
+        </a>
+
+
+        <a href="https://www.facebook.com/TheBelgiumGames/" target="_blank">
+            <img src="afbeeldingen/facebook-logo.png" alt="Fb Foto" title="Klik om naar mijn Facebook te gaan"/>
+        </a>
+
+         <a href="https://discord.gg/pQbvYMm" target="_blank">
+            <img style="" src="afbeeldingen/Discord-Logo-White.png" alt="Discord Foto" title="Klik om naar mijn Discord server te gaan"/>
+        </a>
+
+        <br><br>
+
+        <h4>
+            <strong>Email:</strong><a href="mailto:the.belgiumg@gmail.com"> the.belgiumg@gmail.com</a>
+        </h4>
 
     </div>
 
-    <div>
-        <div class="col-sm-6">
-            <p id="uitleg">   
-                <!-- Tekst binnenhalen en tonen. -->
-                <?= htmlspecialchars_decode($tekst[0]);?>
-            </p>
-        </div>
-        
-        <!-- foto's twit, Yt, FB -->
-        <div id="LinkenFoto" class="col-sm-3 hidden-xs hidden-sm hidden-md">
-            <a href="https://twitter.com/TBG_Jensie1996" target="_blank">
-                <img id="twit" src="afbeeldingen/twitter-logo-silhouette.png" alt="Twitter foto" title="Klik om naar mijn Twitter te gaan"/>
-            </a>
-            <a href="http://www.youtube.com/c/TheBelgiumGamesTBG" target="_blank">
-                <img id="YT" src="afbeeldingen/YT.png" alt="YT Foto" title="Klik om naar mijn YouTube te gaan"/>
-            </a>
-            <a href="https://www.facebook.com/TheBelgiumGames/" target="_blank">
-                <img id="FB" src="afbeeldingen/FB.png" alt="Fb Foto" title="Klik om naar mijn Facebook te gaan"/>
-            </a>
-        </div>
+    <div class="row">
+        <p id="uitleg">   
+            <!-- Tekst binnenhalen en tonen. -->
+            <?= htmlspecialchars_decode($tekst[0]);?>
+        </p>
     </div>
             
+    <div class="row recent">
+        <h3>Recente video's</h3>
+    </div>
+
     <!-- Video's -->
     <div id="video" class="container">
         <div class="row" style="padding-bottom: 80px;">
@@ -74,7 +94,5 @@
             </div>
         </div>
     </div>
-
-    <script src="/js/Index.js"></script>
 
 @endsection
