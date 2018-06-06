@@ -6,6 +6,19 @@
 
 @section('content')
 
+<div class="row achtergrond">
+    <!-- Foto Jens -->
+    <div class="fotoJens">
+        <img id="fotoJens" src="afbeeldingen/jensHoofdklein.png" alt="Foto Jens" Title="Jens, owner van The BelgiumGames"/>
+    </div>
+</div>
+
+<div class="row videoTitel">
+
+    <h1>Aankondigingen / Berichten</h1>
+
+</div>
+
 <div class="row">
        
     <!-- Aankondegingen -->

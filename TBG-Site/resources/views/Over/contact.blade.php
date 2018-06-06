@@ -6,6 +6,19 @@
 
 @section('content')
 
+<div class="row achtergrond">
+    <!-- Foto Jens -->
+    <div class="fotoJens">
+        <img id="fotoJens" src="afbeeldingen/jensHoofdklein.png" alt="Foto Jens" Title="Jens, owner van The BelgiumGames"/>
+    </div>
+</div>
+
+<div class="row videoTitel">
+
+    <h1>Contact</h1>
+
+</div>
+
 <!-- Midden Contact -->
 <div id="contact1">
     <p>Contacteer Jens</p>
@@ -19,6 +32,8 @@
     <p>Wil je mij iets vragen over van alles en nog wat? Dat kan. <a href="mailto:the.belgiumg@gmail.com">Klik mij</a> om een mail te sturen.<br/>
     Ik probeer binnen 2 dagen altijd te antwoorden.
 </div>
+
+<hr>
 
 <div id="contact3">
     <p>Contacteer Jasper</p>

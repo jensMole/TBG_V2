@@ -350,9 +350,12 @@ h2.titelsDown {
 	margin: 10px;
 }
 
+#bericht{
+	margin-bottom: 30px;
+}
+
 #bericht p{
     font-size: 110%;
-	background-color: #404040;
 	border-radius: 10px;
 	padding: 5px;
 	text-align: center;
@@ -360,9 +363,12 @@ h2.titelsDown {
 	margin: 15px;
 }
 
+#berichtJasper{
+	margin-bottom: 40px;
+}
+
 #berichtJasper p{
     font-size: 140%;
-	background-color: #404040;
 	border-radius: 10px;
 	padding: 5px;
 	text-align: center;
