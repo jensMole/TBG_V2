@@ -6,9 +6,20 @@
 
 @section('content')
 
-<h1>Downloads</h1>
-<h2 id="muziek">Muziek</h2>
-<div class="row">
+<div class="row achtergrond">
+    <!-- Foto Jens -->
+    <div class="fotoJens">
+        <img id="fotoJens" src="afbeeldingen/jensHoofdklein.png" alt="Foto Jens" Title="Jens, owner van The BelgiumGames"/>
+    </div>
+</div>
+
+<div class="row videoTitel">
+
+    <h1>Muziek / Plugins</h1>
+
+</div>
+
+<div class="row muziek">
 
     <div class="col-sm-1 hidden-sm">
     </div>
@@ -46,13 +57,11 @@
     </div>
 </div>
 
-<div>
-    <h2 id="plugin">Plugins</h2>
-</div>
+<hr>
 
-<div class="row">
+<div class="row pluginsDownload">
 
-    <div class="col-sm-4 Plugins" style="padding-top:30px;">
+    <div class="col-sm-4 Plugins">
 
     <!-- Aantal bijhouden. -->
     <?php $aantal = 0; ?>
@@ -65,7 +74,7 @@
 
         @if($aantal == 3 || $aantal == 6 )
 
-            </div><div class="col-sm-4 Plugins" style="padding-top:30px;">
+            </div><div class="col-sm-4 Plugins">
 
         @endif
 

@@ -321,6 +321,7 @@ iframe{
 
 .AankondigengenTitel{
 	text-align: center;
+	margin-bottom: 20px;
 }
 /* Einde extra pagina*/
 
@@ -433,14 +434,9 @@ h2.titelsDown {
 /* Einde blog pagina's */
 
 /*Begin Downloads pagina*/
-h2#muziek, h2#plugin {
-	text-align: center;
-	margin-top: 60px;
-	color: white;
-	background-color: #7D1935;
-	padding-left: 10px;
-	padding-top: 5px;
-	height: 40px;
+.muziek{
+	margin-top: 25px;
+	margin-bottom: 20px;
 }
 
 .music{
@@ -456,6 +452,11 @@ h2#muziek, h2#plugin {
 #note, #note1{
 	display: block;
 	margin: 0 auto;
+}
+
+.pluginsDownload{
+	margin-top: 25px;
+	margin-bottom: 20px;
 }
 
 .Plugins li{
