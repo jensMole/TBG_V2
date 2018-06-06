@@ -78,7 +78,7 @@
 <div class="row">
     <div class="col-xs-3 hidden-sm">
     </div>
-    <div class="berichten col-md-6 col-sm-12 col-xs-12">
+    <div class="berichten online col-md-6 col-sm-12 col-xs-12">
         <h2 class="AankondigengenTitel">Online video's</h2>
         <p></p>
         <h3 class="AankondigengenTitel">Hier staan een paar video's die online staan op YouTube.</h3> 

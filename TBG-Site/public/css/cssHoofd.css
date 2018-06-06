@@ -278,20 +278,41 @@ iframe{
 /* Begin Extra pagina */
 .berichten p{
     font-size: 130%;
-	background-color: #404040;
+	background-color: #303030;
 	border-radius: 10px;
 	padding: 5px;
 	margin: 10px;
 	padding-left: 10px;
 }
 
+.berichten{
+	margin-top: 25px;
+	margin-bottom: 20px;
+}
+
 .aankondigingen p{
 	font-size: 130%;
-	background-color: #404040;
+	background-color: #303030;
 	border-radius: 10px;
 	padding: 5px;
 	margin: 10px;
 	padding-left: 10px;
+}
+
+.aankondigingen{
+	margin-top: 25px;
+}
+
+
+@media (max-width: 990px) {
+    .berichten{
+		margin-top: 10px;
+		margin-bottom: -7px;
+	}
+
+	.online{
+		margin-top: 10px;
+	}
 }
 
 .BerichtTitel{
