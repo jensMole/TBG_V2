@@ -20,12 +20,12 @@
 
         body {
             background-image: url("afbeeldingen/404back.jpg");
-            background-position: 50% 0;
+            background-position: top center;
+            /* background-position: 50% 0; */
             font-family:Arial, sans-serif;
         }
         #loginscherm-kleur {
             color: white;
-            box-shadow: -0px 1px 10px gray;
             border-color: #3a3a3a;
             background-color: #3e3e3e;
         }
@@ -35,7 +35,7 @@
         }
 
         #app{
-            padding-top:80px;
+            padding-top:110px;
         }
 
         .panel-heading {
