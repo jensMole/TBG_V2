@@ -130,7 +130,7 @@ body{
 }
 
 .recent{
-	background-color: #2a2a2a;
+	background-color: #303030;
 	padding: 20px;
 }
 
@@ -148,6 +148,8 @@ iframe{
 
 .container{
 	padding-top: 20px;
+	margin-top: 10px;
+	margin-bottom:	10px;
 }
 
 #video iframe{
