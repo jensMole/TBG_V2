@@ -19,13 +19,15 @@
     <style>
 
         body {
-            background-image: url("afbeeldingen/404.png");
+            background-image: url("afbeeldingen/404back.jpg");
             background-position: 50% 0;
             font-family:Arial, sans-serif;
         }
         #loginscherm-kleur {
-            border-color: #999;
-            background-color: #505050;
+            color: white;
+            box-shadow: -0px 1px 10px gray;
+            border-color: #3a3a3a;
+            background-color: #3e3e3e;
         }
 
         #loginscherm-tekstkleur {
@@ -37,9 +39,9 @@
         }
 
         .panel-heading {
-            border-color: #999 !important;;
+            border-color: #3a3a3a !important;;
             color: white !important;
-            background-color: #7d1935 !important;
+            background-color: #2a2a2a !important;
         }
     </style>
 <!-- achtergrond -->

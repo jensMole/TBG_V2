@@ -94,7 +94,6 @@ body{
 	padding-top: 15px;
 }
 
-
 .achtergrond{
 	background-image: url("/afbeeldingen/achtergrond.png");
 	background-position: top center;
@@ -398,41 +397,6 @@ h2.titelsDown {
 }
 /* Einde contact pagina */
 
-/* Begin Blog pagina's */
-#blogtitel{
-	text-align: center;
-	color: white;
-}
-
-#onderwerp{
-	text-align: center;
-	color: white;
-}
-
-#datumpost{
-	text-align: center;
-	color: white;
-}
-
-#postdeel{
-	margin: auto;
-	margin-top: 30px;
-	font-size: 140%;
-	background-color: #404040;
-	border-radius: 10px;
-	padding: 5px;
-	margin-bottom: 20px;
-}
-
-#fotoblog{
-    display: block;
-    width: 50%;
-    height: auto;
-    margin: auto;
-
-}
-/* Einde blog pagina's */
-
 /*Begin Downloads pagina*/
 .muziek{
 	margin-top: 25px;
@@ -490,8 +454,17 @@ h3{
 
 
 /* Dashboard */
+#minecraftVidTitel{
+	margin-top: 28px;
+}
+
+#andereVidTitel{
+	margin-top: 28px;	
+}
+
 #sectionHeadPage{
 	overflow: auto;
+	margin-top: 5px;
 }
 
 .knopTekstEditor{

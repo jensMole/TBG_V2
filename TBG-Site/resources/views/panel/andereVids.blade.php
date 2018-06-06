@@ -6,7 +6,7 @@
 
 @section('content')
 
-<h1>Andere video's</h1>
+<h1 id="andereVidTitel">Andere video's</h1>
 
 <hr>
 
