@@ -7,6 +7,19 @@
 @section('content')
 
 <!-- begin content -->
+<div class="row achtergrond">
+    <!-- Foto Jens -->
+    <div class="fotoJens">
+        <img id="fotoJens" src="afbeeldingen/jensHoofdklein.png" alt="Foto Jens" Title="Jens, owner van The BelgiumGames"/>
+    </div>
+</div>
+
+<div class="row videoTitel">
+
+    <h1>Over</h1>
+
+</div>
+
 <div id="content">
 
     <div>
@@ -35,7 +48,6 @@
     <div class="row">
         <div id="diep" class="col-sm-12">
             <p class="visible-xs visible-sm"><strong>Meer info is te vinden op de PC.</strong></p>
-            <p>Meer info over Jens</p>
             <p>
             Mijn naam is Jens (21 jaar) en ik ben met YouTube begonnen omdat ik eens iets anders wou proberen. Mijn YouTube carriere begon
             op 05/12/2013 toen een kennis van mij ook begon. En toen gebeurde het mijn YouTube kanaal was geboren.
@@ -52,6 +64,8 @@
         <!-- einde diepere info -->
     </div>
 </div>
+
+<hr>
 
 <!-- voor de footer eerst de info van Jasper :) -->
 <div id="content1">
@@ -79,7 +93,6 @@
     <div class="row">
         <div id="diepJasper" class="col-sm-12">
             <p class="visible-xs visible-sm"><strong>Meer info is te vinden op de PC.</strong></p>
-            <p>Meer info over Jasper</p>
             <p>
             Dus hoe begon het? Wel in 2013 wou ik met mijn beste vriend een server maken en ik vond geen enkele YouYuber
             die dat kon uitleggen :'( maar ik bleef doorzoeken en toen vond ik Molenaers games het oude YouTube kanaal en daar vind ik de toturial :).

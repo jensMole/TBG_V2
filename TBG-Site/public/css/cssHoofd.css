@@ -161,12 +161,64 @@ iframe{
 /* Begin over pagina */
 /* content verplaatsen */
 #content, #content1{
-	margin-top: 20px;
+	margin-top: 40px;
 }
 
-/* foto jens */
-#Jens, #Jasper{
+/* foto jens/Jasper */
+#Jens{
 	margin-left: 10%;
+	margin-bottom: 15px;
+}
+
+#Jasper{
+	margin-left: 70%;
+	margin-bottom: 15px;
+}
+
+/* beschrijving */
+#kort{
+	position: absolute;
+	margin-left: 600px;
+	margin-top: -180px;
+	width: 50%;
+	font-size: 130%;
+	padding: 5px;
+}
+
+#diep p{
+	font-size: 130%;
+	width: 80%;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+#kortJasper{
+	position: absolute;
+	margin-left: 200px;
+	margin-right: 100px;
+	margin-top: -220px;
+	width: 60%;
+	font-size: 130%;
+   	padding: 5px;
+}
+
+#diepJasper p{
+	font-size: 130%;
+	width: 80%;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 1550px) {
+    #kortJasper{
+		margin-left: 150px !important;
+	}
+}
+
+@media (max-width: 1190px) {
+    #kortJasper{
+		margin-left: 120px !important;
+	}
 }
 
 @media (max-width: 991px) {
@@ -177,32 +229,9 @@ iframe{
 	#Jens img, #Jasper img{
 		margin-left: auto;
 		margin-right: auto;
-		width: 60%;
+		width: 35%;
+		margin-bottom: 20px;
 	}
-}
-
-/* korte beschrijving */
-#kort, #kortJasper{
- 	position: absolute;
- 	margin-left: 600px;
- 	margin-top: -250px;
-	width: auto;
-	font-size: 130%;
-	background-color: #404040;
-	border-radius: 10px;
-	padding: 5px;
-}
-
-#diep, #diepJasper{
- 	margin-left: 25px;
-	margin-right: 25px;
-	margin-top: 20px;
-  	width: auto;
-	font-size: 130%;
-	background-color: #404040;
-	border-radius: 10px;
-	padding: 5px;
-	margin-bottom: 10px;
 }
 /* Einde over pagina */
 
