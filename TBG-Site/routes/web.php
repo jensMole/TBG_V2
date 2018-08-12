@@ -43,6 +43,9 @@ Route::get('/contact','OverController@contact');
 Route::get('/aankondigingen','ExtraController@aankon');
 Route::get('/downloads','ExtraController@downloads');
 
+// Aanvragen
+Route::get('/aanvragen', 'AanvragenController@index');
+
 
 
 // Dashboard

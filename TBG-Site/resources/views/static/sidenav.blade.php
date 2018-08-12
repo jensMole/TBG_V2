@@ -12,6 +12,7 @@
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li><a href="/">Home</a></li>
+                <li><a href="/aanvragen">Aanvragen</a></li>
                 <!-- class="active" -->
                     <li class="dropdown">
                     <a href="/video" style="background-color: #2a2a2a;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Video's <span class="caret"></span></a>
@@ -48,7 +49,6 @@
                             <li><a href="contact">Contact</a></li> 
                             <!-- <li class="divider visible-xs"></li>      -->
                         </ul>
-                    </li>
                 <li class="dropdown">
                     <a href="aankondigingen" style="background-color: #2a2a2a;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Extra <span class="caret"></span></a>
                     <ul class="dropdown-menu">
