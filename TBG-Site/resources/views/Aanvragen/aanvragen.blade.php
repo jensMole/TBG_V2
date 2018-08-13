@@ -21,31 +21,54 @@
 </div>
 
 <div class="container">
-    <div class="col-md-6 col-xs-12">
+    <div class="col-md-6 col-xs-12 table-responsive" style="border:none;">
 
-        <h3>Geef hier je aanvraag in</h3><br>
+        <!-- <p id="aanvraagTitle">Geef hier je aanvraag in</p><br> -->
 
-        <form class="centerBericht" method="POST" action="">
-            <div>
-            {{csrf_field()}}
-                <label id="type" for="typeSelect">Type: </label>
-                <select id="typeSelect">
-                    <option value="0">Selecteer een optie:</option>
-                    <option value="1">Plugin</option>
-                    <option value="2">Mod</option>
-                    <option value="3">Programeren</option>
-                    <option value="4">Andere...</option>
-                </select>
-            </div>
-            <br/>
-            <!-- <button type="submit" value="Submit" style="margin-bottom: 20px;" class="submitButton">Voeg aankondiging toe</button> -->
+        <form class="" method="POST" action="">
+
+            <table id="tableAanvragen">
+                <tr>
+                    <th style="text-align: center;">
+                        Geef hier je aanvraag in
+                    </th>
+                </tr>
+                <tr>
+                    {{csrf_field()}}
+                        <td><label id="type" for="typeSelect" required>Type </label><br>
+                        <select id="typeSelect" required>
+                            <option value="">Selecteer een optie</option>
+                            <option value="1">Plugin</option>
+                            <option value="2">Mod</option>
+                            <option value="3">Programeren</option>
+                            <option value="4">Andere...</option>
+                        </select>
+                        </td>
+                </tr>
+                <tr>
+                    <td><label id="info" for="infoInput" required>Info</label><br>
+                    <textarea rows="5" cols="50" name="tekstFronpage" placeholder="Info over welke Plugin / Mod / Programeren of andere" id="infoInput" required></textarea></td>
+                </tr>
+                <tr>
+                    <td><label id="link" for="linkInput">Link</label><br>
+                    <input type="url" id="linkInput" size="47" placeholder="Link naar Plugin / Mod / Andere"></input></td>
+                </tr>
+                <tr>
+                    <td><button type="submit" value="Submit" style="margin-bottom: 20px;" id="submitAanvraag" class="">Zend aanvraag</button></td>
+                </tr>
+            </table>
+
         </form>
+
+        <p>De velden met * zijn verplicht</p>
 
     </div>
 
     <div class=" col-md-6 col-xs-12">
         <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis imperdiet sapien, viverra suscipit ex. Quisque semper nunc bibendum purus suscipit tincidunt. Cras auctor nisl eu dolor imperdiet semper. In pretium malesuada dignissim. Nulla facilisi. Mauris a ligula rutrum, maximus dolor in, tincidunt turpis. Vestibulum risus risus, dignissim quis porttitor a, suscipit in nulla. Vestibulum tempor auctor elit eu sollicitudin. Donec aliquam a magna in gravida. Sed luctus mattis tellus, id rutrum magna ornare eu. Vestibulum imperdiet velit non ante feugiat tempus. Sed rutrum augue at sem tempus sodales. Vestibulum dapibus mauris quam, sed dictum quam volutpat eget. Donec congue convallis lacus, et sagittis sem consequat non. In tortor leo, viverra id turpis at, fermentum ultricies tortor. Donec egestas, magna a dictum commodo, risus ligula pulvinar odio, sed sagittis arcu odio id massa.
+            Oplijsting van de verschillende aanvragen. (Gewoon oplijsten. In admin gedeelte ordenen).<br>
+            Aanvragen lijst:<br>
+            Type: Info / Link
         </p>	
     </div>
 </div>

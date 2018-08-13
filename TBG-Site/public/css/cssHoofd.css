@@ -723,3 +723,61 @@ a:hover{
     background-color: #808080;
     color: #b3b3b3;
 }
+
+/* Aanvragen */
+[required]::after {
+    content: " *";
+    color: red;
+}
+
+#aanvraagTitle{
+	font-size: 24px;
+}
+
+#tableAanvragen{
+	margin-top: 20px;
+}
+
+#tableAanvragen td{
+	padding-bottom: 17px;
+}
+
+#tableAanvragen th{
+	padding-bottom: 12px;
+}
+
+#typeSelect, #linkInput{
+	color: #606060;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	padding: 5px;
+	background-color: #fcfcfc;
+	height: 29px;
+	overflow: hidden;
+	border: none;
+}
+
+#linkInput{
+	height: 35px;
+}
+
+#infoInput{
+	color: #606060;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background-color: #fcfcfc;
+}
+
+#submitAanvraag{
+	text-align: center;
+	font-size: 115%;
+	background-color: #2a2a2a; /* Green */
+    border: none;
+    color: white;
+    padding: 8px 13px;
+    text-decoration: none;
+	display: inline-block;
+	border-radius: 5px;
+}
