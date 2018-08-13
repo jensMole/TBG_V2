@@ -64,7 +64,22 @@
 
     </div>
 
-    <div class=" col-md-6 col-xs-12">
+    <div class="aanvragen col-md-6 col-xs-12">
+
+        @if($Types === false)
+
+            <h3>Er zijn geen aanvragen op dit moment</h3>
+
+        @else
+
+            @foreach ($Types as $type)
+
+                <p><?=$type?></p>
+
+            @endforeach
+
+        @endif
+
         <p>
             Oplijsting van de verschillende aanvragen. (Gewoon oplijsten. In admin gedeelte ordenen).<br>
             Aanvragen lijst:<br>
