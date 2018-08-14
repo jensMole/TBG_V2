@@ -13,7 +13,7 @@ class AanvragenController extends Controller
     {
         // Ophalen van data.
         $Types = Aanvragen::pluck('Type');
-        // $NaamType = TypesAanvragen::get();
+        $NaamType = TypesAanvragen::get();
 
         if (count($Types) === 0) {
             $Types = false;
