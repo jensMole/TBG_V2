@@ -72,6 +72,8 @@
 
         @else
 
+            <p><?=$NaamType?></p>
+
             @foreach ($Types as $type)
 
                 <p><?=$type?></p>

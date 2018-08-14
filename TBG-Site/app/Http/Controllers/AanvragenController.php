@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Aanvragen;
+use App\TypesAanvragen;
 use Illuminate\Http\Request;
 
 class AanvragenController extends Controller
@@ -12,6 +13,7 @@ class AanvragenController extends Controller
     {
         // Ophalen van data.
         $Types = Aanvragen::pluck('Type');
+        // $NaamType = TypesAanvragen::get();
 
         if (count($Types) === 0) {
             $Types = false;
@@ -21,7 +23,7 @@ class AanvragenController extends Controller
         $Link = Aanvragen::pluck('Link');
 
         //terug geven van de view met de data.
-        return view('Aanvragen/aanvragen', compact('Types','Info','Link'));
+        return view('Aanvragen/aanvragen', compact('Types','Info','Link','NaamType'));
     }
 }
 
