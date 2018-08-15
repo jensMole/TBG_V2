@@ -20,10 +20,9 @@ class AanvragenController extends Controller
         }
 
         $Info = Aanvragen::pluck('Info');
-        $Link = Aanvragen::pluck('Link');
 
         //terug geven van de view met de data.
-        return view('Aanvragen/aanvragen', compact('Types','Info','Link','NaamType'));
+        return view('Aanvragen/aanvragen', compact('Types','Info','NaamType'));
     }
 }
 

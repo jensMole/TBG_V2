@@ -72,21 +72,30 @@
 
         @else
 
-            <p><?=$NaamType?></p>
+            <h3>Aanvragen lijst</h3><br>
 
-            @foreach ($Types as $type)
+            @for($i = 0; $i < count($Types); $i++)
 
-                <p><?=$type?></p>
+                @switch($Types[$i])
 
-            @endforeach
+                    @case(1)
+                        <p><?=$NaamType[0]["Naam"]?>: <?=$Info[$i]?></p>
+                        @break
+                    @case(2)
+                        <p><?=$NaamType[1]["Naam"]?>: <?=$Info[$i]?></p>
+                        @break
+                    @case(3)
+                        <p><?=$NaamType[2]["Naam"]?>: <?=$Info[$i]?></p>
+                        @break
+                    @case(4)
+                        <p><?=$NaamType[3]["Naam"]?>: <?=$Info[$i]?></p>
+                        @break
+                @endswitch
 
-        @endif
+            @endfor
 
-        <p>
-            Oplijsting van de verschillende aanvragen. (Gewoon oplijsten. In admin gedeelte ordenen).<br>
-            Aanvragen lijst:<br>
-            Type: Info / Link
-        </p>	
+        @endif	
+
     </div>
 </div>
 
