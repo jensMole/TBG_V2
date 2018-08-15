@@ -45,6 +45,8 @@ Route::get('/downloads','ExtraController@downloads');
 
 // Aanvragen
 Route::get('/aanvragen', 'AanvragenController@index');
+// Toevoegen van een aanvraag.
+Route::post("addAanvragen", "AanvragenController@addAanvraag");
 
 
 

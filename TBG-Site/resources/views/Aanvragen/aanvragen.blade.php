@@ -25,7 +25,7 @@
 
         <!-- <p id="aanvraagTitle">Geef hier je aanvraag in</p><br> -->
 
-        <form class="" method="POST" action="">
+        <form method="POST" action="addAanvragen">
 
             <table id="tableAanvragen">
                 <tr>
@@ -36,7 +36,7 @@
                 <tr>
                     {{csrf_field()}}
                         <td><label id="type" for="typeSelect" required>Type </label><br>
-                        <select id="typeSelect" required>
+                        <select id="typeSelect" name="typeSelect" required>
                             <option value="">Selecteer een optie</option>
                             <option value="1">Plugin</option>
                             <option value="2">Mod</option>
@@ -47,11 +47,11 @@
                 </tr>
                 <tr>
                     <td><label id="info" for="infoInput" required>Info</label><br>
-                    <textarea rows="5" cols="50" name="tekstFronpage" placeholder="Info over welke Plugin / Mod / Programeren of andere" id="infoInput" required></textarea></td>
+                    <textarea rows="5" cols="50" name="infoAanvraag" placeholder="Info over welke Plugin / Mod / Programeren of andere" id="infoInput" required></textarea></td>
                 </tr>
                 <tr>
                     <td><label id="link" for="linkInput">Link</label><br>
-                    <input type="url" id="linkInput" size="47" placeholder="Link naar Plugin / Mod / Andere"></input></td>
+                    <input type="url" id="linkInput" size="47" name="linkAanvraag" placeholder="Link naar Plugin / Mod / Andere"></input></td>
                 </tr>
                 <tr>
                     <td><button type="submit" value="Submit" style="margin-bottom: 20px;" id="submitAanvraag" class="">Zend aanvraag</button></td>

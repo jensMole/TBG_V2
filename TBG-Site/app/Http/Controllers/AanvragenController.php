@@ -24,6 +24,23 @@ class AanvragenController extends Controller
         //terug geven van de view met de data.
         return view('Aanvragen/aanvragen', compact('Types','Info','NaamType'));
     }
+
+    // Toevoegen van een aanvraag.
+    public function addAanvraag(Request $request)
+    {
+        // Nieuwe aanvraag aanmaken.
+        $aanvraag = new Aanvragen;
+        
+        // Toevoegen van de aanvraag.
+        $aanvraag->Type = request("typeSelect");
+        $aanvraag->Info = request("infoAanvraag");
+        $aanvraag->Link = request("linkAanvraag");
+        // Opslaan.
+        $aanvraag->save();
+
+        //terugsturen naar dashboard
+        return redirect("/aanvragen");
+    }
 }
 
 ?>
