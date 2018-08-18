@@ -6,6 +6,13 @@
 
 @section('content')
 
+@if ($Types === false)
+    
+    <br>
+    <h3>Er zijn geen aanvragen op dit moment</h3>
+
+@else
+
 <section id="sectionTeksten"> 
 
     <div class="row separation hidden-sm hidden-xs"></div>
@@ -24,7 +31,13 @@
 
                 <table class="table is-fullwidth">
                     <tr>
+                        @if($plugin["Foto"] == 0)
+                        <td style="width:80%;"><span class="glyphicon glyphicon-remove" style="color:red;">&nbsp;</span><?=$plugin["Prefix"]?><?=$plugin["Info"]?> <br> <a href="<?=$plugin["Link"]?>" target="_blank"><?=$plugin["Link"]?></a><?=$plugin["Suffix"]?></td>
+                        @elseif($plugin["Foto"] == 1)
+                        <td style="width:80%;"><span class="glyphicon glyphicon-ok" style="color:green;">&nbsp;</span><?=$plugin["Prefix"]?><?=$plugin["Info"]?> <br> <a href="<?=$plugin["Link"]?>" target="_blank"><?=$plugin["Link"]?></a><?=$plugin["Suffix"]?></td>
+                        @else
                         <td style="width:80%;"><?=$plugin["Prefix"]?><?=$plugin["Info"]?> <br> <a href="<?=$plugin["Link"]?>" target="_blank"><?=$plugin["Link"]?></a><?=$plugin["Suffix"]?></td>
+                        @endif
                         <td style="width:5%;">
                             <div class="inline-forms">
                                 <form method="post" action='aanvragen/goed/{{$plugin["Id"]}}'>
@@ -83,7 +96,13 @@
 
                 <table class="table is-fullwidth">
                     <tr>
+                        @if($mod["Foto"] == 0)
+                        <td style="width:80%;"><span class="glyphicon glyphicon-remove" style="color:red;">&nbsp;</span><?=$mod["Prefix"]?><?=$mod["Info"]?> <br> <a href="<?=$mod["Link"]?>" target="_blank"><?=$mod["Link"]?></a><?=$mod["Suffix"]?></td>
+                        @elseif($mod["Foto"] == 1)
+                        <td style="width:80%;"><span class="glyphicon glyphicon-ok" style="color:green;">&nbsp;</span><?=$mod["Prefix"]?><?=$mod["Info"]?> <br> <a href="<?=$mod["Link"]?>" target="_blank"><?=$mod["Link"]?></a><?=$mod["Suffix"]?></td>
+                        @else
                         <td style="width:80%;"><?=$mod["Prefix"]?><?=$mod["Info"]?> <br> <a href="<?=$mod["Link"]?>" target="_blank"><?=$mod["Link"]?></a><?=$mod["Suffix"]?></td>
+                        @endif
                         <td style="width:5%;">
                             <div class="inline-forms">
                                 <form method="post" action='aanvragen/goed/{{$mod["Id"]}}'>
@@ -142,7 +161,13 @@
 
                 <table class="table is-fullwidth">
                     <tr>
+                        @if($program["Foto"] == 0)
+                        <td style="width:80%;"><span class="glyphicon glyphicon-remove" style="color:red;">&nbsp;</span><?=$program["Prefix"]?><?=$program["Info"]?> <br> <a href="<?=$program["Link"]?>" target="_blank"><?=$program["Link"]?></a><?=$program["Suffix"]?></td>
+                        @elseif($program["Foto"] == 1)
+                        <td style="width:80%;"><span class="glyphicon glyphicon-ok" style="color:green;">&nbsp;</span><?=$program["Prefix"]?><?=$program["Info"]?> <br> <a href="<?=$program["Link"]?>" target="_blank"><?=$program["Link"]?></a><?=$program["Suffix"]?></td>
+                        @else
                         <td style="width:80%;"><?=$program["Prefix"]?><?=$program["Info"]?> <br> <a href="<?=$program["Link"]?>" target="_blank"><?=$program["Link"]?></a><?=$program["Suffix"]?></td>
+                        @endif
                         <td style="width:5%;">
                             <div class="inline-forms">
                                 <form method="post" action='aanvragen/goed/{{$program["Id"]}}'>
@@ -202,7 +227,13 @@
 
                 <table class="table is-fullwidth">
                     <tr>
+                         @if($ander["Foto"] == 0)
+                        <td style="width:80%;"><span class="glyphicon glyphicon-remove" style="color:red;">&nbsp;</span><?=$ander["Prefix"]?><?=$ander["Info"]?> <br> <a href="<?=$ander["Link"]?>" target="_blank"><?=$ander["Link"]?></a><?=$ander["Suffix"]?></td>
+                        @elseif($ander["Foto"] == 1)
+                        <td style="width:80%;"><span class="glyphicon glyphicon-ok" style="color:green;">&nbsp;</span><?=$ander["Prefix"]?><?=$ander["Info"]?> <br> <a href="<?=$ander["Link"]?>" target="_blank"><?=$ander["Link"]?></a><?=$ander["Suffix"]?></td>
+                        @else
                         <td style="width:80%;"><?=$ander["Prefix"]?><?=$ander["Info"]?> <br> <a href="<?=$ander["Link"]?>" target="_blank"><?=$ander["Link"]?></a><?=$ander["Suffix"]?></td>
+                        @endif
                         <td style="width:5%;">
                             <div class="inline-forms">
                                 <form method="post" action='aanvragen/goed/{{$ander["Id"]}}'>
@@ -246,6 +277,12 @@
     </div>
 
 </section>
+
+@endif
+
+<br/>
+<hr>
+<br/>
 
 <br><br><br>
 

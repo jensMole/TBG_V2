@@ -794,3 +794,14 @@ a:hover{
 .separation{
 	padding-bottom: 50px;
 }
+
+.bijschrift{
+	padding-top: 15px !important;
+	font-size: 100% !important;
+	background-color: transparent !important;
+}
+
+.bijschrift2{
+	font-size: 100% !important;
+	background-color: transparent !important;
+}

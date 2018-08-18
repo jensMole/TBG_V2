@@ -72,9 +72,9 @@ class AanvragenController extends Controller
         // zoek de gegevens in de database.
         $aanvraag = Aanvragen::find($aanvraagId);
 
-        $aanvraag->Prefix = "<b><u>";
+        $aanvraag->Prefix = "<b>";
 
-        $aanvraag->Suffix = "</u></b>";
+        $aanvraag->Suffix = "</b>";
 
         $aanvraag->Foto = 1;
 

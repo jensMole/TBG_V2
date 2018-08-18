@@ -130,9 +130,24 @@
 
             @endfor
 
-        @endif	
+        <p class="bijschrift"><span class="glyphicon glyphicon-ok" style="color:green;">&nbsp;</span>: Je aanvraag is goedgekeurd en je kan er een video van verwachten.</p>	
+        <p class="bijschrift2"><span class="glyphicon glyphicon-remove" style="color:red;">&nbsp;</span>: Je aanvraag is afgekeurd en hier komt geen video van.</p>
 
+        @endif
+        
     </div>
+
 </div>
+
+<script>
+// Nakijken als je op het begin spatie wilt meegeven.
+$(function() {
+    $('body').on('keydown', '#infoInput', function(e) {
+        if (e.which === 32 &&  e.target.selectionStart === 0) {
+        return false;
+        }
+    });
+});
+</script>
 
 @endsection

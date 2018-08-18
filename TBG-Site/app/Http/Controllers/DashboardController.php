@@ -106,11 +106,18 @@ class DashboardController extends Controller
         $NaamType = TypesAanvragen::get();
         $Types = Aanvragen::orderby("Type","asc")->get();
 
+        // Zijn er aanvragen?
         if (count($Types) === 0) {
             $Types = false;
         }
         else {
 
+            $pluginType = null;
+            $modType = null;
+            $programType = null;
+            $anderType = null;
+
+            // Kijken welke aanvragen er zijn en ze in groepen delen.
             for($i = 0; $i < count($Types); $i++){
             
                 if($Types[$i]["Type"] == 1){
@@ -136,19 +143,20 @@ class DashboardController extends Controller
             
             }
 
-            if(count($pluginType) == 0){
-                $pluginType = false;
+            // Nakijken als er in een groep wel aanvragen zijn.
+            if (!$pluginType){
+                $pluginType = false; 
             }
             
-            if (count($modType) == 0){
+            if (!$modType){
                 $modType = false;
             }
             
-            if (count($programType) == 0){
+            if (!$programType){
                 $programType = false;
             }
             
-            if (count($anderType) == 0){
+            if (!$anderType){
                 $anderType = false;
             }
 
