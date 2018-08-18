@@ -29,7 +29,7 @@
 </div>
 
 <script>
-  function toggleModalAanvraag(aankondID) {
-    document.getElementById("DeleteAanvraag").action = "/aanvraag/" + aankondID;
+  function toggleModalAanvraag(aanvraagID) {
+    document.getElementById("DeleteAanvraag").action = "/aanvraag/" + aanvraagID;
   }
 </script>

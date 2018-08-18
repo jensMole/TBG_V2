@@ -50,6 +50,16 @@ class AanvragenController extends Controller
         //terugsturen naar dashboard
         return redirect("/aanvragen");
     }
+
+    // Verwijderen van een aanvraag
+    public function destroyAanvraag($aanvraagId){
+        // zoek de gegevens in de database.
+        $aanvraag = Aanvragen::where('Id', $aanvraagId);
+        // Verwijder het.
+        $aanvraag->delete();
+        // Terugsturen naar de pagina.
+        return redirect("/dashboard/aanvragen");
+    }
 }
 
 ?>

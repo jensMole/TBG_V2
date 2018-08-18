@@ -47,7 +47,7 @@
                             <input name="_method" type="hidden" value="DELETE"/>
                             {{ csrf_field() }}
                             <!-- Modal openen van de delete functie. -->
-                            <button onclick='toggleModalAankondiging({{$Types[$i]["Id"]}});' class="kb-button btn btn-danger btn-md" type="submit" data-toggle="modal" data-target="#deleteModelAanvraag" value='{{$Types[$i]["Id"]}}'><span class="glyphicon glyphicon-remove"></span> Verwijder</button>  
+                            <button onclick='toggleModalAanvraag({{$Types[$i]["Id"]}});' class="kb-button btn btn-danger btn-md" type="submit" data-toggle="modal" data-target="#deleteModelAanvraag" value='{{$Types[$i]["Id"]}}'><span class="glyphicon glyphicon-remove"></span> Verwijder</button>  
                         </td>
                     </tr>                
                 </table>
@@ -57,7 +57,7 @@
 
             <table class="table is-fullwidth">
                     <tr>
-                        <td style="width:70%;"><?=$NaamType[0]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a></td>
+                        <td style="width:70%;"><?=$NaamType[1]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a></td>
                         <td style="width:10%;">
                             <div class="inline-forms">
                                 <form method="post" action='aanvragen/goed/{{$Types[$i]["Id"]}}'>
@@ -80,7 +80,7 @@
                             <input name="_method" type="hidden" value="DELETE"/>
                             {{ csrf_field() }}
                             <!-- Modal openen van de delete functie. -->
-                            <button onclick='toggleModalAankondiging({{$Types[$i]["Id"]}});' class="kb-button btn btn-danger btn-md" type="submit" data-toggle="modal" data-target="#deleteModelAanvraag" value='{{$Types[$i]["Id"]}}'><span class="glyphicon glyphicon-remove"></span> Verwijder</button>  
+                            <button onclick='toggleModalAanvraag({{$Types[$i]["Id"]}});' class="kb-button btn btn-danger btn-md" type="submit" data-toggle="modal" data-target="#deleteModelAanvraag" value='{{$Types[$i]["Id"]}}'><span class="glyphicon glyphicon-remove"></span> Verwijder</button>  
                         </td>
                     </tr>                
                 </table> 
@@ -90,7 +90,7 @@
 
             <table class="table is-fullwidth">
                     <tr>
-                        <td style="width:70%;"><?=$NaamType[0]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a></td>
+                        <td style="width:70%;"><?=$NaamType[2]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a></td>
                         <td style="width:10%;">
                             <div class="inline-forms">
                                 <form method="post" action='aanvragen/goed/{{$Types[$i]["Id"]}}'>
@@ -113,7 +113,7 @@
                             <input name="_method" type="hidden" value="DELETE"/>
                             {{ csrf_field() }}
                             <!-- Modal openen van de delete functie. -->
-                            <button onclick='toggleModalAankondiging({{$Types[$i]["Id"]}});' class="kb-button btn btn-danger btn-md" type="submit" data-toggle="modal" data-target="#deleteModelAanvraag" value='{{$Types[$i]["Id"]}}'><span class="glyphicon glyphicon-remove"></span> Verwijder</button>  
+                            <button onclick='toggleModalAanvraag({{$Types[$i]["Id"]}});' class="kb-button btn btn-danger btn-md" type="submit" data-toggle="modal" data-target="#deleteModelAanvraag" value='{{$Types[$i]["Id"]}}'><span class="glyphicon glyphicon-remove"></span> Verwijder</button>  
                         </td>
                     </tr>                
                 </table>  
@@ -123,7 +123,7 @@
 
             <table class="table is-fullwidth">
                     <tr>
-                        <td style="width:70%;"><?=$NaamType[0]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a></td>
+                        <td style="width:70%;"><?=$NaamType[3]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a></td>
                         <td style="width:10%;">
                             <div class="inline-forms">
                                 <form method="post" action='aanvragen/goed/{{$Types[$i]["Id"]}}'>
@@ -146,11 +146,11 @@
                             <input name="_method" type="hidden" value="DELETE"/>
                             {{ csrf_field() }}
                             <!-- Modal openen van de delete functie. -->
-                            <button onclick='toggleModalAankondiging({{$Types[$i]["Id"]}});' class="kb-button btn btn-danger btn-md" type="submit" data-toggle="modal" data-target="#deleteModelAanvraag" value='{{$Types[$i]["Id"]}}'><span class="glyphicon glyphicon-remove"></span> Verwijder</button>  
+                            <button onclick='toggleModalAanvraag({{$Types[$i]["Id"]}});' class="kb-button btn btn-danger btn-md" type="submit" data-toggle="modal" data-target="#deleteModelAanvraag" value='{{$Types[$i]["Id"]}}'><span class="glyphicon glyphicon-remove"></span> Verwijder</button>  
                         </td>
                     </tr>                
                 </table> 
-                               
+
                 @break
 
         @endswitch

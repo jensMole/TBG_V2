@@ -118,3 +118,8 @@ Route::post("addPlugins", "PluginsController@addPlugin");
 Route::post('plugin/edit/{id}','PluginsController@editPlugin');
 // Plugin updaten.
 Route::post('plugin/edit/updatePlugin/{id}','PluginsController@updatePlugin');
+
+
+// Aanvragen
+// Verwijderen van een aanvraag
+Route::post('aanvraag/{id}','AanvragenController@destroyAanvraag');
