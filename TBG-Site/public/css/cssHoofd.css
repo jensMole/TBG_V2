@@ -752,10 +752,10 @@ a:hover{
 	-moz-border-radius: 5px;
 	border-radius: 5px;
 	padding: 5px;
-	background-color: #fcfcfc;
 	height: 29px;
 	overflow: hidden;
 	border: none;
+	background-color: #e2e2e2;
 }
 
 #linkInput{
@@ -763,11 +763,11 @@ a:hover{
 }
 
 #infoInput{
-	color: #606060;
+	color: #3d3d3d;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
-	background-color: #fcfcfc;
+	background-color: #e2e2e2;
 }
 
 #submitAanvraag{
@@ -783,7 +783,7 @@ a:hover{
 }
 
 .aanvragen p {
-	font-size: 130%;
+	font-size: 115%;
 	border-radius: 10px;
     padding: 5px;
     margin: 10px;

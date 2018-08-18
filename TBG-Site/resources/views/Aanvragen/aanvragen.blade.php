@@ -81,7 +81,7 @@
                     @case(1)
 
                         @if($Types[$i]["Foto"] == 0)
-                            <p><span class="glyphicon glyphicon-remove" style="color:red;">&nbsp;</span><?=$Types[$i]["Prefix"]?><?=$NaamType[0]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a><?=$Types[$i]["Suffix"]?></p>
+                            <p><span class="glyphicon glyphicon-remove" style="color:#aa1414;">&nbsp;</span><?=$Types[$i]["Prefix"]?><?=$NaamType[0]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a><?=$Types[$i]["Suffix"]?></p>
                         @elseif($Types[$i]["Foto"] == 1)
                             <p><span class="glyphicon glyphicon-ok" style="color:#156b08;">&nbsp;</span><?=$Types[$i]["Prefix"]?><?=$NaamType[0]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a><?=$Types[$i]["Suffix"]?></p>
                         @else
@@ -93,9 +93,9 @@
                     @case(2)
 
                         @if($Types[$i]["Foto"] == 0)
-                            <p><span class="glyphicon glyphicon-remove" style="color:red;">&nbsp;</span><?=$Types[$i]["Prefix"]?><?=$NaamType[1]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a><?=$Types[$i]["Suffix"]?></p>
+                            <p><span class="glyphicon glyphicon-remove" style="color:#aa1414;">&nbsp;</span><?=$Types[$i]["Prefix"]?><?=$NaamType[1]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a><?=$Types[$i]["Suffix"]?></p>
                         @elseif($Types[$i]["Foto"] == 1)
-                            <p><span class="glyphicon glyphicon-ok" style="color:green;">&nbsp;</span><?=$Types[$i]["Prefix"]?><?=$NaamType[1]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a><?=$Types[$i]["Suffix"]?></p>
+                            <p><span class="glyphicon glyphicon-ok" style="color:#156b08;">&nbsp;</span><?=$Types[$i]["Prefix"]?><?=$NaamType[1]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a><?=$Types[$i]["Suffix"]?></p>
                         @else
                             <p>- <?=$Types[$i]["Prefix"]?><?=$NaamType[1]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a><?=$Types[$i]["Suffix"]?></p>
                         @endif                        
@@ -105,9 +105,9 @@
                     @case(3)
 
                         @if($Types[$i]["Foto"] == 0)
-                            <p><span class="glyphicon glyphicon-remove" style="color:red;">&nbsp;</span><?=$Types[$i]["Prefix"]?><?=$NaamType[2]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a><?=$Types[$i]["Suffix"]?></p>
+                            <p><span class="glyphicon glyphicon-remove" style="color:#aa1414;">&nbsp;</span><?=$Types[$i]["Prefix"]?><?=$NaamType[2]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a><?=$Types[$i]["Suffix"]?></p>
                         @elseif($Types[$i]["Foto"] == 1)
-                            <p><span class="glyphicon glyphicon-ok" style="color:green;">&nbsp;</span><?=$Types[$i]["Prefix"]?><?=$NaamType[2]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a><?=$Types[$i]["Suffix"]?></p>
+                            <p><span class="glyphicon glyphicon-ok" style="color:#156b08;">&nbsp;</span><?=$Types[$i]["Prefix"]?><?=$NaamType[2]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a><?=$Types[$i]["Suffix"]?></p>
                         @else
                             <p>- <?=$Types[$i]["Prefix"]?><?=$NaamType[2]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a><?=$Types[$i]["Suffix"]?></p>
                         @endif                        
@@ -117,9 +117,9 @@
                     @case(4)
 
                         @if($Types[$i]["Foto"] == 0)
-                            <p><span class="glyphicon glyphicon-remove" style="color:red;">&nbsp;</span><?=$Types[$i]["Prefix"]?><?=$NaamType[3]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a><?=$Types[$i]["Suffix"]?></p>
+                            <p><span class="glyphicon glyphicon-remove" style="color:#aa1414;">&nbsp;</span><?=$Types[$i]["Prefix"]?><?=$NaamType[3]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a><?=$Types[$i]["Suffix"]?></p>
                         @elseif($Types[$i]["Foto"] == 1)
-                            <p><span class="glyphicon glyphicon-ok" style="color:green;">&nbsp;</span><?=$Types[$i]["Prefix"]?><?=$NaamType[3]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a><?=$Types[$i]["Suffix"]?></p>
+                            <p><span class="glyphicon glyphicon-ok" style="color:#156b08;">&nbsp;</span><?=$Types[$i]["Prefix"]?><?=$NaamType[3]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a><?=$Types[$i]["Suffix"]?></p>
                         @else
                             <p>- <?=$Types[$i]["Prefix"]?><?=$NaamType[3]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a><?=$Types[$i]["Suffix"]?></p>
                         @endif                        
@@ -130,8 +130,10 @@
 
             @endfor
 
-        <p class="bijschrift"><span class="glyphicon glyphicon-ok" style="color:green;">&nbsp;</span>: Je aanvraag is goedgekeurd en je kan er een video van verwachten.</p>	
-        <p class="bijschrift2"><span class="glyphicon glyphicon-remove" style="color:red;">&nbsp;</span>: Je aanvraag is afgekeurd en hier komt geen video van.</p>
+            <hr>
+
+        <p class="bijschrift"><span class="glyphicon glyphicon-ok" style="color:#156b08;">&nbsp;</span>: Je aanvraag is goedgekeurd en je kan er een video van verwachten.</p>	
+        <p class="bijschrift2"><span class="glyphicon glyphicon-remove" style="color:#aa1414;">&nbsp;</span>: Je aanvraag is afgekeurd en hier komt geen video van.</p>
 
         @endif
         
