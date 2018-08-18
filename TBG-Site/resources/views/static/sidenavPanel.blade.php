@@ -15,6 +15,7 @@
             <li><a href="/dashboard">Home</a></li>
             <li><a href="/dashboard/minecraft">Minecraft</a></li>
             <li><a href="/dashboard/andere">Andere</a></li>
+            <li><a href="/dashboard/aanvragen">Aanvragen</a></li>
             <li><a href="/">Ga naar home page</a></li>
             <li>    
             

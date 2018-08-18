@@ -9,6 +9,8 @@ use App\Aankondiging;
 use App\OnlineVid;
 use App\Muziek;
 use App\Plugin;
+use App\Aanvragen;
+use App\TypesAanvragen;
 
 
 use Illuminate\Http\Request;
@@ -95,6 +97,21 @@ class DashboardController extends Controller
         $vids = Video::pluck('VideoLink');
 
         return view('panel.andereVids', compact('vids'));
+    }
+
+    public function aanvragen()
+    {
+
+        // Ophalen van data.
+        $NaamType = TypesAanvragen::get();
+        $Types = Aanvragen::orderby("Type","asc")->get();
+
+        if (count($Types) === 0) {
+            $Types = false;
+        }
+
+        // Zenden naar de pagina met de data.
+        return view('panel.aanvragenPanel', compact('Types','NaamType'));
     }
 
     /**

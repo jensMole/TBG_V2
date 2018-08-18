@@ -54,6 +54,7 @@ Route::post("addAanvragen", "AanvragenController@addAanvraag");
 // Tonen van het dashboard.
 Route::get('/dashboard/minecraft','DashBoardController@minecraft');
 Route::get('/dashboard/andere','DashBoardController@andere');
+Route::get('/dashboard/aanvragen','DashboardController@aanvragen');
 Route::resource('/dashboard','DashBoardController');
 
 // updaten van de video link van voorpagina.
