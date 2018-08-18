@@ -109,9 +109,53 @@ class DashboardController extends Controller
         if (count($Types) === 0) {
             $Types = false;
         }
+        else {
+
+            for($i = 0; $i < count($Types); $i++){
+            
+                if($Types[$i]["Type"] == 1){
+
+                    $pluginType[$i] = $Types[$i];
+
+                }
+                elseif($Types[$i]["Type"] == 2){
+
+                    $modType[$i] = $Types[$i];
+
+                }
+                elseif($Types[$i]["Type"] == 3){
+
+                    $programType[$i] = $Types[$i];
+
+                }
+                elseif($Types[$i]["Type"] == 4){
+
+                    $anderType[$i] = $Types[$i];
+
+                }
+            
+            }
+
+            if(count($pluginType) == 0){
+                $pluginType = false;
+            }
+            
+            if (count($modType) == 0){
+                $modType = false;
+            }
+            
+            if (count($programType) == 0){
+                $programType = false;
+            }
+            
+            if (count($anderType) == 0){
+                $anderType = false;
+            }
+
+        }
 
         // Zenden naar de pagina met de data.
-        return view('panel.aanvragenPanel', compact('Types','NaamType'));
+        return view('panel.aanvragenPanel', compact('Types','NaamType','pluginType','modType','programType','anderType'));
     }
 
     /**

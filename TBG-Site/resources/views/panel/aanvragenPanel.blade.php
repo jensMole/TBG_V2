@@ -6,52 +6,50 @@
 
 @section('content')
 
-<div class="aanvragen col-md-6 col-xs-12">
+<section id="sectionTeksten"> 
 
-@if($Types === false)
+    <div class="aanvragen col-md-6 col-xs-12">
 
-    <h3>Er zijn geen aanvragen op dit moment</h3>
+        @if($pluginType === false)
 
-@else
+            <h3>Er zijn geen plugin aanvragen op dit moment</h3>
 
-    <h3>Aanvragen lijst</h3><br>
+        @else
 
-    @for($i = 0; $i < count($Types); $i++)
+            <h3>Plugin aanvragen</h3><br>
 
-        @switch($Types[$i]["Type"])
-
-            @case(1)
+            @foreach ($pluginType as $plugin)
 
                 <table class="table is-fullwidth">
                     <tr>
-                        <td style="width:60%;"><?=$Types[$i]["Prefix"]?><?=$NaamType[0]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a><?=$Types[$i]["Suffix"]?></td>
-                        <td style="width:10%;">
+                        <td style="width:80%;"><?=$plugin["Prefix"]?><?=$plugin["Info"]?> <br> <a href="<?=$plugin["Link"]?>" target="_blank"><?=$plugin["Link"]?></a><?=$plugin["Suffix"]?></td>
+                        <td style="width:5%;">
                             <div class="inline-forms">
-                                <form method="post" action='aanvragen/goed/{{$Types[$i]["Id"]}}'>
+                                <form method="post" action='aanvragen/goed/{{$plugin["Id"]}}'>
                                     {{ csrf_field() }}
                                     <!-- Modal openen voor edit functie. -->
                                     <button type="submit" class="card-footer-item btn btn-success btn-md"><span class="glyphicon glyphicon-ok"></span> OK</button>
                                 </form>
                             </div>
                         </td>
-                        <td style="width:10%;">
+                        <td style="width:5%;">
                             <div class="inline-forms">
-                                <form method="post" action='aanvragen/slecht/{{$Types[$i]["Id"]}}'>
+                                <form method="post" action='aanvragen/slecht/{{$plugin["Id"]}}'>
                                     {{ csrf_field() }}
                                     <!-- Modal openen voor edit functie. -->
                                     <button type="submit" class="card-footer-item btn btn-warning btn-md"><span class="glyphicon glyphicon-minus"></span> NOK</button>
                                 </form>
                             </div>
                         </td>
-                        <td style="width:10%;">
+                        <td style="width:5%;">
                             <input name="_method" type="hidden" value="DELETE"/>
                             {{ csrf_field() }}
                             <!-- Modal openen van de delete functie. -->
-                            <button onclick='toggleModalAanvraag({{$Types[$i]["Id"]}});' class="kb-button btn btn-danger btn-md" type="submit" data-toggle="modal" data-target="#deleteModelAanvraag" value='{{$Types[$i]["Id"]}}'><span class="glyphicon glyphicon-remove"></span> Verwijder</button>  
+                            <button onclick='toggleModalAanvraag({{$plugin["Id"]}});' class="kb-button btn btn-danger btn-md" type="submit" data-toggle="modal" data-target="#deleteModelAanvraag" value='{{$plugin["Id"]}}'><span class="glyphicon glyphicon-remove"></span> Verwijder</button>  
                         </td>
-                        <td style="width:10%;">
+                        <td style="width:5%;">
                             <div class="inline-forms">
-                                <form method="post" action='aanvragen/reset/{{$Types[$i]["Id"]}}'>
+                                <form method="post" action='aanvragen/reset/{{$plugin["Id"]}}'>
                                     {{ csrf_field() }}
                                     <!-- Modal openen voor edit functie. -->
                                     <button type="submit" class="card-footer-item btn btn-info btn-md"><span class="glyphicon glyphicon-exclamation-sign"></span> Reset</button>
@@ -61,39 +59,54 @@
                     </tr>                
                 </table>
 
-                @break
-            @case(2)
+            @endforeach
 
-            <table class="table is-fullwidth">
+        @endif
+
+    </div>
+
+    <div class="aanvragen col-md-6 col-xs-12">
+
+        @if($modType === false)
+
+            <h3>Er zijn geen mod aanvragen op dit moment</h3>
+
+        @else
+
+            <h3>Mod aanvragen</h3><br>
+
+            @foreach ($modType as $mod)
+
+                <table class="table is-fullwidth">
                     <tr>
-                        <td style="width:60%;"><?=$Types[$i]["Prefix"]?><?=$NaamType[1]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a><?=$Types[$i]["Suffix"]?></td>
-                        <td style="width:10%;">
+                        <td style="width:80%;"><?=$mod["Prefix"]?><?=$mod["Info"]?> <br> <a href="<?=$mod["Link"]?>" target="_blank"><?=$mod["Link"]?></a><?=$mod["Suffix"]?></td>
+                        <td style="width:5%;">
                             <div class="inline-forms">
-                                <form method="post" action='aanvragen/goed/{{$Types[$i]["Id"]}}'>
+                                <form method="post" action='aanvragen/goed/{{$mod["Id"]}}'>
                                     {{ csrf_field() }}
                                     <!-- Modal openen voor edit functie. -->
                                     <button type="submit" class="card-footer-item btn btn-success btn-md"><span class="glyphicon glyphicon-ok"></span> OK</button>
                                 </form>
                             </div>
                         </td>
-                        <td style="width:10%;">
+                        <td style="width:5%;">
                             <div class="inline-forms">
-                                <form method="post" action='aanvragen/slecht/{{$Types[$i]["Id"]}}'>
+                                <form method="post" action='aanvragen/slecht/{{$mod["Id"]}}'>
                                     {{ csrf_field() }}
                                     <!-- Modal openen voor edit functie. -->
                                     <button type="submit" class="card-footer-item btn btn-warning btn-md"><span class="glyphicon glyphicon-minus"></span> NOK</button>
                                 </form>
                             </div>
                         </td>
-                        <td style="width:10%;">
+                        <td style="width:5%;">
                             <input name="_method" type="hidden" value="DELETE"/>
                             {{ csrf_field() }}
                             <!-- Modal openen van de delete functie. -->
-                            <button onclick='toggleModalAanvraag({{$Types[$i]["Id"]}});' class="kb-button btn btn-danger btn-md" type="submit" data-toggle="modal" data-target="#deleteModelAanvraag" value='{{$Types[$i]["Id"]}}'><span class="glyphicon glyphicon-remove"></span> Verwijder</button>  
+                            <button onclick='toggleModalAanvraag({{$mod["Id"]}});' class="kb-button btn btn-danger btn-md" type="submit" data-toggle="modal" data-target="#deleteModelAanvraag" value='{{$mod["Id"]}}'><span class="glyphicon glyphicon-remove"></span> Verwijder</button>  
                         </td>
-                        <td style="width:10%;">
+                        <td style="width:5%;">
                             <div class="inline-forms">
-                                <form method="post" action='aanvragen/reset/{{$Types[$i]["Id"]}}'>
+                                <form method="post" action='aanvragen/reset/{{$mod["Id"]}}'>
                                     {{ csrf_field() }}
                                     <!-- Modal openen voor edit functie. -->
                                     <button type="submit" class="card-footer-item btn btn-info btn-md"><span class="glyphicon glyphicon-exclamation-sign"></span> Reset</button>
@@ -101,41 +114,56 @@
                             </div>
                         </td>
                     </tr>                
-                </table> 
+                </table>
 
-                 @break
-            @case(3)
+            @endforeach
 
-            <table class="table is-fullwidth">
+        @endif
+
+    </div>
+
+    <div class="aanvragen col-md-6 col-xs-12">
+
+        @if($programType === false)
+
+            <h3>Er zijn geen programmeer aanvragen op dit moment</h3>
+
+        @else
+
+            <h3>Programeren aanvragen</h3><br>
+
+            @foreach ($programType as $program)
+
+                <table class="table is-fullwidth">
                     <tr>
-                        <td style="width:60%;"><?=$Types[$i]["Prefix"]?><?=$NaamType[2]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a><?=$Types[$i]["Suffix"]?></td>
-                        <td style="width:10%;">
+                        <td style="width:80%;"><?=$program["Prefix"]?><?=$program["Info"]?> <br> <a href="<?=$program["Link"]?>" target="_blank"><?=$program["Link"]?></a><?=$program["Suffix"]?></td>
+                        <td style="width:5%;">
                             <div class="inline-forms">
-                                <form method="post" action='aanvragen/goed/{{$Types[$i]["Id"]}}'>
+                                <form method="post" action='aanvragen/goed/{{$program["Id"]}}'>
                                     {{ csrf_field() }}
                                     <!-- Modal openen voor edit functie. -->
                                     <button type="submit" class="card-footer-item btn btn-success btn-md"><span class="glyphicon glyphicon-ok"></span> OK</button>
                                 </form>
                             </div>
                         </td>
-                        <td style="width:10%;">
+                        <td style="width:5%;">
                             <div class="inline-forms">
-                                <form method="post" action='aanvragen/slecht/{{$Types[$i]["Id"]}}'>
+                                <form method="post" action='aanvragen/slecht/{{$program["Id"]}}'>
                                     {{ csrf_field() }}
                                     <!-- Modal openen voor edit functie. -->
                                     <button type="submit" class="card-footer-item btn btn-warning btn-md"><span class="glyphicon glyphicon-minus"></span> NOK</button>
                                 </form>
                             </div>
                         </td>
-                        <td style="width:10%;">
+                        <td style="width:5%;">
                             <input name="_method" type="hidden" value="DELETE"/>
                             {{ csrf_field() }}
                             <!-- Modal openen van de delete functie. -->
-                            <button onclick='toggleModalAanvraag({{$Types[$i]["Id"]}});' class="kb-button btn btn-danger btn-md" type="submit" data-toggle="modal" data-target="#deleteModelAanvraag" value='{{$Types[$i]["Id"]}}'><span class="glyphicon glyphicon-remove"></span> Verwijder</button>  
+                            <button onclick='toggleModalAanvraag({{$program["Id"]}});' class="kb-button btn btn-danger btn-md" type="submit" data-toggle="modal" data-target="#deleteModelAanvraag" value='{{$program["Id"]}}'><span class="glyphicon glyphicon-remove"></span> Verwijder</button>  
                         </td>
-                        <td style="width:10%;">
+                        <td style="width:5%;">
                             <div class="inline-forms">
-                                <form method="post" action='aanvragen/reset/{{$Types[$i]["Id"]}}'>
+                                <form method="post" action='aanvragen/reset/{{$program["Id"]}}'>
                                     {{ csrf_field() }}
                                     <!-- Modal openen voor edit functie. -->
                                     <button type="submit" class="card-footer-item btn btn-info btn-md"><span class="glyphicon glyphicon-exclamation-sign"></span> Reset</button>
@@ -143,41 +171,57 @@
                             </div>
                         </td>
                     </tr>                
-                </table>  
+                </table>
 
-                 @break
-            @case(4)
+            @endforeach 
 
-            <table class="table is-fullwidth">
+        @endif
+
+    </div>
+
+    <div class="aanvragen col-md-6 col-xs-12">
+
+        @if($anderType === false)
+
+            <h3>Er zijn geen andere aanvragen op dit moment</h3>
+
+        @else
+
+        
+        <h3>Andere aanvragen</h3><br>
+
+            @foreach ($anderType as $ander)
+
+                <table class="table is-fullwidth">
                     <tr>
-                        <td style="width:60%;"><?=$Types[$i]["Prefix"]?><?=$NaamType[3]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a><?=$Types[$i]["Suffix"]?></td>
-                        <td style="width:10%;">
+                        <td style="width:80%;"><?=$ander["Prefix"]?><?=$ander["Info"]?> <br> <a href="<?=$ander["Link"]?>" target="_blank"><?=$ander["Link"]?></a><?=$ander["Suffix"]?></td>
+                        <td style="width:5%;">
                             <div class="inline-forms">
-                                <form method="post" action='aanvragen/goed/{{$Types[$i]["Id"]}}'>
+                                <form method="post" action='aanvragen/goed/{{$ander["Id"]}}'>
                                     {{ csrf_field() }}
                                     <!-- Modal openen voor edit functie. -->
                                     <button type="submit" class="card-footer-item btn btn-success btn-md"><span class="glyphicon glyphicon-ok"></span> OK</button>
                                 </form>
                             </div>
                         </td>
-                        <td style="width:10%;">
+                        <td style="width:5%;">
                             <div class="inline-forms">
-                                <form method="post" action='aanvragen/slecht/{{$Types[$i]["Id"]}}'>
+                                <form method="post" action='aanvragen/slecht/{{$ander["Id"]}}'>
                                     {{ csrf_field() }}
                                     <!-- Modal openen voor edit functie. -->
                                     <button type="submit" class="card-footer-item btn btn-warning btn-md"><span class="glyphicon glyphicon-minus"></span> NOK</button>
                                 </form>
                             </div>
                         </td>
-                        <td style="width:10%;">
+                        <td style="width:5%;">
                             <input name="_method" type="hidden" value="DELETE"/>
                             {{ csrf_field() }}
                             <!-- Modal openen van de delete functie. -->
-                            <button onclick='toggleModalAanvraag({{$Types[$i]["Id"]}});' class="kb-button btn btn-danger btn-md" type="submit" data-toggle="modal" data-target="#deleteModelAanvraag" value='{{$Types[$i]["Id"]}}'><span class="glyphicon glyphicon-remove"></span> Verwijder</button>  
+                            <button onclick='toggleModalAanvraag({{$ander["Id"]}});' class="kb-button btn btn-danger btn-md" type="submit" data-toggle="modal" data-target="#deleteModelAanvraag" value='{{$ander["Id"]}}'><span class="glyphicon glyphicon-remove"></span> Verwijder</button>  
                         </td>
-                        <td style="width:10%;">
+                        <td style="width:5%;">
                             <div class="inline-forms">
-                                <form method="post" action='aanvragen/reset/{{$Types[$i]["Id"]}}'>
+                                <form method="post" action='aanvragen/reset/{{$ander["Id"]}}'>
                                     {{ csrf_field() }}
                                     <!-- Modal openen voor edit functie. -->
                                     <button type="submit" class="card-footer-item btn btn-info btn-md"><span class="glyphicon glyphicon-exclamation-sign"></span> Reset</button>
@@ -185,17 +229,15 @@
                             </div>
                         </td>
                     </tr>                
-                </table> 
+                </table>
 
-                @break
+            @endforeach 
 
-        @endswitch
+        @endif
 
-    @endfor
+    </div>
 
-@endif	
-
-</div>
+</section>
 
 <br><br><br>
 
