@@ -9,6 +9,11 @@ use Illuminate\Http\Request;
 class AanvragenController extends Controller
 {
 
+    public function __construct()
+    {
+        $this->middleware('auth')->except(['index', 'addAanvraag']);
+    }
+
     public function index()
     {
         // Ophalen van data.
@@ -59,6 +64,42 @@ class AanvragenController extends Controller
         $aanvraag->delete();
         // Terugsturen naar de pagina.
         return redirect("/dashboard/aanvragen");
+    }
+
+    // Pas prefix en suffix aan als de aanvraag accept is.
+    public function acceptAanvraag($aanvraagId){
+
+        // zoek de gegevens in de database.
+        $aanvraag = Aanvragen::find($aanvraagId);
+
+        $aanvraag->Prefix = "<b><u>";
+
+        $aanvraag->Suffix = "</u></b>";
+
+        // Opslaan.
+        $aanvraag->save();
+
+        // Terugsturen naar de pagina.
+        return redirect("/dashboard/aanvragen");
+
+    }
+
+    // Pas prefix en suffix aan als de aanvraag denied is.
+    public function deniedAanvraag($aanvraagId){
+
+        // zoek de gegevens in de database.
+        $aanvraag = Aanvragen::find($aanvraagId);
+
+        $aanvraag->Prefix = "<strike>";
+
+        $aanvraag->Suffix = "</strike>";
+
+        // Opslaan.
+        $aanvraag->save();
+
+        // Terugsturen naar de pagina.
+        return redirect("/dashboard/aanvragen");
+
     }
 }
 

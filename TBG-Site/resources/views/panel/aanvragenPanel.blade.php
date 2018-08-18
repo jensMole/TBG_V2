@@ -24,7 +24,7 @@
 
                 <table class="table is-fullwidth">
                     <tr>
-                        <td style="width:70%;"><?=$NaamType[0]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a></td>
+                        <td style="width:70%;"><?=$Types[$i]["Prefix"]?><?=$NaamType[0]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a><?=$Types[$i]["Suffix"]?></td>
                         <td style="width:10%;">
                             <div class="inline-forms">
                                 <form method="post" action='aanvragen/goed/{{$Types[$i]["Id"]}}'>
@@ -57,7 +57,7 @@
 
             <table class="table is-fullwidth">
                     <tr>
-                        <td style="width:70%;"><?=$NaamType[1]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a></td>
+                        <td style="width:70%;"><?=$Types[$i]["Prefix"]?><?=$NaamType[1]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a><?=$Types[$i]["Suffix"]?></td>
                         <td style="width:10%;">
                             <div class="inline-forms">
                                 <form method="post" action='aanvragen/goed/{{$Types[$i]["Id"]}}'>
@@ -90,7 +90,7 @@
 
             <table class="table is-fullwidth">
                     <tr>
-                        <td style="width:70%;"><?=$NaamType[2]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a></td>
+                        <td style="width:70%;"><?=$Types[$i]["Prefix"]?><?=$NaamType[2]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a><?=$Types[$i]["Suffix"]?></td>
                         <td style="width:10%;">
                             <div class="inline-forms">
                                 <form method="post" action='aanvragen/goed/{{$Types[$i]["Id"]}}'>
@@ -123,7 +123,7 @@
 
             <table class="table is-fullwidth">
                     <tr>
-                        <td style="width:70%;"><?=$NaamType[3]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a></td>
+                        <td style="width:70%;"><?=$Types[$i]["Prefix"]?><?=$NaamType[3]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a><?=$Types[$i]["Suffix"]?></td>
                         <td style="width:10%;">
                             <div class="inline-forms">
                                 <form method="post" action='aanvragen/goed/{{$Types[$i]["Id"]}}'>

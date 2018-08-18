@@ -123,3 +123,7 @@ Route::post('plugin/edit/updatePlugin/{id}','PluginsController@updatePlugin');
 // Aanvragen
 // Verwijderen van een aanvraag
 Route::post('aanvraag/{id}','AanvragenController@destroyAanvraag');
+// Aanvraag accept.
+Route::post('dashboard/aanvragen/goed/{id}','AanvragenController@acceptAanvraag');
+// Aanvraag denied.
+Route::post('dashboard/aanvragen/slecht/{id}','AanvragenController@deniedAanvraag');
