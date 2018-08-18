@@ -76,19 +76,19 @@
 
             @for($i = 0; $i < count($Types); $i++)
 
-                @switch($Types[$i])
+                @switch($Types[$i]["Type"])
 
                     @case(1)
-                        <p><?=$NaamType[0]["Naam"]?>: <?=$Info[$i]?></p>
+                        <p><?=$NaamType[0]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a></p>
                         @break
                     @case(2)
-                        <p><?=$NaamType[1]["Naam"]?>: <?=$Info[$i]?></p>
+                        <p><?=$NaamType[1]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a></p>
                         @break
                     @case(3)
-                        <p><?=$NaamType[2]["Naam"]?>: <?=$Info[$i]?></p>
+                        <p><?=$NaamType[2]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a></p>
                         @break
                     @case(4)
-                        <p><?=$NaamType[3]["Naam"]?>: <?=$Info[$i]?></p>
+                        <p><?=$NaamType[3]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a></p>
                         @break
                 @endswitch
 
