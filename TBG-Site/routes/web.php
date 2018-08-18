@@ -127,3 +127,5 @@ Route::post('aanvraag/{id}','AanvragenController@destroyAanvraag');
 Route::post('dashboard/aanvragen/goed/{id}','AanvragenController@acceptAanvraag');
 // Aanvraag denied.
 Route::post('dashboard/aanvragen/slecht/{id}','AanvragenController@deniedAanvraag');
+// Aanvraag reset.
+Route::post('dashboard/aanvragen/reset/{id}','AanvragenController@resetAanvraag');

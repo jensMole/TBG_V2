@@ -24,7 +24,7 @@
 
                 <table class="table is-fullwidth">
                     <tr>
-                        <td style="width:70%;"><?=$Types[$i]["Prefix"]?><?=$NaamType[0]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a><?=$Types[$i]["Suffix"]?></td>
+                        <td style="width:60%;"><?=$Types[$i]["Prefix"]?><?=$NaamType[0]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a><?=$Types[$i]["Suffix"]?></td>
                         <td style="width:10%;">
                             <div class="inline-forms">
                                 <form method="post" action='aanvragen/goed/{{$Types[$i]["Id"]}}'>
@@ -48,6 +48,15 @@
                             {{ csrf_field() }}
                             <!-- Modal openen van de delete functie. -->
                             <button onclick='toggleModalAanvraag({{$Types[$i]["Id"]}});' class="kb-button btn btn-danger btn-md" type="submit" data-toggle="modal" data-target="#deleteModelAanvraag" value='{{$Types[$i]["Id"]}}'><span class="glyphicon glyphicon-remove"></span> Verwijder</button>  
+                        </td>
+                        <td style="width:10%;">
+                            <div class="inline-forms">
+                                <form method="post" action='aanvragen/reset/{{$Types[$i]["Id"]}}'>
+                                    {{ csrf_field() }}
+                                    <!-- Modal openen voor edit functie. -->
+                                    <button type="submit" class="card-footer-item btn btn-info btn-md"><span class="glyphicon glyphicon-exclamation-sign"></span> Reset</button>
+                                </form>
+                            </div>
                         </td>
                     </tr>                
                 </table>
@@ -57,7 +66,7 @@
 
             <table class="table is-fullwidth">
                     <tr>
-                        <td style="width:70%;"><?=$Types[$i]["Prefix"]?><?=$NaamType[1]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a><?=$Types[$i]["Suffix"]?></td>
+                        <td style="width:60%;"><?=$Types[$i]["Prefix"]?><?=$NaamType[1]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a><?=$Types[$i]["Suffix"]?></td>
                         <td style="width:10%;">
                             <div class="inline-forms">
                                 <form method="post" action='aanvragen/goed/{{$Types[$i]["Id"]}}'>
@@ -81,6 +90,15 @@
                             {{ csrf_field() }}
                             <!-- Modal openen van de delete functie. -->
                             <button onclick='toggleModalAanvraag({{$Types[$i]["Id"]}});' class="kb-button btn btn-danger btn-md" type="submit" data-toggle="modal" data-target="#deleteModelAanvraag" value='{{$Types[$i]["Id"]}}'><span class="glyphicon glyphicon-remove"></span> Verwijder</button>  
+                        </td>
+                        <td style="width:10%;">
+                            <div class="inline-forms">
+                                <form method="post" action='aanvragen/reset/{{$Types[$i]["Id"]}}'>
+                                    {{ csrf_field() }}
+                                    <!-- Modal openen voor edit functie. -->
+                                    <button type="submit" class="card-footer-item btn btn-info btn-md"><span class="glyphicon glyphicon-exclamation-sign"></span> Reset</button>
+                                </form>
+                            </div>
                         </td>
                     </tr>                
                 </table> 
@@ -90,7 +108,7 @@
 
             <table class="table is-fullwidth">
                     <tr>
-                        <td style="width:70%;"><?=$Types[$i]["Prefix"]?><?=$NaamType[2]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a><?=$Types[$i]["Suffix"]?></td>
+                        <td style="width:60%;"><?=$Types[$i]["Prefix"]?><?=$NaamType[2]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a><?=$Types[$i]["Suffix"]?></td>
                         <td style="width:10%;">
                             <div class="inline-forms">
                                 <form method="post" action='aanvragen/goed/{{$Types[$i]["Id"]}}'>
@@ -114,6 +132,15 @@
                             {{ csrf_field() }}
                             <!-- Modal openen van de delete functie. -->
                             <button onclick='toggleModalAanvraag({{$Types[$i]["Id"]}});' class="kb-button btn btn-danger btn-md" type="submit" data-toggle="modal" data-target="#deleteModelAanvraag" value='{{$Types[$i]["Id"]}}'><span class="glyphicon glyphicon-remove"></span> Verwijder</button>  
+                        </td>
+                        <td style="width:10%;">
+                            <div class="inline-forms">
+                                <form method="post" action='aanvragen/reset/{{$Types[$i]["Id"]}}'>
+                                    {{ csrf_field() }}
+                                    <!-- Modal openen voor edit functie. -->
+                                    <button type="submit" class="card-footer-item btn btn-info btn-md"><span class="glyphicon glyphicon-exclamation-sign"></span> Reset</button>
+                                </form>
+                            </div>
                         </td>
                     </tr>                
                 </table>  
@@ -123,7 +150,7 @@
 
             <table class="table is-fullwidth">
                     <tr>
-                        <td style="width:70%;"><?=$Types[$i]["Prefix"]?><?=$NaamType[3]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a><?=$Types[$i]["Suffix"]?></td>
+                        <td style="width:60%;"><?=$Types[$i]["Prefix"]?><?=$NaamType[3]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a><?=$Types[$i]["Suffix"]?></td>
                         <td style="width:10%;">
                             <div class="inline-forms">
                                 <form method="post" action='aanvragen/goed/{{$Types[$i]["Id"]}}'>
@@ -147,6 +174,15 @@
                             {{ csrf_field() }}
                             <!-- Modal openen van de delete functie. -->
                             <button onclick='toggleModalAanvraag({{$Types[$i]["Id"]}});' class="kb-button btn btn-danger btn-md" type="submit" data-toggle="modal" data-target="#deleteModelAanvraag" value='{{$Types[$i]["Id"]}}'><span class="glyphicon glyphicon-remove"></span> Verwijder</button>  
+                        </td>
+                        <td style="width:10%;">
+                            <div class="inline-forms">
+                                <form method="post" action='aanvragen/reset/{{$Types[$i]["Id"]}}'>
+                                    {{ csrf_field() }}
+                                    <!-- Modal openen voor edit functie. -->
+                                    <button type="submit" class="card-footer-item btn btn-info btn-md"><span class="glyphicon glyphicon-exclamation-sign"></span> Reset</button>
+                                </form>
+                            </div>
                         </td>
                     </tr>                
                 </table> 

@@ -76,6 +76,8 @@ class AanvragenController extends Controller
 
         $aanvraag->Suffix = "</u></b>";
 
+        $aanvraag->Foto = 1;
+
         // Opslaan.
         $aanvraag->save();
 
@@ -93,6 +95,28 @@ class AanvragenController extends Controller
         $aanvraag->Prefix = "<strike>";
 
         $aanvraag->Suffix = "</strike>";
+
+        $aanvraag->Foto = 0;
+
+        // Opslaan.
+        $aanvraag->save();
+
+        // Terugsturen naar de pagina.
+        return redirect("/dashboard/aanvragen");
+
+    }
+
+    // Pas prefix en suffix aan als de aanvraag denied is.
+    public function resetAanvraag($aanvraagId){
+
+        // zoek de gegevens in de database.
+        $aanvraag = Aanvragen::find($aanvraagId);
+
+        $aanvraag->Prefix = null;
+
+        $aanvraag->Suffix = null;
+
+        $aanvraag->Foto = 2;
 
         // Opslaan.
         $aanvraag->save();
