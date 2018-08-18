@@ -128,12 +128,22 @@
                         
                 @endswitch
 
+                @if(($i%7) == 0)
+
+                    </div>
+
+                    <div class="aanvragen col-md-6 col-xs-12" style="padding-bottom: 20px;">
+
+                @endif
+
             @endfor
 
+        </div>
+        <div class="row aanvragen col-md-12 col-xs-12" style="text-align:center">
             <hr>
-
-        <p class="bijschrift"><span class="glyphicon glyphicon-ok" style="color:#156b08;">&nbsp;</span>: Je aanvraag is goedgekeurd en je kan er een video van verwachten.</p>	
-        <p class="bijschrift2"><span class="glyphicon glyphicon-remove" style="color:#aa1414;">&nbsp;</span>: Je aanvraag is afgekeurd en hier komt geen video van.</p>
+            <p class="bijschrift"><span class="glyphicon glyphicon-ok" style="color:#156b08;">&nbsp;</span>: Je aanvraag is goedgekeurd en je kan er een video van verwachten.</p>	
+            <p class="bijschrift2"><span class="glyphicon glyphicon-remove" style="color:#aa1414;">&nbsp;</span>: Je aanvraag is afgekeurd en hier komt geen video van.</p>
+        </div>
 
         @endif
         
