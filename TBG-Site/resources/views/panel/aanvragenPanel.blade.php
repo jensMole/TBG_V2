@@ -8,7 +8,9 @@
 
 <section id="sectionTeksten"> 
 
-    <div class="aanvragen col-md-6 col-xs-12">
+    <div class="row separation hidden-sm hidden-xs"></div>
+
+    <div class="aanvragen col-lg-6 col-md-12">
 
         @if($pluginType === false)
 
@@ -65,7 +67,9 @@
 
     </div>
 
-    <div class="aanvragen col-md-6 col-xs-12">
+    <div class="row separation visible-md visible-sm visible-xs"></div>
+
+    <div class="aanvragen col-lg-6 col-md-12">
 
         @if($modType === false)
 
@@ -122,7 +126,9 @@
 
     </div>
 
-    <div class="aanvragen col-md-6 col-xs-12">
+    <div class="row separation"></div>
+
+    <div class="aanvragen col-lg-6 col-md-12">
 
         @if($programType === false)
 
@@ -179,7 +185,9 @@
 
     </div>
 
-    <div class="aanvragen col-md-6 col-xs-12">
+    <div class="row separation visible-md visible-sm visible-xs"></div>
+
+    <div class="aanvragen col-lg-6 col-md-12">
 
         @if($anderType === false)
 
