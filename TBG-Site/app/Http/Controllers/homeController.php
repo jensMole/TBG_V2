@@ -22,6 +22,10 @@ class HomeController extends Controller
         //terug geven van de view en meegeven van de link.
         return view('welcome', compact('newVidLink','tekst'));
     }
+
+    public function cookie(){
+        return view('cookie');
+    }
 }
 
 ?>

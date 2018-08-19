@@ -15,6 +15,9 @@ Auth::routes();
 // Sturen naar home page.
 Route::get('/', 'HomeController@index');
 
+// Sturen naar cookie pagina.
+Route::get('/cookies','HomeController@cookie');
+
 // Voor als je bent aangemeld naar het dashboard.
 Route::get('/home', 'DashBoardController@index');
 

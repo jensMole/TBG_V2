@@ -1,5 +1,5 @@
 @php
-    setcookie('accept-cookies', 'true', time() + 3600);
+    setcookie('accept-cookies', 'true', time() + 86400);
 @endphp
 
 <!DOCTYPE html>
@@ -38,7 +38,7 @@
 
         <div class="cookie-banner">
             <div class="container">
-                <p>Deze website maakt gebruik van cookies. Door deze website te gebruiken gaan wij er van uit dat u akkoord gaat met de cookies.</p>
+                <p>Deze website maakt gebruik van cookies. Door deze website te gebruiken gaan wij er van uit dat u akkoord gaat met de <a href="/cookies" target="_blank"><u>cookies</u></a>.</p>
                 <a name="button" id="button">Ok</a>
             </div>
         </div>
