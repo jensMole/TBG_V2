@@ -1,3 +1,7 @@
+<!-- @php
+    setcookie('accept-cookies', 'true', time() + 3600);
+@endphp -->
+
 <!DOCTYPE html>
 <html lang="nl">
     <head>
@@ -30,6 +34,17 @@
     </head>
     <body>
 
+        @if(!isset($_COOKIE["accept-cookies"]))
+
+        <div class="cookie-banner">
+            <div class="container">
+                <p>Deze website maakt gebruik van cookies. Door deze website te gebruiken gaan wij er van uit dat u akkoord gaat met de cookies.</p>
+                <a name="button" id="button">Ok</a>
+            </div>
+        </div>
+        
+        @endif
+
         <!-- <div class="wide hidden-xs hidden-sm hidden-md"></div> -->
 
         @include('static.sidenav')
@@ -44,6 +59,8 @@
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="/js/bootstrap.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+        <script src="/js/Index.js"></script>
 
         <!-- SmartMenus jQuery plugin -->
         <script src="/js/jquery.smartmenus.js"></script>
