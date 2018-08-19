@@ -1,6 +1,6 @@
-<!-- @php
+@php
     setcookie('accept-cookies', 'true', time() + 3600);
-@endphp -->
+@endphp
 
 <!DOCTYPE html>
 <html lang="nl">

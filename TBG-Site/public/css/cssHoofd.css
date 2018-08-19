@@ -806,19 +806,18 @@ a:hover{
 }
 
 #button{
-	background: #ccc;
-	color: #333;
+	background: rgb(53, 53, 53);
+	color: white;
 	text-decoration: none;
 	padding: 5px 10px;
 	border-radius: 3px;
 	display: inline-block;
-	border: 1px solid #aaa;
-	border-bottom: 2px solid #aaa;
+	cursor: pointer;
 }
 
 .cookie-banner{
 	display: none;
-	background: black;
+	background: rgb(22, 22, 22);
 	position: fixed;
 	bottom: 0;
 	left: 0;
