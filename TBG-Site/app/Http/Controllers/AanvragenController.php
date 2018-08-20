@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Log;
+
 use App\Aanvragen;
 use App\TypesAanvragen;
 use Illuminate\Http\Request;
@@ -16,16 +18,68 @@ class AanvragenController extends Controller
 
     public function index()
     {
+
         // Ophalen van data.
         $NaamType = TypesAanvragen::get();
         $Types = Aanvragen::orderby("Type","asc")->get();
 
+        // Zijn er aanvragen?
         if (count($Types) === 0) {
             $Types = false;
         }
+        else {
 
-        //terug geven van de view met de data.
-        return view('Aanvragen/aanvragen', compact('Types','NaamType'));
+            $pluginType = null;
+            $modType = null;
+            $programType = null;
+            $anderType = null;
+
+            // Kijken welke aanvragen er zijn en ze in groepen delen.
+            for($i = 0; $i < count($Types); $i++){
+            
+                if($Types[$i]["Type"] == 1){
+
+                    $pluginType[$i] = $Types[$i];
+
+                }
+                elseif($Types[$i]["Type"] == 2){
+
+                    $modType[$i] = $Types[$i];
+
+                }
+                elseif($Types[$i]["Type"] == 3){
+
+                    $programType[$i] = $Types[$i];
+
+                }
+                elseif($Types[$i]["Type"] == 4){
+
+                    $anderType[$i] = $Types[$i];
+
+                }
+            
+            }
+
+            // Nakijken als er in een groep wel aanvragen zijn.
+            if (!$pluginType){
+                $pluginType = false; 
+            }
+            
+            if (!$modType){
+                $modType = false;
+            }
+            
+            if (!$programType){
+                $programType = false;
+            }
+            
+            if (!$anderType){
+                $anderType = false;
+            }
+        }
+ 
+         // Zenden naar de pagina met de data.
+         return view('Aanvragen/aanvragen', compact('Types','NaamType','pluginType','modType','programType','anderType'));
     }
 
     // Toevoegen van een aanvraag.

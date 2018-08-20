@@ -746,6 +746,10 @@ a:hover{
 	padding-bottom: 12px;
 }
 
+.aanvragenForm{
+	overflow-x: hidden;
+}
+
 #typeSelect, #linkInput{
 	color: #606060;
 	-webkit-border-radius: 5px;
@@ -830,4 +834,10 @@ a:hover{
 	width: 70%;
 	color: #f0f0f0;
 	padding: 15px;
+}
+
+#sectionAanvragen{
+	margin-bottom: 30px;
+	overflow: auto;
+	width: 100%;
 }

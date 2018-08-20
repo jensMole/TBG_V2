@@ -21,7 +21,10 @@
 </div>
 
 <div class="container">
-    <div class="col-md-6 col-xs-12 table-responsive" style="border:none;">
+
+    <div class="col-md-4 col-sm-2 hidden-xs"></div>
+
+    <div class="col-md-4 col-sm-8 col-xs-12 table-responsive aanvragenForm" style="border:none;">
 
         <!-- <p id="aanvraagTitle">Geef hier je aanvraag in</p><br> -->
 
@@ -47,11 +50,11 @@
                 </tr>
                 <tr>
                     <td><label id="info" for="infoInput" required>Info</label><br>
-                    <textarea rows="5" cols="50" name="infoAanvraag" placeholder="Info over welke Plugin / Mod / Programeren of andere" id="infoInput" required></textarea></td>
+                    <textarea rows="5" cols="50" name="infoAanvraag" placeholder="Info over welke Plugin / Mod / Programeren of andere" id="infoInput" required class="form-control"></textarea></td>
                 </tr>
                 <tr>
                     <td><label id="link" for="linkInput">Link</label><br>
-                    <input type="url" id="linkInput" size="47" name="linkAanvraag" placeholder="Link naar Plugin / Mod / Andere"></input></td>
+                    <input type="url" id="linkInput" size="47" name="linkAanvraag" placeholder="Link naar Plugin / Mod / Andere" class="form-control"></td>
                 </tr>
                 <tr>
                     <td><button type="submit" value="Submit" style="margin-bottom: 20px;" id="submitAanvraag" class="">Zend aanvraag</button></td>
@@ -64,90 +67,166 @@
 
     </div>
 
-    <div class="aanvragen col-md-6 col-xs-12">
+    <div class="col-md-4 col-sm-2 hidden-xs"></div>
 
-        @if($Types === false)
+    @if ($Types === false)
 
-            <h3>Er zijn geen aanvragen op dit moment</h3>
+    <div class="col-sm-12">
 
-        @else
+        <hr>
+        <h3 style="padding-bottom:30px; padding-top:20px;">Er zijn geen aanvragen op dit moment</h3>
 
-            <h3>Aanvragen lijst</h3><br>
+    </div>
 
-            @for($i = 0; $i < count($Types); $i++)
+    @else
 
-                @switch($Types[$i]["Type"])
+    <section id="sectionAanvragen"> 
 
-                    @case(1)
+        <div class="row separation"></div>
 
-                        @if($Types[$i]["Foto"] == 0)
-                            <p><span class="glyphicon glyphicon-remove" style="color:#aa1414;">&nbsp;</span><?=$Types[$i]["Prefix"]?><?=$NaamType[0]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a><?=$Types[$i]["Suffix"]?></p>
-                        @elseif($Types[$i]["Foto"] == 1)
-                            <p><span class="glyphicon glyphicon-ok" style="color:#156b08;">&nbsp;</span><?=$Types[$i]["Prefix"]?><?=$NaamType[0]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a><?=$Types[$i]["Suffix"]?></p>
-                        @else
-                            <p>- <?=$Types[$i]["Prefix"]?><?=$NaamType[0]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a><?=$Types[$i]["Suffix"]?></p>
-                        @endif
+        <hr>
 
-                        @break
+        <div class="aanvragen col-lg-6 col-md-12" style="overflox:auto">
 
-                    @case(2)
+            @if($pluginType === false)
 
-                        @if($Types[$i]["Foto"] == 0)
-                            <p><span class="glyphicon glyphicon-remove" style="color:#aa1414;">&nbsp;</span><?=$Types[$i]["Prefix"]?><?=$NaamType[1]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a><?=$Types[$i]["Suffix"]?></p>
-                        @elseif($Types[$i]["Foto"] == 1)
-                            <p><span class="glyphicon glyphicon-ok" style="color:#156b08;">&nbsp;</span><?=$Types[$i]["Prefix"]?><?=$NaamType[1]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a><?=$Types[$i]["Suffix"]?></p>
-                        @else
-                            <p>- <?=$Types[$i]["Prefix"]?><?=$NaamType[1]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a><?=$Types[$i]["Suffix"]?></p>
-                        @endif                        
-                        
-                        @break
+                <h3>Er zijn geen plugin aanvragen op dit moment</h3>
 
-                    @case(3)
+            @else
 
-                        @if($Types[$i]["Foto"] == 0)
-                            <p><span class="glyphicon glyphicon-remove" style="color:#aa1414;">&nbsp;</span><?=$Types[$i]["Prefix"]?><?=$NaamType[2]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a><?=$Types[$i]["Suffix"]?></p>
-                        @elseif($Types[$i]["Foto"] == 1)
-                            <p><span class="glyphicon glyphicon-ok" style="color:#156b08;">&nbsp;</span><?=$Types[$i]["Prefix"]?><?=$NaamType[2]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a><?=$Types[$i]["Suffix"]?></p>
-                        @else
-                            <p>- <?=$Types[$i]["Prefix"]?><?=$NaamType[2]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a><?=$Types[$i]["Suffix"]?></p>
-                        @endif                        
-                        
-                        @break
+                <h3>Plugin aanvragen</h3><br>
 
-                    @case(4)
+                @foreach ($pluginType as $plugin)
 
-                        @if($Types[$i]["Foto"] == 0)
-                            <p><span class="glyphicon glyphicon-remove" style="color:#aa1414;">&nbsp;</span><?=$Types[$i]["Prefix"]?><?=$NaamType[3]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a><?=$Types[$i]["Suffix"]?></p>
-                        @elseif($Types[$i]["Foto"] == 1)
-                            <p><span class="glyphicon glyphicon-ok" style="color:#156b08;">&nbsp;</span><?=$Types[$i]["Prefix"]?><?=$NaamType[3]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a><?=$Types[$i]["Suffix"]?></p>
-                        @else
-                            <p>- <?=$Types[$i]["Prefix"]?><?=$NaamType[3]["Naam"]?>: <?=$Types[$i]["Info"]?> <br> <a href="<?=$Types[$i]["Link"]?>" target="_blank"><?=$Types[$i]["Link"]?></a><?=$Types[$i]["Suffix"]?></p>
-                        @endif                        
-                        
-                        @break               
-                        
-                @endswitch
+                    <table class="table is-fullwidth">
+                        <tr>
+                            @if($plugin["Foto"] == 0)
+                            <td style="width:100%;"><span class="glyphicon glyphicon-remove" style="color:red;">&nbsp;</span><?=$plugin["Prefix"]?><?=$plugin["Info"]?> <br> <a href="<?=$plugin["Link"]?>" target="_blank"><?=$plugin["Link"]?></a><?=$plugin["Suffix"]?></td>
+                            @elseif($plugin["Foto"] == 1)
+                            <td style="width:100%;"><span class="glyphicon glyphicon-ok" style="color:green;">&nbsp;</span><?=$plugin["Prefix"]?><?=$plugin["Info"]?> <br> <a href="<?=$plugin["Link"]?>" target="_blank"><?=$plugin["Link"]?></a><?=$plugin["Suffix"]?></td>
+                            @else
+                            <td style="width:100%;"><?=$plugin["Prefix"]?><?=$plugin["Info"]?> <br> <a href="<?=$plugin["Link"]?>" target="_blank"><?=$plugin["Link"]?></a><?=$plugin["Suffix"]?></td>
+                            @endif
+                        </tr>                
+                    </table>
 
-                @if(($i%7) == 0)
+                @endforeach
 
-                    </div>
-
-                    <div class="aanvragen col-md-6 col-xs-12" style="padding-bottom: 20px;">
-
-                @endif
-
-            @endfor
+            @endif
 
         </div>
-        <div class="row aanvragen col-md-12 col-xs-12" style="text-align:center">
-            <hr>
-            <p class="bijschrift"><span class="glyphicon glyphicon-ok" style="color:#156b08;">&nbsp;</span>: Je aanvraag is goedgekeurd en je kan er een video van verwachten.</p>	
-            <p class="bijschrift2"><span class="glyphicon glyphicon-remove" style="color:#aa1414;">&nbsp;</span>: Je aanvraag is afgekeurd en hier komt geen video van.</p>
+
+        <div class="row separation visible-md visible-sm visible-xs"></div>
+
+        <div class="aanvragen col-lg-6 col-md-12">
+
+            @if($modType === false)
+
+                <h3>Er zijn geen mod aanvragen op dit moment</h3>
+
+            @else
+
+                <h3>Mod aanvragen</h3><br>
+
+                @foreach ($modType as $mod)
+
+                    <table class="table is-fullwidth">
+                        <tr>
+                            @if($mod["Foto"] == 0)
+                            <td style="width:100%;"><span class="glyphicon glyphicon-remove" style="color:red;">&nbsp;</span><?=$mod["Prefix"]?><?=$mod["Info"]?> <br> <a href="<?=$mod["Link"]?>" target="_blank"><?=$mod["Link"]?></a><?=$mod["Suffix"]?></td>
+                            @elseif($mod["Foto"] == 1)
+                            <td style="width:100%;"><span class="glyphicon glyphicon-ok" style="color:green;">&nbsp;</span><?=$mod["Prefix"]?><?=$mod["Info"]?> <br> <a href="<?=$mod["Link"]?>" target="_blank"><?=$mod["Link"]?></a><?=$mod["Suffix"]?></td>
+                            @else
+                            <td style="width:100%;"><?=$mod["Prefix"]?><?=$mod["Info"]?> <br> <a href="<?=$mod["Link"]?>" target="_blank"><?=$mod["Link"]?></a><?=$mod["Suffix"]?></td>
+                            @endif
+                        </tr>                
+                    </table>
+
+                @endforeach
+
+            @endif
+
         </div>
+
+        <div class="row separation"></div>
+
+        <div class="aanvragen col-lg-6 col-md-12">
+
+            @if($programType === false)
+
+                <h3>Er zijn geen programmeer aanvragen op dit moment</h3>
+
+            @else
+
+                <h3>Programeren aanvragen</h3><br>
+
+                @foreach ($programType as $program)
+
+                    <table class="table is-fullwidth">
+                        <tr>
+                            @if($program["Foto"] == 0)
+                            <td style="width:100%;"><span class="glyphicon glyphicon-remove" style="color:red;">&nbsp;</span><?=$program["Prefix"]?><?=$program["Info"]?> <br> <a href="<?=$program["Link"]?>" target="_blank"><?=$program["Link"]?></a><?=$program["Suffix"]?></td>
+                            @elseif($program["Foto"] == 1)
+                            <td style="width:100%;"><span class="glyphicon glyphicon-ok" style="color:green;">&nbsp;</span><?=$program["Prefix"]?><?=$program["Info"]?> <br> <a href="<?=$program["Link"]?>" target="_blank"><?=$program["Link"]?></a><?=$program["Suffix"]?></td>
+                            @else
+                            <td style="width:100%;"><?=$program["Prefix"]?><?=$program["Info"]?> <br> <a href="<?=$program["Link"]?>" target="_blank"><?=$program["Link"]?></a><?=$program["Suffix"]?></td>
+                            @endif
+                        </tr>                
+                    </table>
+
+                @endforeach 
+
+            @endif
+
+        </div>
+
+        <div class="row separation visible-md visible-sm visible-xs"></div>
+
+        <div class="aanvragen col-lg-6 col-md-12">
+
+            @if($anderType === false)
+
+                <h3>Er zijn geen andere aanvragen op dit moment</h3>
+
+            @else
+
+            
+            <h3>Andere aanvragen</h3><br>
+
+                @foreach ($anderType as $ander)
+
+                    <table class="table is-fullwidth">
+                        <tr>
+                            @if($ander["Foto"] == 0)
+                            <td style="width:100%;"><span class="glyphicon glyphicon-remove" style="color:red;">&nbsp;</span><?=$ander["Prefix"]?><?=$ander["Info"]?> <br> <a href="<?=$ander["Link"]?>" target="_blank"><?=$ander["Link"]?></a><?=$ander["Suffix"]?></td>
+                            @elseif($ander["Foto"] == 1)
+                            <td style="width:100%;"><span class="glyphicon glyphicon-ok" style="color:green;">&nbsp;</span><?=$ander["Prefix"]?><?=$ander["Info"]?> <br> <a href="<?=$ander["Link"]?>" target="_blank"><?=$ander["Link"]?></a><?=$ander["Suffix"]?></td>
+                            @else
+                            <td style="width:100%;"><?=$ander["Prefix"]?><?=$ander["Info"]?> <br> <a href="<?=$ander["Link"]?>" target="_blank"><?=$ander["Link"]?></a><?=$ander["Suffix"]?></td>
+                            @endif
+                        </tr>                
+                    </table>
+
+                @endforeach 
+
+            @endif
+
+        </div>
+
+        <div class="row separation"></div>
+
+    </div>
+
+</section>
+
+    <div class="row aanvragen col-md-12 col-xs-12" style="text-align:center">
+        <hr>
+        <p class="bijschrift"><span class="glyphicon glyphicon-ok" style="color:#156b08;">&nbsp;</span>: Je aanvraag is goedgekeurd en je kan er een video van verwachten.</p>	
+        <p class="bijschrift2"><span class="glyphicon glyphicon-remove" style="color:#aa1414;">&nbsp;</span>: Je aanvraag is afgekeurd en hier komt geen video van.</p>
+    </div>
 
         @endif
         
-    </div>
 
 </div>
 
